@@ -20,3 +20,5 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/staffId/create','StaffIDController@create');
+Route::post('/staffId/create','StaffIDController@store');
+

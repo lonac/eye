@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Staffids;
+
 class StaffIDController extends Controller
 {
     /**
@@ -34,7 +36,12 @@ class StaffIDController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $ids = new Staffids;
+        $ids->staff_id = $request->input('staff_id');
+
+        $ids->save();
+
+        return redirect('/staffId/create');
     }
 
     /**
