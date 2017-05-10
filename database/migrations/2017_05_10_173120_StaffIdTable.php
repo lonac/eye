@@ -13,7 +13,11 @@ class StaffIdTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('staffIds', function( Blueprint $table){
+            $table->increments('id');
+            $table->string('staff_id');
+            $table->timestamp();
+        });
     }
 
     /**
@@ -23,6 +27,6 @@ class StaffIdTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('staffIds');
     }
 }
