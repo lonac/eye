@@ -17,7 +17,7 @@
         <div class="row">
             <div class="col-sm-12 col-md=1">
                 <p><marquee scrollamount="2" direction="left" behavior="scroll" style="background:colorname">
-                       <font color="blue"><b>Jicho helps you to see before you take action.....</b>
+                       <font color="blue"><b>Jicho helps you to see before taking an action.....</b>
                        </font>
                 </marquee></p>
             </div>
@@ -30,8 +30,7 @@
                     <div class="panel-body">
                         <div class="caption">
                             <h3>ADMINISTRATION</h3>
-                                <p>into this section to meet and check status of staffs for specific
-                                    college.
+                                <p>Let Jicho take you to College administration, see the person you want to meet before visitation.
                                 </p>
                                 <a href="{{ url('#')}}" class="btn btn-primary" role="button">
                                     Check Administration
@@ -47,7 +46,7 @@
                     <div class="panel-body">
                         <div class="caption">
                             <h3>CAFTERIA SERVICES</h3>
-                                <p>For cafteria services status enter into this section 
+                                <p>Visit the cafteria in your college, check the list of updated Menu everytime before you decide to go.
                                </p>
                                 <a href="{{ url('#')}}" class="btn btn-primary" role="button">
                                     Check Cafteria
@@ -63,9 +62,28 @@
                     <div class="panel-body">
                         <div class="caption">
                             <h3>LIBRARY</h3>
-                                <p>Check status for library services.</p>
-                                <a href="{{ url('#')}}" class="btn btn-primary" role="button">
-                                  Check Library
+                                <p>.
+                                  The services offered at College library are well defined 
+                                  at particular times in here!
+                                </p>
+                                <a href="{{ url('#')}}" class="btn btn-primary" role="button"> Library
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4">
+                <div class="panel panel-primary">
+                    <div class="panel-body">
+                        <div class="caption">
+                            <h3>MEDICAL SERVICE</h3>
+                                <p>
+                                    Before you make any movement to any Medical Center within a college,
+                                     you can let Jicho make visit for you.
+                                </p>
+                                <a href="{{ url('#')}}" class="btn btn-primary" role="button"> Medical
                                 </a>
                             </p>
                         </div>
