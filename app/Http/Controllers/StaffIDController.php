@@ -23,7 +23,7 @@ class StaffIDController extends Controller
      */
     public function create()
     {
-        //
+        return view('staffId.create');
     }
 
     /**
