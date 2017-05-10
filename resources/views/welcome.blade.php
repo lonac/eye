@@ -17,7 +17,7 @@
         <div class="row">
             <div class="col-sm-12 col-md=1">
                 <p><marquee scrollamount="2" direction="left" behavior="scroll" style="background:colorname">
-                       <font color="blue"><b>Choose the Organization or Company you Love and Apply for Loan.....</b>
+                       <font color="blue"><b>Jicho helps you to see before you take action.....</b>
                        </font>
                 </marquee></p>
             </div>
@@ -33,8 +33,8 @@
                                 <p>into this section to meet and check status of staffs for specific
                                     college.
                                 </p>
-                                <a href="{{ url('companies/create')}}" class="btn btn-primary" role="button">
-                                    Enter
+                                <a href="{{ url('#')}}" class="btn btn-primary" role="button">
+                                    Check Administration
                                 </a>
                             </p>
                         </div>
@@ -49,8 +49,8 @@
                             <h3>CAFTERIA SERVICES</h3>
                                 <p>For cafteria services status enter into this section 
                                </p>
-                                <a href="{{ url('companies')}}" class="btn btn-primary" role="button">
-                                    enter
+                                <a href="{{ url('#')}}" class="btn btn-primary" role="button">
+                                    Check Cafteria
                                 </a>
                             </p>
                         </div>
@@ -65,7 +65,7 @@
                             <h3>LIBRARY</h3>
                                 <p>Check status for library services.</p>
                                 <a href="{{ url('#')}}" class="btn btn-primary" role="button">
-                                  Enter
+                                  Check Library
                                 </a>
                             </p>
                         </div>
