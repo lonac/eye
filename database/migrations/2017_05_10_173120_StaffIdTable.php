@@ -16,7 +16,7 @@ class StaffIdTable extends Migration
         Schema::create('staffIds', function( Blueprint $table){
             $table->increments('id');
             $table->string('staff_id');
-            $table->timestamp();
+            $table->timestamps();
         });
     }
 

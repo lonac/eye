@@ -62,7 +62,7 @@
                     <div class="panel-body">
                         <div class="caption">
                             <h3>LIBRARY</h3>
-                                <p>.
+                                <p>
                                   The services offered at College library are well defined 
                                   at particular times in here!
                                 </p>
