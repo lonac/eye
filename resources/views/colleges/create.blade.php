@@ -13,7 +13,7 @@
 				</div>
 				<div class="panel-body">
 					
-					<form method="POST" action="{{ url('colleges/create') }}">
+					<form method="POST" action="{{ url('colleges') }}">
 
 						{{ csrf_field() }}
 
