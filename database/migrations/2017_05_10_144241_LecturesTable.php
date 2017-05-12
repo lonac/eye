@@ -15,8 +15,13 @@ class LecturesTable extends Migration
     {
         Schema::create('lectures', function(Blueprint $table){
             $table->increments('id');
-            $table->string('officeNo');
+            $table->integer('user_id')->unsigned()->index();
+            $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade');
+            $table->integer('college_id')->unsigned()->index();
+            $table->foreign('college_id')->references('id')->on('colleges')->onUpdate('cascade');
             $table->string('employ_id');
+            $table->string('officeNo');
+            $table->string('college_name');
             $table->string('department');
             $table->timestamps();
         });
