@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\College;
+
 class CollegeController extends Controller
 {
     /**
@@ -23,7 +25,7 @@ class CollegeController extends Controller
      */
     public function create()
     {
-        //
+        return view('colleges.create');
     }
 
     /**
@@ -34,7 +36,13 @@ class CollegeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $col = new College;
+
+        $col->col_name = $request->input('col_name');
+
+        $col->save();
+
+        return redirect('/colleges/create');
     }
 
     /**

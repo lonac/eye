@@ -22,3 +22,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/staffId/create','StaffIDController@create');
 Route::post('/staffId/create','StaffIDController@store');
 
+Route::get('/colleges/create','CollegeController@create');
+Route::post('/colleges/create','CollegeController@store');

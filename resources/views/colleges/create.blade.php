@@ -19,7 +19,7 @@
 
 						<div class="form-group">
 							<label for="collehes">College Name</label>
-							<input type="text" name="college" id="college" class="form-control" placeholder="college name" />
+							<input type="text" name="col_name" id="college" class="form-control" placeholder="college name" />
 						</div>
 						<button type="submit" class="btn btn-success">ADD</button>
 					</form>
