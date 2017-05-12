@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\College;
+
 use Auth;
 
 class HomeController extends Controller
@@ -25,6 +27,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+
+        $col = College::all();
+        return view('home',compact('col'));
     }
 }

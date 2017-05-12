@@ -16,6 +16,14 @@
     </div>
 
 {{-- check if there are colleges so far --}}
+@if($col->count()>0)
+    show me college
+    
+    @else
+
+    no colleges
+
+@endif
 
 {{-- if she/he is not registered to any college, let him/her see the options for registering to colleges--}}
 
