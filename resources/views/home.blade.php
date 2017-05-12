@@ -17,7 +17,11 @@
 
 {{-- check if there are colleges so far --}}
 @if($col->count()>0)
-    show me college
+    
+    {{-- great we now have colleges what next?--}}
+
+
+    
     
     @else
 

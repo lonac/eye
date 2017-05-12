@@ -24,7 +24,6 @@
 						@foreach($col as $colg)	
 							<a href="{{ url('colleges/' . $colg->id) }}">{{ $colg->col_name }}</a>
 						@endforeach
-
 					
 				@else
 					No colleges so far

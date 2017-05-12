@@ -56,7 +56,8 @@ class CollegeController extends Controller
     public function show($id)
     {
         $college = College::findOrFail($id);
-        return redirect('colleges.show',compact('college'));
+
+        return view('colleges.show',compact('college'));
     }
 
     /**
