@@ -15,7 +15,7 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" background-color="blue">
             <ul class="nav navbar-nav navbar-left">
                 <li><a href="/home">Home</a></li>
-                <li><a href="#">Colleges</a></li>
+                <li><a href="/colleges/index">Colleges</a></li>
                 <li><a href="/about">About Us</a></li>
                 <li><a href="/contacts">Contacts</a></li>
             </ul>

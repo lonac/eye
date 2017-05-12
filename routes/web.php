@@ -24,3 +24,6 @@ Route::post('/staffId/create','StaffIDController@store');
 
 Route::get('/colleges/create','CollegeController@create');
 Route::post('/colleges/create','CollegeController@store');
+Route::get('/colleges/index','CollegeController@index');
+Route::get('/colleges/{id}/show','CollegeController@show');
+

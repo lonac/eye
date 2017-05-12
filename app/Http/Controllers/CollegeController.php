@@ -15,7 +15,9 @@ class CollegeController extends Controller
      */
     public function index()
     {
-        //
+        $col = College::all();
+        
+        return view('colleges.index',compact('col'));
     }
 
     /**
@@ -53,7 +55,8 @@ class CollegeController extends Controller
      */
     public function show($id)
     {
-        //
+        $college = College::findOrFail($id);
+        return redirect('colleges.show',compact('college'));
     }
 
     /**
