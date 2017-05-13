@@ -57,7 +57,11 @@ class CollegeController extends Controller
     {
         $college = College::findOrFail($id);
 
-        return view('colleges.show',compact('college'));
+        $category = $college->categories;
+
+        dd($category);
+
+        //return view('colleges.show',compact('college'));
     }
 
     /**
