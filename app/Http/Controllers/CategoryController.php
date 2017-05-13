@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Category;
+
+use App\College;
+
 class CategoryController extends Controller
 {
     /**
@@ -21,9 +25,11 @@ class CategoryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($id)
     {
-        //
+        $col = College::findOrFail($id);
+
+        return view('categories.create',compact('col'));
     }
 
     /**
@@ -32,9 +38,17 @@ class CategoryController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, $id)
     {
-        //
+
+        $col = College::findOrFail($id);
+        $cat = new Category;
+
+        $cat->cat_name = $request->input('cat_name');
+
+        $cat->save();
+
+        return redirect('colleges/'.$col->id.'/categories/create');
     }
 
     /**

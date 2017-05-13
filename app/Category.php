@@ -10,4 +10,9 @@ class Category extends Model
 
     'cat_name',
     ];
+
+    public function college()
+    {
+    	return $this->belongsTo('App\College');
+    }
 }
