@@ -20,4 +20,9 @@ class College extends Model
     {
     	return $this->hasMany('App\User');
     }
+
+    public function category()
+    {
+        return $this->hasMany('App\Category');
+    }
 }
