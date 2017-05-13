@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\College;
 
+use App\Category;
+
 class CollegeController extends Controller
 {
     /**
@@ -57,11 +59,9 @@ class CollegeController extends Controller
     {
         $college = College::findOrFail($id);
 
-        $category = $college->categories;
-
-        dd($category);
-
-        //return view('colleges.show',compact('college'));
+        $cat = $college->category;
+    
+       return view('colleges.show',compact('college','cat'));
     }
 
     /**

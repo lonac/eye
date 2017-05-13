@@ -19,7 +19,8 @@
                 <div class="panel-heading">Select College and Proceed!</div>
                 <div class="panel-body">
                     @foreach($col as $colleges)
-                        <a href="{{url('colleges/' .$colleges->id)}}">{{$colleges->col_name}}</a>
+                        <a href="{{url('colleges/' .$colleges->id)}}"
+                            role="button" class="btn btn-primary">{{$colleges->col_name}}</a>
                     @endforeach   
                 </div>
             </div>
@@ -38,9 +39,6 @@
 
 {{-- if the user has registered already let them see their colleges and other details--}}
     
-
-
-
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             

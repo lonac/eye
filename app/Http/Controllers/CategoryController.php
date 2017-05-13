@@ -43,7 +43,7 @@ class CategoryController extends Controller
 
         $col = College::findOrFail($id);
         $cat = new Category;
-
+        $cat->college_id = $col->id;
         $cat->cat_name = $request->input('cat_name');
 
         $cat->save();
