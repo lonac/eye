@@ -30,4 +30,9 @@ class College extends Model
     {
         return $this->hasMany('App\Departments');
     }
+
+    public function lecturers()
+    {
+        return $this->hasMany('App\Lecturer');
+    }
 }

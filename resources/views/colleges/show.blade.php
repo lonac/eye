@@ -15,6 +15,12 @@
 		</div>		
 	</div>
 
+		@if(! Auth::guest())
+				{{--if registerd then allow me to register as staff member, as lecturer,bursar or any other--}}
+				
+
+		@else
+
 	<div class="row">
 		<div class="col-sm-6 col-sm-offset-1">
 			<div class="panel-body">
@@ -47,6 +53,9 @@
 		</div>
 
 	</div>
+		@endif
+
+
 
 
 </div>
