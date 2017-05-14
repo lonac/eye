@@ -13,7 +13,14 @@ class CollegeDepartmentsTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('departments', function (Blueprint $table)
+        {
+            $table->increments('id');
+            $table->integer('college_id')->unsigned()->index();
+            $table->foreign('college_id')->references('id')->on('colleges')->onUpdate('cascade');
+            $table->string('depart_name');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +30,6 @@ class CollegeDepartmentsTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('departments');
     }
 }
