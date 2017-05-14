@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\College;
 
+use App\Departments;
+
 class DepartmentsController extends Controller
 {
     /**
@@ -36,9 +38,20 @@ class DepartmentsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request,$id)
     {
-        //
+        $col = College::findOrFail($id);
+
+        $dep = new Departments;
+
+        $dep->college_id = $col->id;
+        $dep->depart_name = $request->input('depart_name');
+
+        $dep->save();
+
+          return view('collegedepartments.create',compact('col'));
+
+
     }
 
     /**
