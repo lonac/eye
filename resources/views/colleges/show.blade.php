@@ -17,24 +17,33 @@
 
 	<div class="row">
 		<div class="col-sm-6 col-sm-offset-1">
-			@foreach ($cat as $cats)
-				<a href="" role="button" class="btn btn-info">{{ $cats->cat_name}}</a>
-			@endforeach
+			<div class="panel-body">
+				@foreach ($cat as $cats)
+					<a href="" role="button" class="btn btn-info">{{ $cats->cat_name}}</a>
+				@endforeach
+			</div>
 		</div>		
 
 	</div>
 
 	<div class="row">
 		<div class="col-md-6  col-sm-offset-1">
-			@if($dep->count()> 0)
-				@foreach($dep as $department)
-					<a href="" role="button" class="btn btn-info">{{ $department->depart_name}}</a>
-				@endforeach
-			@else
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<h3 class="panel-title"> Departments:</h3>
+				</div>
+			</div>
+			<div class="panel-body">
+				@if($dep->count()> 0)
+					@foreach($dep as $department)
+						<a href="" role="button" class="btn btn-info">{{ $department->depart_name}}</a>
+					@endforeach
+				@else
 
-				no departments for this college
+					no departments for this college
 
-			@endif
+				@endif
+			</div>
 		</div>
 
 	</div>
