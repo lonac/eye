@@ -4,6 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\College;
+
+use Auth;
+
+use App\Otherstaffs;
+
+
 class OtherStuffsController extends Controller
 {
     /**
@@ -21,9 +28,12 @@ class OtherStuffsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($id)
     {
-        //
+        $col = College::findOrFail($id);
+        $dep = $col->departments;
+
+        return view('otherstaffs.create',compact('col','dep'));
     }
 
     /**
@@ -32,9 +42,22 @@ class OtherStuffsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, $id)
     {
-        //
+        $col = College::findOrFail($id);
+
+        $staffs = new Otherstaffs();
+
+        $staffs->college_id = $col->id;
+        $staffs->department = $request->input('department');
+        $staffs->officeNo = $request->input('officeNo');
+        $staffs->blockNo = $request->input('blockNo');
+        $staffs->employee_id = $request->input('employee_id');
+        $staffs->user_id = Auth::user()->id;
+
+        $staffs->save();
+
+        return redirect('/home');
     }
 
     /**
