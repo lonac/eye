@@ -21,6 +21,8 @@ class OtherStaffsTable extends Migration
             $table->foreign('college_id')->references('id')->on('colleges')->onUpdate('cascade');
             $table->string('officeNo');
             $table->string('employee_id');
+            $table->string('blockNo')->nullable();
+            $table->string('department')->nullable();
             $table->timestamps();
         });
     }
