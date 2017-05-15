@@ -6,11 +6,10 @@
 
 <div class="container">
 	<div class="row">
-
 		<div class="col-sm-4 col-sm-offset-3">
 			<div class="panel panel-default">
 				<div class="panel-heading">
-					<h3 class="panel-title">College of {{$col->col_name}}: Lecturer Details:</h3>
+					<h3 class="panel-title">College of {{$col->col_name}}: Lecturer Details:</h3> 
 				</div>
 				<div class="panel-body">
 					

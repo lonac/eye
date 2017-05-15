@@ -15,6 +15,10 @@ class OtherStaffsTable extends Migration
     {
         Schema::create('otherstaffs', function(Blueprint $table){
             $table->increments('id');
+            $table->integer('user_id')->unsigned()->index();
+            $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade');
+            $table->integer('college_id')->unsigned()->index();
+            $table->foreign('college_id')->references('id')->on('colleges')->onUpdate('cascade');
             $table->string('officeNo');
             $table->string('employee_id');
             $table->timestamps();

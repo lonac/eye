@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\College;
 
+use App\Lecturer;
+
 use Auth;
 
 class LecturersController extends Controller
@@ -41,19 +43,18 @@ class LecturersController extends Controller
      */
     public function store(Request $request, $id)
     {
-        $col = College::findOrFail($id);
-        
-        $lect->user_id = Auth::user()->id;
-      
-        $lect->college_id = $col->id;
-        $lect->department = $request->input('department');
-        $lect->officeNo = $request->input('officeNo');
-        $lect->employ_id = $request->input('employ_id');
+        $coll = College::findOrFail($id);
 
-        $lect->save();
+        $lecturer = new Lecturer();
+        $lecturer->employ_id = $request->input('employ_id');
+        $lecturer->officeNo = $request->input('officeNo');
+        $lecturer->department = $request->input('department');
+        $lecturer->college_id = $coll->id;
+        $lecturer->user_id  = Auth::user()->id;
 
-        return view('/home');
+        $lecturer->save();
 
+        return redirect('/home');
     }
 
     /**

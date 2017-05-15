@@ -29,6 +29,7 @@ class HomeController extends Controller
     {
 
         $col = College::all();
+        
         return view('home',compact('col'));
     }
 }

@@ -13,7 +13,7 @@ class LecturesTable extends Migration
      */
     public function up()
     {
-        Schema::create('lectures', function(Blueprint $table){
+        Schema::create('lecturers', function(Blueprint $table){
             $table->increments('id');
             $table->integer('user_id')->unsigned()->index();
             $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade');
