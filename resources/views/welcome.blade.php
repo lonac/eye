@@ -90,6 +90,23 @@
                     </div>
                 </div>
             </div>
+            
+              <div class="col-sm-6 col-md-4">
+                <div class="panel panel-primary">
+                    <div class="panel-body">
+                        <div class="caption">
+                            <h3>HOSTEL SERVICE</h3>
+                                <p>
+                                    You want to know if Officers are present in Hostel offices??,Let Jicho help you
+                                    see current status of officers.
+                                </p>
+                                <a href="{{ url('#')}}" class="btn btn-primary" role="button"> Hostel
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 </div>
 </div>
 
