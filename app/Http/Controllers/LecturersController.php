@@ -42,8 +42,9 @@ class LecturersController extends Controller
     public function store(Request $request, $id)
     {
         $col = College::findOrFail($id);
-        $user= Auth::user();
+        
         $lect->user_id = Auth::user()->id;
+      
         $lect->college_id = $col->id;
         $lect->department = $request->input('department');
         $lect->officeNo = $request->input('officeNo');
