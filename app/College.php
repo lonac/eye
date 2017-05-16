@@ -40,4 +40,9 @@ class College extends Model
     {
         return $this->hasMany('App\Otherstuffs');
     }
+
+    public function collegestaffids()
+    {
+        return $this->hasMany('App\Collegestaffids');
+    }
 }
