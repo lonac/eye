@@ -4,7 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class CollegeStaffIDs extends Controller
+use App\College;
+
+use App\Collegestaffids;
+
+class CollegeStaffIDsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -21,9 +25,11 @@ class CollegeStaffIDs extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($id)
     {
-        //
+        $col = College::findOrFail($id);
+        
+            return view('collegestaffIDs.create',compact('col'));   
     }
 
     /**
@@ -32,9 +38,18 @@ class CollegeStaffIDs extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request,$id)
     {
-        //
+        $col = College::findOrFail($id);
+
+        $staffid = new Collegestaffids;
+
+        $staffid->college_id = $col->id;
+        $staffid->staffids = $request->input('staffids');
+
+        $staffid->save();
+
+        return redirect('home');
     }
 
     /**
