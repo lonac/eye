@@ -40,14 +40,16 @@
                             </div>
                         </div>
 
-                        @if($dep->count()> 0)
-                        <div class="form-group{{ $errors->has('college_name') ? ' has-error' : '' }}">
-                                <label for="collegename">College Name:</label>
-                                <select class="form-control" name="college_name">
-                                    @foreach($col as $college)
-                                        <option>{{ $college->col_name}}</option>
-                                    @endforeach
-                                </select>
+                        @if($col->count()> 0)
+                            <div class="form-group{{ $errors->has('college_name') ? ' has-error' : '' }}">
+                                <label for="collegeName" class="col-md-4 control-label">College Name:</label>
+                               <div class="col-md-6">
+                                    <select class="form-control" name="college_name">
+                                        @foreach($col as $college)
+                                            <option>{{ $college->col_name}}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
                             </div>
                         @endif
 
