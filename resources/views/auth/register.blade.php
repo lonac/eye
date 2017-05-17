@@ -40,6 +40,31 @@
                             </div>
                         </div>
 
+                        @if($dep->count()> 0)
+                        <div class="form-group{{ $errors->has('college_name') ? ' has-error' : '' }}">
+                                <label for="collegename">College Name:</label>
+                                <select class="form-control" name="college_name">
+                                    @foreach($col as $college)
+                                        <option>{{ $college->col_name}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        @endif
+
+                        <div class="form-group{{ $errors->has('staffid') ? ' has-error' : '' }}">
+                            <label for="staffid" class="col-md-4 control-label">Staff ID:</label>
+
+                            <div class="col-md-6">
+                                <input id="staffid" type="text" class="form-control" name="staffid" value="{{ old('staffid') }}" required autofocus>
+
+                                @if ($errors->has('staffid'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('staffid') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                             <label for="email" class="col-md-4 control-label">E-Mail Address</label>
 
