@@ -51,7 +51,6 @@ class RegisterController extends Controller
             'firstname' => 'required|string|max:255',
             'lastname' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
-            'college_name'=> 'required|string|max:100',
             'staffid'=>'required|string|max:50',
             'password' => 'required|string|min:6|confirmed',
         ]);
@@ -63,14 +62,14 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return User
      */
-    protected function create(array $data)
+    protected function create(array $data, $id)
     {
-
+            $col_id = College::findOrFail($id);
             return User::create([
             'firstname' => $data['firstname'],
             'lastname' => $data['lastname'],
             'email' => $data['email'],
-            'college_name'=>$data['college_name'],
+            'college_id'=>$data->$col_id->id,
             'staffid'=>$data['staffid'],
             'password' => bcrypt($data['password']),
         ]);
