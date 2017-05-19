@@ -42,7 +42,7 @@
 
                         @if($col->count()> 0)
                             <div class="form-group{{ $errors->has('college_name') ? ' has-error' : '' }}">
-                                <label for="collegeName" class="col-md-4 control-label">College Name:</label>
+                                <label for="collegeName" class="col-md-4 control-label">College Name</label>
                                <div class="col-md-6">
                                     <select class="form-control" name="college_name">
                                         @foreach($col as $college)

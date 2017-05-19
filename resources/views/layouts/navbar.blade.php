@@ -8,7 +8,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/">JICHO-UDOM</a>
+            <a class="navbar-brand" href="/">JICHO</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -18,13 +18,14 @@
                 <li><a href="/colleges">Colleges</a></li>
                 <li><a href="/about">About Us</a></li>
                 <li><a href="/contacts">Contacts</a></li>
+
             </ul>
 
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         @if (Auth::guest())
                             <li><a href="{{ url('/login') }}">Login</a></li>
-                            <li><a href="{{ url('/register') }}">Register</a></li>
+                            <li><a href="{{ url('/register') }}">Register</a></li> 
                         @else
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
