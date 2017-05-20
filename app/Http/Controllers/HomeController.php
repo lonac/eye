@@ -32,4 +32,10 @@ class HomeController extends Controller
         
         return view('home',compact('col'));
     }
+
+    public function welcome()
+    {
+        $col = College::all();
+        return view('/',compact('col'));
+    }
 }

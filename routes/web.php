@@ -16,6 +16,9 @@ Route::get('/', function () {
 });
 
 Auth::routes();
+// Registrations
+Route::get('/colleges/{id}/register','Auth\RegisterController@showRegistrationForm');
+Route::post('/colleges/{id}/register','Auth\RegisterController@register');
 
 Route::get('/home', 'HomeController@index');
 

@@ -3,6 +3,9 @@
 namespace App\Http\Controllers\Auth;
 
 use App\User;
+use Illuminate\Http\Request;
+
+use App\College;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -62,16 +65,17 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return User
      */
-    protected function create(array $data, $id)
+    protected function create($id, $data)
     {
-            $col_id = College::findOrFail($id);
+            $college = College::findOrFail($id);
+
             return User::create([
             'firstname' => $data['firstname'],
             'lastname' => $data['lastname'],
             'email' => $data['email'],
-            'college_id'=>$data->$col_id->id,
             'staffid'=>$data['staffid'],
             'password' => bcrypt($data['password']),
+             'college_id' => $college->id,
         ]);
 
         
