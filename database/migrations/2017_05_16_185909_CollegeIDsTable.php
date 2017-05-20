@@ -18,7 +18,7 @@ class CollegeIDsTable extends Migration
             $table->increments('id');
             $table->integer('college_id')->unsigned()->index();
             $table->foreign('college_id')->references('id')->on('colleges')->onUpdate('cascade');
-            $table->string('staffids');
+            $table->string('staffids')->unique();
             $table->timestamps();
         });
     }

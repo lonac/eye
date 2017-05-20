@@ -13,6 +13,9 @@ class StaffIDController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    
+
     public function index()
     {
         //
@@ -34,10 +37,16 @@ class StaffIDController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+    public function validator(array $data)
+    {
+        return Validator::make($data, [
+            'staffids' => 'required|string|staffids|max:255|unique:collegestaffids',
+        ]);
+    }
     public function store(Request $request)
     {
         $ids = new Staffids;
-        $ids->staff_id = $request->input('staff_id');
+        $ids->staff_id = $request->input('staffids');
 
         $ids->save();
 

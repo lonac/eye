@@ -17,10 +17,19 @@
 
 						{{ csrf_field() }}
 
-						<div class="form-group">
-							<label for="StaffIds">Staff ID:</label>
-							<input type="text" name="staffids" id="staffids" class="form-control" placeholder="Staff Id" />
-						</div>
+						<div class="form-group{{ $errors->has('staffid') ? ' has-error' : '' }}">
+                            <label for="staffid" class="col-md-4 control-label">Staff ID</label>
+
+                            <div class="col-md-6">
+                                <input id="staffid" type="text" class="form-control" name="staffid" value="{{ old('staffid') }}" required autofocus>
+
+                                @if ($errors->has('staffid'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('staffid') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
 						<button type="submit" class="btn btn-success">ADD</button>
 					</form>
 

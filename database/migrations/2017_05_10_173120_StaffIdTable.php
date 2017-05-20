@@ -15,7 +15,7 @@ class StaffIdTable extends Migration
     {
         Schema::create('staffids', function( Blueprint $table){
             $table->increments('id');
-            $table->string('staff_id');
+            $table->string('staff_id')->unique();
             $table->timestamps();
         });
     }

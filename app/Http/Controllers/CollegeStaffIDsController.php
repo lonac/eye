@@ -38,6 +38,14 @@ class CollegeStaffIDsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+
+    protected function validator(array $data)
+    {
+        return Validator::make($data, [
+            'staffids' => 'required|string|staffids|max:255|unique:collegestaffids',
+        ]);
+    }
+
     public function store(Request $request,$id)
     {
         $col = College::findOrFail($id);
