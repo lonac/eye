@@ -7,9 +7,9 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Staff Registration at {{ $col->col_name }}: </div>
+                <div class="panel-heading">Staff Registration: </div>
                 <div class="panel-body">
-                    <form class="form-horizontal" role="form" method="POST" action="{{ url('colleges/' .$col->id.'/register') }}">
+                    <form class="form-horizontal" role="form" method="POST" action="{{ url('register') }}">
                         {{ csrf_field() }}
 
                         <div class="form-group{{ $errors->has('firstname') ? ' has-error' : '' }}">
@@ -39,6 +39,18 @@
                                 @endif
                             </div>
                         </div>
+                        @if($col->count()>0)
+                        <div class="form-group{{ $errors->has('college') ? ' has-error' : '' }}">
+                            <label for="college" class="col-md-4 control-label">College</label>
+                            <div class="col-md-6">
+                                @foreach($col as $college)
+                                    <select name="college" class="form-control">
+                                        <option>{{$college->col_name}}</option>
+                                    </select>
+                                @endforeach
+                            </div>
+                         </div>
+                         @endif
 
                         <div class="form-group{{ $errors->has('staffid') ? ' has-error' : '' }}">
                             <label for="staffid" class="col-md-4 control-label">Staff ID</label>
