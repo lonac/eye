@@ -10,6 +10,7 @@ class Collegestaffids extends Model
 
     'college_id',
     'staffids',
+    'role',
     ];
 
     public function college()

@@ -54,6 +54,7 @@ class CollegeStaffIDsController extends Controller
 
         $staffid->college_id = $col->id;
         $staffid->staffids = $request->input('staffids');
+        $staffid->role = $request->input('role');
 
         $staffid->save();
 

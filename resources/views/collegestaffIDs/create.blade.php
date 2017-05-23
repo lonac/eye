@@ -21,7 +21,7 @@
                             <label for="staffid" class="col-md-2 control-label">Staff ID</label>
 
                             <div class="col-md-4">
-                                <input id="staffid" type="text" class="form-control" name="staffid" value="{{ old('staffid') }}" required autofocus>
+                                <input id="staffids" type="text" class="form-control" name="staffids" value="{{ old('staffid') }}" required autofocus>
 
                                 @if ($errors->has('staffid'))
                                     <span class="help-block">
@@ -29,8 +29,7 @@
                                     </span>
                                 @endif
                             </div>
-                         </div>
-                        
+                         </div>      
                             <div class="form-group">
 							<label for="Role" class="col-md-1 control-label">Role:</label>
 							<div class="col-md-4">
