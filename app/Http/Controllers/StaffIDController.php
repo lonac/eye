@@ -30,7 +30,7 @@ class StaffIDController extends Controller
     {
         return view('staffId.create');
     }
-
+        
     /**
      * Store a newly created resource in storage.
      *

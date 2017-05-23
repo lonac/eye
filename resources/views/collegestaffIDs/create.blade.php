@@ -6,10 +6,10 @@
 
 <div class="container">
 	<div class="row">
-		<div class="col-sm-6 col-sm-offset-3">
+		<div class="col-sm-8 col-sm-offset-2">
 			<div class="panel panel-primary">
 				<div class="panel-heading">
-					<h3 class="panel-title"> Staff Ids registers at {{ $col->col_name}}</h3>
+					<h3 class="panel-title"> Staff Ids and Roles registers at {{ $col->col_name}}</h3>
 				</div>
 				<div class="panel-body">
 					
@@ -18,9 +18,9 @@
 						{{ csrf_field() }}
 
 						<div class="form-group{{ $errors->has('staffid') ? ' has-error' : '' }}">
-                            <label for="staffid" class="col-md-4 control-label">Staff ID</label>
+                            <label for="staffid" class="col-md-2 control-label">Staff ID</label>
 
-                            <div class="col-md-6">
+                            <div class="col-md-4">
                                 <input id="staffid" type="text" class="form-control" name="staffid" value="{{ old('staffid') }}" required autofocus>
 
                                 @if ($errors->has('staffid'))
@@ -29,7 +29,21 @@
                                     </span>
                                 @endif
                             </div>
-                        </div>
+                         </div>
+                        
+                            <div class="form-group">
+							<label for="Role" class="col-md-1 control-label">Role:</label>
+							<div class="col-md-4">
+								<select class="form-control" name="role">
+									<option value="lecturer">Lecturer</option>
+									<option value="sysadmn">Administrator</option>
+									<option value="bursar">Bursar</option>
+									<option value="stdean">Dean</option>
+									<option value="cafe_manager">Cafe Manager</option>
+								</select>
+							</div>
+						</div>      
+                        
 						<button type="submit" class="btn btn-success">ADD</button>
 					</form>
 
