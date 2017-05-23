@@ -15,11 +15,12 @@ class CreateUsersTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('college_id')->unsigned()->index();
-            $table->foreign('college_id')->references('id')->on('colleges')->onUpdate('cascade');
+           // $table->integer('college_id')->unsigned()->index();
+            //$table->foreign('college_id')->references('id')->on('colleges')->onUpdate('cascade');
             $table->string('firstname');
             $table->string('lastname');
             $table->string('staffid');
+            $table->string('college');
             $table->string('email')->unique();
             $table->string('password');
             $table->rememberToken();

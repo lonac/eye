@@ -5,6 +5,7 @@
 @section('content')
 <div class="container">
     <div class="row">
+        @if($col->count()>0)
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
                 <div class="panel-heading">Staff Registration: </div>
@@ -48,6 +49,11 @@
                                         <option>{{$college->col_name}}</option>
                                     </select>
                                 @endforeach
+                                @if ($errors->has('college'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('college') }}</strong>
+                                    </span>
+                                @endif
                             </div>
                          </div>
                          @endif
@@ -113,6 +119,13 @@
                 </div>
             </div>
         </div>
+        @else
+        <div class="col-md-12">
+            <font color="red">
+                <h1>No any college to Register!</h1>
+            </font>
+        </div>
+        @endif
     </div>
 </div>
 @endsection
