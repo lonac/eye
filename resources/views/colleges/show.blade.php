@@ -32,27 +32,6 @@
 
 	</div>
 
-	<div class="row">
-		<div class="col-md-6  col-sm-offset-1">
-			<div class="panel panel-primary">
-				<div class="panel-heading">
-					<h3 class="panel-title"> Departments:</h3>
-				</div>
-			</div>
-			<div class="panel-body">
-				@if($dep->count()> 0)
-					@foreach($dep as $department)
-						<a href="" role="button" class="btn btn-info">{{ $department->depart_name}}</a>
-					@endforeach
-				@else
-
-					no departments for this college
-
-				@endif
-			</div>
-		</div>
-
-	</div>
 		@endif
 
 

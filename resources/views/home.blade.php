@@ -12,7 +12,7 @@
             </div>
         </div>
     </div>
-
+q
 
 {{-- if she/he is not registered to any college, let him/her see the options for registering to colleges--}}
 
