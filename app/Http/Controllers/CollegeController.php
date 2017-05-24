@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Validator;
+
 use App\College;
 
 use App\Category;
@@ -40,13 +42,29 @@ class CollegeController extends Controller
      */
     public function store(Request $request)
     {
-        $col = new College;
 
-        $col->col_name = $request->input('col_name');
+        $validator = Validator::make($request->all(),[
 
-        $col->save();
+            'college'=>'required|unique:colleges|max:50',
+            ]);
 
-        return redirect('/colleges/create');
+        if($validator->fails()){
+
+            return redirect('/colleges/create')
+            ->withErrors($validator)
+            ->withInput();
+
+        }
+
+
+            $col = new College;
+
+            $col->college = $request->input('college');
+
+            $col->save();
+
+            return redirect('/colleges/create');
+         
     }
 
     /**

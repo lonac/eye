@@ -17,9 +17,14 @@
 
 						{{ csrf_field() }}
 
-						<div class="form-group">
-							<label for="collehes">College Name</label>
-							<input type="text" name="col_name" id="college" class="form-control" placeholder="college name" />
+						<div class="form-group{{ $errors->has('college') ? ' has-error' : '' }}">							
+							<label for="college">College Name</label>
+							<input type="text" name="college" id="college" class="form-control" placeholder="college name" />
+						@if ($errors->has('college'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('college') }}</strong>
+                                    </span>
+                           @endif
 						</div>
 						<button type="submit" class="btn btn-success">ADD</button>
 					</form>

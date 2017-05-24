@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', $college->col_name)
+@section('title', $college->college)
 
 @section('content')
 
@@ -9,7 +9,7 @@
 		<div class="col-sm-6 col-sm-offset-1">
 			<div class="panel panel-primary">
 				<div class="panel-heading">
-					<h3 class="panel-title"> Welcome at {{$college->col_name}}:</h3>
+					<h3 class="panel-title"> Welcome at {{$college->college}}:</h3>
 				</div>
 			</div>
 		</div>		

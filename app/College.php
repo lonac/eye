@@ -8,7 +8,7 @@ class College extends Model
 {
     protected $fillable = [
 
-    'col_name',
+    'collage',
     ];
 
     public function staffids()

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Validator;
+
 use App\College;
 
 use App\Departments;
@@ -41,6 +43,17 @@ class DepartmentsController extends Controller
     public function store(Request $request,$id)
     {
         $col = College::findOrFail($id);
+
+        $validator = Validator::make($request->all(),[
+                'depart_name'=>'required|unique:departments|max:50',
+            ]);
+
+        if($validator->fails())
+            {
+                return redirect('colleges/'.$col->id.'/collegedepartments/create')
+                    ->withErrors($validator)
+                    ->withInput();
+            }
 
         $dep = new Departments;
 
