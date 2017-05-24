@@ -44,16 +44,16 @@
                         <div class="form-group{{ $errors->has('college') ? ' has-error' : '' }}">
                             <label for="college" class="col-md-4 control-label">College</label>
                             <div class="col-md-6">
-                                @foreach($col as $college)
-                                    <select name="college" class="form-control">
-                                        <option>{{$college->col_name}}</option>
-                                    </select>
-                                @endforeach
-                                @if ($errors->has('college'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('college') }}</strong>
-                                    </span>
-                                @endif
+                                <select name="college" class="form-control">
+                                    @foreach($col as $college)  
+                                            <option>{{$college->college}}</option>
+                                    @endforeach   
+                                    @if ($errors->has('college'))
+                                        <span class="help-block">
+                                         <strong>{{ $errors->first('college') }}</strong>
+                                        </span>
+                                     @endif 
+                                </select>
                             </div>
                          </div>
                          @endif
@@ -63,7 +63,6 @@
 
                             <div class="col-md-6">
                                 <input id="staffid" type="text" class="form-control" name="staffid" value="{{ old('staffid') }}" required autofocus>
-
                                 @if ($errors->has('staffid'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('staffid') }}</strong>
