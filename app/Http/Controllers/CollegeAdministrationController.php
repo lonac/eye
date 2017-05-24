@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\College;
+
 class CollegeAdministrationController extends Controller
 {
     /**
@@ -45,7 +47,9 @@ class CollegeAdministrationController extends Controller
      */
     public function show($id)
     {
-        //
+        $col = College::findOrFail($id);
+
+        return view('collegeAdministrations.show',compact('col'));
     }
 
     /**

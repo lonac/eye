@@ -12,13 +12,11 @@
 					<h3 class="panel-title"> Colleges at UDOM:</h3>
 				</div>
 					<div class="panel-body">
-						@if($col->count()>0)
-								
+						@if($col->count()>0)			
 							@foreach($col as $colg)	
 								<a href="{{ url('colleges/' . $colg->id) }}" role="button"
-									class="btn btn-primary">{{ $colg->college }}</a>
-							@endforeach
-					
+									class="btn btn-info">{{ $colg->college }}</a>
+							@endforeach		
 					@else
 						No colleges so far
 

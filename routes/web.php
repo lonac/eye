@@ -48,3 +48,5 @@ Route::post('colleges/{id}/otherstaffs/create','OtherStuffsController@store');
 
 Route::get('colleges/{id}/collegestaffIDs/create','CollegeStaffIDsController@create');
 Route::post('colleges/{id}/collegestaffIDs/create','CollegeStaffIDsController@store');
+
+Route::get('colleges/{id}/collegeAdministrations/show','CollegeAdministrationController@show');

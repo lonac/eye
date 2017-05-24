@@ -13,7 +13,8 @@
 				</div>
 				<div class="panel-body">
 					@foreach ($cat as $cats)
-						<a href="" role="button" class="btn btn-info">{{ $cats->cat_name}}</a>
+						<a href="{{ url('colleges/'.$college->id.'/collegeAdministrations/show')}}" role="button"
+						 class="btn btn-info">{{ $cats->cat_name}}</a>
 					@endforeach
 				</div>
 			</div>
