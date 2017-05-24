@@ -17,7 +17,7 @@ class CollegeCategoriesTable extends Migration
             $table->increments('id');
             $table->integer('college_id')->unsigned()->index();
             $table->foreign('college_id')->references('id')->on('colleges')->onUpdate('cascade');
-            $table->string('cat_name');
+            $table->string('cat_name')->unique();
             $table->timestamps();
         });
     }

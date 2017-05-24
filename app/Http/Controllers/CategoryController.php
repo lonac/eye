@@ -38,6 +38,14 @@ class CategoryController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+
+    public function validator(array $request)
+    {
+        return Validator::make($request, [
+            'cat_name' => 'required|string|cat_name|max:255|unique:categories',
+        ]);
+    }
+
     public function store(Request $request, $id)
     {
 

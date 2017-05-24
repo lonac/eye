@@ -17,9 +17,14 @@
 
 						{{ csrf_field() }}
 
-						<div class="form-group">
+						<div class="form-group{{ $errors->has('cat_name') ? ' has-error' : '' }}">	
 							<label for="colgcategories">College Category:</label>
 							<input type="text" name="cat_name" id="category" class="form-control" placeholder="categories e.g Administration" />
+							@if ($errors->has('cat_name'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('cat_name') }}</strong>
+                                    </span>
+                              @endif
 						</div>
 						<button type="submit" class="btn btn-success">ADD</button>
 					</form>
