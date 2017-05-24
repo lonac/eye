@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Validator;
+
 use App\Category;
 
 use App\College;
@@ -39,17 +41,21 @@ class CategoryController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function validator(array $request)
-    {
-        return Validator::make($request, [
-            'cat_name' => 'required|string|cat_name|max:255|unique:categories',
-        ]);
-    }
-
     public function store(Request $request, $id)
     {
-
         $col = College::findOrFail($id);
+
+        $validator = validator::make($request->all(),[
+            'cat_name'=>'required|unique:categories|max:50',
+            ]);
+
+        if($validator->fails()){
+
+            return redirect('colleges/'.$col->id.'/categories/create')
+                    ->withErrors($validator)
+                    ->withInput();
+        }
+
         $cat = new Category;
         $cat->college_id = $col->id;
         $cat->cat_name = $request->input('cat_name');
