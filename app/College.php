@@ -45,4 +45,9 @@ class College extends Model
     {
         return $this->hasMany('App\Collegestaffids');
     }
+
+    public function cafteria()
+    {
+        return $this->hasMany('App\Collegecafteria');
+    }
 }

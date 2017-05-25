@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+
 use App\College;
+
+use App\Collegecafteria;
 
 class CollegeCafteriaController extends Controller
 {
@@ -35,9 +38,18 @@ class CollegeCafteriaController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, $id)
     {
-        //
+        $col = College::findOrFail($id);
+
+        $cafe = new Collegecafteria;
+
+        $cafe->cafe_name = $request->input('cafe_name');
+        $cafe->college_id = $col->id;
+
+        $cafe->save();
+
+        return view('collegeCafteria.create',compact('col'));
     }
 
     /**
@@ -48,7 +60,11 @@ class CollegeCafteriaController extends Controller
      */
     public function show($id)
     {
-        //
+        $col =College::findOrFail($id);
+
+        $caf = $col->Collegecafteria;
+
+        return view('collegeCafteria.show',compact('col','caf'));
     }
 
     /**

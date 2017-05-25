@@ -13,7 +13,7 @@ class CollegeCafteriaTable extends Migration
      */
     public function up()
     {
-        Schema::create('cafterias',function(Blueprint $table)
+        Schema::create('collegecafterias',function(Blueprint $table)
         {
             $table->increments('id');
             $table->integer('college_id')->unsigned()->index();
