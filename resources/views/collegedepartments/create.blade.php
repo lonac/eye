@@ -9,7 +9,7 @@
 		<div class="col-sm-6 col-sm-offset-3">
 			<div class="panel panel-primary">
 				<div class="panel-heading">
-					<h3 class="panel-title"> College Departments at {{ $col->college}}</h3>
+					<h3 class="panel-title"> {{ $col->college}} Departments</h3>
 				</div>
 				<div class="panel-body">
 					
