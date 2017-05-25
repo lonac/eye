@@ -38,6 +38,7 @@ Route::post('/colleges/{id}/categories/create','CategoryController@store');
 
 Route::get('/colleges/{id}/collegedepartments/create','DepartmentsController@create');
 Route::post('/colleges/{id}/collegedepartments/create','DepartmentsController@store');
+Route::get('/colleges/{id}/collegedepartments/show','DepartmentsController@show');
 
 
 Route::get('colleges/{id}/lecturers/create','LecturersController@create');

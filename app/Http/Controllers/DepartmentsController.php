@@ -75,7 +75,11 @@ class DepartmentsController extends Controller
      */
     public function show($id)
     {
-        //
+        $col = College::findOrFail($id);
+
+        $dep = $col->Departments;
+
+        return view('collegedepartments.show',compact('col','dep'));
     }
 
     /**

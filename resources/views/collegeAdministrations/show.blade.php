@@ -13,9 +13,10 @@
 				</div>
 				<div class="panel-body">
 						<a href="{{url('colleges/'.$col->id.'/lecturers/show')}}" 
-							role="button" class="btn btn-info">Instructors:</a>
-						<a href="" role="button" class="btn btn-info">Financial/Bursa</a>
-						<a href="" role="button" class="btn btn-info">Departments</a>
+							role="button" class="btn btn-info">Instructors</a>
+						<a href="{{url('colleges/'.$col->id.'/collegedepartments/show')}}" 
+						role="button" class="btn btn-info">Departments</a>
+						<a href="" role="button" class="btn btn-info">Bursa</a>
 						<a href="" role="button" class="btn btn-info">Dean of Students</a>		
 				</div>
 			</div>

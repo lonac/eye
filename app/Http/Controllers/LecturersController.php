@@ -66,7 +66,7 @@ class LecturersController extends Controller
     public function show($id)
     {
         $col = College::findOrFail($id);
-         $lect = Lecturer::all();
+         $lect = $col->lecturers;
 
            return view('lecturers.show',compact('col','lect'));
     }
