@@ -12,12 +12,15 @@ class Lecturer extends Model
     'college_id',
     'officeNo',
     'department',
-    'employ_id',
-
     ];
 
     public function college()
     {
     	return $this->belongsTo('App\College');
+    }
+
+    public function department()
+    {
+        return $this->belongsTo('App\Departments');
     }
 }

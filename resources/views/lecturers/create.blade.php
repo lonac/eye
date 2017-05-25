@@ -9,7 +9,7 @@
 		<div class="col-sm-4 col-sm-offset-3">
 			<div class="panel panel-default">
 				<div class="panel-heading">
-					<h3 class="panel-title">College of {{$col->col_name}}: Lecturer Details:</h3> 
+					<h3 class="panel-title">{{$col->college}}: Instructors' Details:</h3> 
 				</div>
 				<div class="panel-body">
 					
@@ -17,10 +17,6 @@
 
 						{{ csrf_field() }}
 
-						<div class="form-group">
-							<label for="employ ID">Employee ID:</label>
-							<input type="text" name="employ_id" id="employee id" class="form-control" placeholder="Employee ID" />
-						</div>
 						<div class="form-group">
 							<label for="officeNo">Office No:</label>
 							<input type="text" name="officeNo" id="officeNo" class="form-control" placeholder="Office Number">

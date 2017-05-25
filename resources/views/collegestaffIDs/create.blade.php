@@ -9,7 +9,7 @@
 		<div class="col-sm-8 col-sm-offset-2">
 			<div class="panel panel-primary">
 				<div class="panel-heading">
-					<h3 class="panel-title"> Staff Ids and Roles registers at {{ $col->col_name}}</h3>
+					<h3 class="panel-title"> Staff Ids and Roles registers at {{ $col->collage}}</h3>
 				</div>
 				<div class="panel-body">
 					

@@ -1,0 +1,215 @@
+[33mcommit 66f0ef7567a0e2591a6eaae19ea6aea88b9e110b[m
+Author: lonac <barakamalonao@yahoo.com>
+Date:   Wed May 24 15:44:00 2017 +0300
+
+    modified:   resources/views/auth/register.blade.php
+    modified:   resources/views/home.blade.php
+
+[33mcommit da96acbd8305d2bde92ceb665bf6857ba8a8ebf1[m
+Author: lonac <barakamalonao@yahoo.com>
+Date:   Wed May 24 15:10:37 2017 +0300
+
+    modified:   app/Http/Controllers/CollegeAdministrationController.php
+    modified:   resources/views/categories/create.blade.php
+    modified:   resources/views/colleges/index.blade.php
+    modified:   resources/views/colleges/show.blade.php
+    modified:   routes/web.php
+    resources/views/collegeAdministrations/
+
+[33mcommit d604e1ead4f58d33ca6f13781a637417f8740379[m
+Author: lonac <barakamalonao@yahoo.com>
+Date:   Wed May 24 14:45:41 2017 +0300
+
+    app/Collegeadministration.php
+
+[33mcommit 5319b97cb6002cf3483a2f68868b98c2447762bc[m
+Author: lonac <barakamalonao@yahoo.com>
+Date:   Wed May 24 14:44:39 2017 +0300
+
+    app/Http/Controllers/CollegeAdministrationController.php
+
+[33mcommit 1061f1dced2feaabba5d63184f5a0f304a63a02a[m
+Author: lonac <barakamalonao@yahoo.com>
+Date:   Wed May 24 14:43:38 2017 +0300
+
+    database/migrations/2017_05_24_114259_CollegeAdministrationTable.php
+
+[33mcommit 969383815878bdb0112456b2b8b604d60ccc8c88[m
+Author: lonac <barakamalonao@yahoo.com>
+Date:   Wed May 24 14:42:23 2017 +0300
+
+    modified:   resources/views/colleges/show.blade.php
+
+[33mcommit ce34976c433da80642f42099908d6bcf4710ecab[m
+Author: lonac <barakamalonao@yahoo.com>
+Date:   Wed May 24 14:25:03 2017 +0300
+
+    modified:   app/College.php
+    modified:   app/Http/Controllers/CollegeController.php
+    modified:   app/Http/Controllers/DepartmentsController.php
+    modified:   database/migrations/2013_05_10_000000_CollegesTable.php
+    modified:   database/migrations/2017_05_14_085025_CollegeDepartmentsTable.php
+    modified:   resources/views/collegedepartments/create.blade.php
+    modified:   resources/views/colleges/create.blade.php
+    modified:   resources/views/colleges/index.blade.php
+    modified:   resources/views/colleges/show.blade.php
+
+[33mcommit 440d8758c940cd7fb7213504b29277a6cc96b41b[m
+Author: lonac <barakamalonao@yahoo.com>
+Date:   Wed May 24 13:23:47 2017 +0300
+
+    modified:   app/Http/Controllers/CategoryController.php
+    modified:   database/migrations/2013_05_10_000000_CollegesTable.php
+
+[33mcommit 5a0901dac31cd20782f5858c0984e8046ba2bbfe[m
+Author: lonac <barakamalonao@yahoo.com>
+Date:   Wed May 24 13:04:59 2017 +0300
+
+    modified:   app/Http/Controllers/CategoryController.php
+    modified:   database/migrations/2017_05_10_143307_CollegeCategoriesTable.php
+    modified:   resources/views/categories/create.blade.php
+
+[33mcommit 02cf2366ef54b9ee8004eb9dbd391bf60a82c505[m
+Author: lonac <barakamalonao@yahoo.com>
+Date:   Wed May 24 12:47:17 2017 +0300
+
+    modified:   resources/views/colleges/show.blade.php
+    modified:   resources/views/home.blade.php
+
+[33mcommit 46a58892669ce8bbe09f803e4168af1c152aef0b[m
+Author: lonac <barakamalonao@yahoo.com>
+Date:   Tue May 23 17:40:17 2017 +0300
+
+    modified:   app/Http/Controllers/Auth/RegisterController.php
+    modified:   app/User.php
+    modified:   database/migrations/2014_10_12_000000_create_users_table.php
+    modified:   resources/views/auth/register.blade.php
+    modified:   resources/views/home.blade.php
+    modified:   resources/views/layouts/navbar.blade.php
+
+[33mcommit fec53d28d07292c4704aa2cdca47f78cc59efce0[m
+Author: lonac <barakamalonao@yahoo.com>
+Date:   Tue May 23 16:45:21 2017 +0300
+
+    modified:   resources/views/auth/register.blade.php
+    modified:   routes/web.php
+
+[33mcommit f1aee52bb138bda4913a0b8c14d0e6ec52fc974a[m
+Author: lonac <barakamalonao@yahoo.com>
+Date:   Tue May 23 10:57:58 2017 +0300
+
+    modified:   app/Collegestaffids.php
+    modified:   app/Http/Controllers/CollegeStaffIDsController.php
+    modified:   database/migrations/2017_05_16_185909_CollegeIDsTable.php
+    modified:   resources/views/collegestaffIDs/create.blade.php
+
+[33mcommit 8a5cb456ff336be3e69130e07b0d0fc30e2109d7[m
+Author: lonac <barakamalonao@yahoo.com>
+Date:   Tue May 23 10:47:19 2017 +0300
+
+    modified:   app/Http/Controllers/StaffIDController.php
+    modified:   resources/views/collegestaffIDs/create.blade.php
+
+[33mcommit 26bc3caf16e3fa8ca8c492dab0e0a5265e287501[m
+Author: lonac <barakamalonao@yahoo.com>
+Date:   Sat May 20 23:03:41 2017 +0300
+
+    modified:   app/Http/Controllers/CollegeStaffIDsController.php
+    modified:   app/Http/Controllers/StaffIDController.php
+    modified:   database/migrations/2017_05_10_173120_StaffIdTable.php
+    modified:   database/migrations/2017_05_16_185909_CollegeIDsTable.php
+    modified:   resources/views/collegestaffIDs/create.blade.php
+
+[33mcommit b4c92d65e3feccb7d8b2da061db14cb22ef73a13[m
+Author: lonac <barakamalonao@yahoo.com>
+Date:   Sat May 20 15:59:40 2017 +0300
+
+    modified:   app/Http/Controllers/Auth/RegisterController.php
+    modified:   app/Http/Controllers/HomeController.php
+    modified:   resources/views/auth/register.blade.php
+    modified:   resources/views/layouts/navbar.blade.php
+    modified:   routes/web.php
+
+[33mcommit a3ba2d08e4ee49f004f05e9376adee1fc2007aec[m
+Author: lonac <barakamalonao@yahoo.com>
+Date:   Fri May 19 19:22:14 2017 +0300
+
+    modified:   app/Http/Controllers/Auth/RegisterController.php
+    modified:   app/User.php
+    modified:   database/migrations/2014_10_12_000000_create_users_table.php
+    deleted:    database/migrations/2017_05_10_142626_CollegesTable.php
+    modified:   resources/views/auth/register.blade.php
+    database/migrations/2013_05_10_000000_CollegesTable.php
+
+[33mcommit 2df015370af7200007c0c19139fade43b83b0517[m
+Author: lonac <barakamalonao@yahoo.com>
+Date:   Fri May 19 18:27:14 2017 +0300
+
+    modified:   app/Http/Controllers/Auth/RegisterController.php
+    modified:   resources/views/auth/register.blade.php
+    modified:   resources/views/layouts/navbar.blade.php
+
+[33mcommit 07430e910df2b3e4d99ef6d9dff64b6b3b96ee47[m
+Author: lonac <barakamalonao@yahoo.com>
+Date:   Wed May 17 14:37:02 2017 +0300
+
+    modified:   app/Http/Controllers/Auth/RegisterController.php
+    modified:   resources/views/auth/register.blade.php
+
+[33mcommit e0d3ffcdd0705d0a88109fd05dd2365ff9ea29a8[m
+Author: lonac <barakamalonao@yahoo.com>
+Date:   Wed May 17 14:28:22 2017 +0300
+
+    modified:   app/Http/Controllers/Auth/RegisterController.php
+    modified:   resources/views/auth/register.blade.php
+
+[33mcommit 25203b0e0b5ff895d6d62a10eb7171e486adac98[m
+Author: lonac <barakamalonao@yahoo.com>
+Date:   Wed May 17 14:08:55 2017 +0300
+
+    modified:   app/User.php
+    modified:   database/migrations/2014_10_12_000000_create_users_table.php
+    modified:   resources/views/auth/register.blade.php
+
+[33mcommit 322086caed799ba93dbf69add2f3972eec16ecf9[m
+Author: lonac <barakamalonao@yahoo.com>
+Date:   Tue May 16 23:27:56 2017 +0300
+
+    deleted:    app/Http/Controllers/CollegeStaffIDs.php
+    modified:   resources/views/collegestaffIDs/create.blade.php
+    modified:   routes/web.php
+    app/Http/Controllers/CollegeStaffIDsController.php
+
+[33mcommit dbf08b7e692b6981e3ecdda79a4022f22d7bacb1[m
+Author: lonac <barakamalonao@yahoo.com>
+Date:   Tue May 16 22:18:28 2017 +0300
+
+    app/Http/Controllers/CollegeStaffIDs.php
+
+[33mcommit f512e126e6e413f65214c2a72d0b408a42e1ad1a[m
+Author: lonac <barakamalonao@yahoo.com>
+Date:   Tue May 16 22:17:14 2017 +0300
+
+    resources/views/collegestaffIDs/
+
+[33mcommit 2dc29d135bc18e8fcec93a703a85589fe10046d0[m
+Author: lonac <barakamalonao@yahoo.com>
+Date:   Tue May 16 22:14:56 2017 +0300
+
+    modified:   app/College.php
+    modified:   app/Collegestaffids.php
+
+[33mcommit b1b6b22f34fe62aac9fbe2aa533d2199cdd3e443[m
+Author: lonac <barakamalonao@yahoo.com>
+Date:   Tue May 16 22:11:32 2017 +0300
+
+    app/Collegestaffids.php
+
+[33mcommit 14ac5b0c1b8da2746f5b9cbe679ab27c6e53ec69[m
+Author: lonac <barakamalonao@yahoo.com>
+Date:   Tue May 16 22:05:56 2017 +0300
+
+    database/migrations/2017_05_16_185909_CollegeIDsTable.php
+
+[33mcommit d160d4aa2b4613283216d4744539e25889565811[m
+Author: lonac <barakamal

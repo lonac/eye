@@ -19,7 +19,6 @@ class LecturesTable extends Migration
             $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade');
             $table->integer('college_id')->unsigned()->index();
             $table->foreign('college_id')->references('id')->on('colleges')->onUpdate('cascade');
-            $table->string('employ_id');
             $table->string('officeNo');
             $table->string('department')->nullable();
             $table->timestamps();

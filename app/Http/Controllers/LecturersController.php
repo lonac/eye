@@ -46,7 +46,6 @@ class LecturersController extends Controller
         $coll = College::findOrFail($id);
 
         $lecturer = new Lecturer();
-        $lecturer->employ_id = $request->input('employ_id');
         $lecturer->officeNo = $request->input('officeNo');
         $lecturer->department = $request->input('department');
         $lecturer->college_id = $coll->id;
