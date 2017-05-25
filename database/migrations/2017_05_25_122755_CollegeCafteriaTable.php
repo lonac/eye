@@ -13,7 +13,14 @@ class CollegeCafteriaTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('cafterias',function(Blueprint $table)
+        {
+            $table->increments('id');
+            $table->integer('college_id')->unsigned()->index();
+            $table->foreign('college_id')->references('id')->on('colleges')->onUpdate('cascade');
+            $table->string('cafe_name');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +30,6 @@ class CollegeCafteriaTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('cafterias');
     }
 }

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\College;
 
 class CollegeCafteriaController extends Controller
 {
@@ -21,9 +22,11 @@ class CollegeCafteriaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($id)
     {
-        //
+        $col= College::findOrFail($id);
+
+        return view('collegeCafteria.create',compact('col'));
     }
 
     /**
