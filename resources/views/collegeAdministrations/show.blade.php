@@ -12,7 +12,8 @@
 					<h3 class="panel-title"> {{$col->college}} Administrations:</h3>
 				</div>
 				<div class="panel-body">
-						<a href="" role="button" class="btn btn-info">Lecturers</a>
+						<a href="{{url('colleges/'.$col->id.'/lecturers/show')}}" 
+							role="button" class="btn btn-info">Instructors:</a>
 						<a href="" role="button" class="btn btn-info">Financial/Bursa</a>
 						<a href="" role="button" class="btn btn-info">Departments</a>
 						<a href="" role="button" class="btn btn-info">Dean of Students</a>		

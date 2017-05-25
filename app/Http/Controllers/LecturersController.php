@@ -10,6 +10,7 @@ use App\Lecturer;
 
 use Auth;
 
+
 class LecturersController extends Controller
 {
     /**
@@ -64,7 +65,10 @@ class LecturersController extends Controller
      */
     public function show($id)
     {
-        //
+        $col = College::findOrFail($id);
+         $lect = Lecturer::all();
+
+           return view('lecturers.show',compact('col','lect'));
     }
 
     /**

@@ -45,7 +45,7 @@ class CategoryController extends Controller
     {
         $col = College::findOrFail($id);
 
-        $validator = validator::make($request->all(),[
+       /* $validator = validator::make($request->all(),[
             'cat_name'=>'required|unique:categories|max:50',
             ]);
 
@@ -54,7 +54,7 @@ class CategoryController extends Controller
             return redirect('colleges/'.$col->id.'/categories/create')
                     ->withErrors($validator)
                     ->withInput();
-        }
+        } */
 
         $cat = new Category;
         $cat->college_id = $col->id;
