@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\College;
+
+use App\Collegehostels;
+
 class CollegeHostelController extends Controller
 {
     /**
@@ -21,9 +25,11 @@ class CollegeHostelController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($id)
     {
-        //
+        $col = College::findOrFail($id);
+
+        return view('collegeHostels.create',compact('col'));
     }
 
     /**
@@ -32,9 +38,18 @@ class CollegeHostelController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request,$id)
     {
-        //
+        $col = College::findOrFail($id);
+
+        $host = new Collegehostels;
+
+        $host->college_id = $col->id;
+        $host->hostel = $request->input('hostel');
+
+        $host->save();
+
+        return view('collegeHostels.create',compact('col'));
     }
 
     /**
@@ -45,7 +60,12 @@ class CollegeHostelController extends Controller
      */
     public function show($id)
     {
-        //
+        $col = College::findOrFail($id);
+
+        $hos = $col->Collegehostels;
+
+        return view('collegeHostels.show',compact('col','hos'));
+
     }
 
     /**

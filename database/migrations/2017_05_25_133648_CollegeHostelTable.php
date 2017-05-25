@@ -13,7 +13,15 @@ class CollegeHostelTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('collegehostels',function ( Blueprint $table)
+        {
+
+            $table->increments('id');
+            $table->integer('college_id')->unsigned()->index();
+            $table->foreign('college_id')->references('id')->on('colleges')->onUpdate('cascade');
+            $table->string('hostel');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +31,6 @@ class CollegeHostelTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('collegehostels');
     }
 }

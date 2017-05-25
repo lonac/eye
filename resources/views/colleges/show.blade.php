@@ -16,7 +16,7 @@
 						role="button" class="btn btn-info">Administrations</a>
 					<a href="{{url('colleges/'.$college->id.'/collegeCafteria/show')}}"
 						role="button" class="btn btn-info">Cafteria Services</a>
-					<a href="{{url('colleges/'.$college->id.'/collegeHostel/show')}}"
+					<a href="{{url('colleges/'.$college->id.'/collegeHostels/show')}}"
 						role="button" class="btn btn-info">Hostel Service</a>
 					<a href="{{url('colleges/'.$college->id.'/collegeHospitals/show')}}"
 						role="button" class="btn btn-info">Hospital Services</a>

@@ -59,5 +59,11 @@ Route::post('colleges/{id}/collegeCafteria/create','CollegeCafteriaController@st
 Route::get('colleges/{id}/collegeCafteria/show','CollegeCafteriaController@show');
 
 
+Route::get('colleges/{id}/collegeHostels/create','CollegeHostelController@create');
+Route::post('colleges/{id}/collegeHostels/create','CollegeHostelController@store');
+Route::get('colleges/{id}/collegeHostels/show','CollegeHostelController@show');
+
+
+
 
 
