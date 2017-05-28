@@ -14,7 +14,7 @@
 				<div class="panel-body">
 					@if($col->count()>0)
 						@foreach($col as $colee)
-							<a href="{{url('college/'.$colee->id.'/register')}}" role="button" class="btn btn-info">{{$colee->college}}</a>
+							<a href="{{url('colleges/'.$colee->id.'/register')}}" role="button" class="btn btn-info">{{$colee->college}}</a>
 						@endforeach
 					@else
 						<font color="red">No Colleges so far!</font>

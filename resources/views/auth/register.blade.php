@@ -40,23 +40,6 @@
                                 @endif
                             </div>
                         </div>
-                        @if($col->count()>0)
-                        <div class="form-group{{ $errors->has('college') ? ' has-error' : '' }}">
-                            <label for="college" class="col-md-4 control-label">College</label>
-                            <div class="col-md-6">
-                                <select name="college" class="form-control">
-                                    @foreach($col as $college)  
-                                            <option>{{$college->college}}</option>
-                                    @endforeach   
-                                    @if ($errors->has('college'))
-                                        <span class="help-block">
-                                         <strong>{{ $errors->first('college') }}</strong>
-                                        </span>
-                                     @endif 
-                                </select>
-                            </div>
-                         </div>
-                         @endif
 
                         <div class="form-group{{ $errors->has('staffid') ? ' has-error' : '' }}">
                             <label for="staffid" class="col-md-4 control-label">Staff ID</label>
