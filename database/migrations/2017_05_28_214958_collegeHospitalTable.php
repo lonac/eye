@@ -13,7 +13,15 @@ class CollegeHospitalTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('collegehospitals',function(Blueprint $table){
+
+            $table->increments('id');
+            $table->integer('college_id')->unsigned()->index();
+            $table->foreign('college_id')->references('id')->on('colleges')->onUpdate('cascade');
+            $table->string('hospital')->unique();
+            $table->timestamps();
+
+        });
     }
 
     /**
@@ -23,6 +31,6 @@ class CollegeHospitalTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('collegehospitals');
     }
 }
