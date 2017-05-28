@@ -6,9 +6,9 @@
 <div class="container">
     <div class="row">
         @if($col->count()>0)
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Staff Registration: </div>
+        <div class="col-md-6 col-md-offset-1">
+            <div class="panel panel-primary">
+                <div class="panel-heading">{{ $col->college }}   Staff Registration:</div>
                 <div class="panel-body">
                     <form class="form-horizontal" role="form" method="POST" action="{{ url('register') }}">
                         {{ csrf_field() }}
