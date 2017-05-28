@@ -24,6 +24,7 @@ class CollegeController extends Controller
         return view('colleges.index',compact('col'));
     }
 
+
     /**
      * Show the form for creating a new resource.
      *

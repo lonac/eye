@@ -22,6 +22,9 @@ Route::post('/colleges/{id}/register','Auth\RegisterController@register');
 
 Route::get('/home', 'HomeController@index');
 
+Route::get('welcomeToColleges/collegeswelcome','WelcomeToCollegesController@welcomeToColleges');
+
+
 Route::get('/staffId/create','StaffIDController@create');
 Route::post('/staffId/create','StaffIDController@store');
 
@@ -31,6 +34,7 @@ Route::get('/colleges/index','CollegeController@index');
 Route::get('/colleges/{id}/show','CollegeController@show'); */
 
 Route::resource('colleges','CollegeController');
+Route::get('colleges/choose','CollegeController@choose');
 
 
 Route::get('/colleges/{id}/categories/create','CategoryController@create');
