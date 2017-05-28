@@ -12,7 +12,7 @@
 					<h3 class="panel-title"> {{ $col->college}} Hostels:</h3>
 				</div>
 				<div class="panel-body">
-					@if($hos!==null)
+					@if($hos->count()>0)
 						@foreach($hos as $host)
 							<a href="#" role="button" class="btn btn-info">{{$host->hostel}}</a>
 						@endforeach

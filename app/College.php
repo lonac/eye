@@ -46,12 +46,12 @@ class College extends Model
         return $this->hasMany('App\Collegestaffids');
     }
 
-    public function cafteria()
+    public function collegecafterias()
     {
         return $this->hasMany('App\Collegecafteria');
     }
 
-    public function college()
+    public function Collegehostels()
     {
         return $this->hasMany('App\Collegehostels');
     }

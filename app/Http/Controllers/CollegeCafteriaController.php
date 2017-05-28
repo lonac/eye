@@ -60,11 +60,11 @@ class CollegeCafteriaController extends Controller
      */
     public function show($id)
     {
-        $col =College::findOrFail($id);
+        $college =College::findOrFail($id);
 
-        $caf = $col->Collegecafteria;
+        $caf = $college->collegecafterias;
 
-        return view('collegeCafteria.show',compact('col','caf'));
+        return view('collegeCafteria.show',compact('college','caf'));
     }
 
     /**

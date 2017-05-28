@@ -70,6 +70,32 @@ class RegisterController extends Controller
     {
             //$college = College::findOrFail($id);
 
+            //before saving these data to the computer
+
+        //get the college name and the Staffids from the user input data at the registration form
+
+                //collegeName
+
+                //    $college = College::findOrFail('id')
+
+        //get the staff id frm  the college staffids in the collegeIDS
+
+
+
+        //now compare the staffid entered by the user to the staffid present in the collegeIDs table
+
+
+
+        //if they match, allow me to save the data 
+
+
+
+        //after saving my data, chech the StaffID ROLE and allocate me to my page:
+
+
+
+        //if the dont match then cancell saving.
+
             return User::create([
             'firstname' => $data['firstname'],
             'lastname' => $data['lastname'],
