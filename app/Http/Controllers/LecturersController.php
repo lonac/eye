@@ -10,7 +10,6 @@ use App\Lecturer;
 
 use Auth;
 
-
 class LecturersController extends Controller
 {
     /**

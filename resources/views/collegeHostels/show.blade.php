@@ -14,15 +14,14 @@
 				<div class="panel-body">
 					@if($hos->count()>0)
 						@foreach($hos as $host)
-							<a href="#" role="button" class="btn btn-info">{{$host->hostel}}</a>
+							<a href="#" role="button" class="btn btn-info">{{ $host->hostel }}</a>
 						@endforeach
 					@else
-						<font color="red">No Hostels for this college!</font>
+							<font color="red">No Hostels for this college!</font>
 					@endif
 				</div>
 			</div>
 		</div>		
-
 	</div>
 </div>
 

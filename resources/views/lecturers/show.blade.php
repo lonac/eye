@@ -18,8 +18,8 @@
 							<a href="">{{$instr->officeNo}}</a>
 						@endforeach
 					@else
-						<font>
-							sorry no Instructor registered on this college.
+						<font color="red">
+							Sorry no Instructor registered on this college.
 						</font>
 					@endif
 
