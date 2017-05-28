@@ -55,4 +55,9 @@ class College extends Model
     {
         return $this->hasMany('App\Collegehostels');
     }
+
+    public function collegehospitals()
+    {
+         return $this->hasMany('App\Collegehospital');
+    }
 }

@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+
 use App\College;
+
+use App\Collegehospital;
 
 class CollegeHospitalController extends Controller
 {
@@ -35,9 +38,17 @@ class CollegeHospitalController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, $id)
     {
-        //
+        $col = College::findOrFail($id);
+
+        $hospital = new Collegehospital;
+        $hospital->college_id = $col->id;
+        $hospital->hospital = $request->input('hospital');
+
+        $hospital->save();
+
+        return view('collegeHospital.create',compact('col'));
     }
 
     /**
