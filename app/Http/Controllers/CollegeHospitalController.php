@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\College;
 
 class CollegeHospitalController extends Controller
 {
@@ -21,9 +22,11 @@ class CollegeHospitalController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($id)
     {
-        //
+        $col= College::findOrFail($id);
+
+        return view('collegeHospital.create',compact('col'));
     }
 
     /**
@@ -45,7 +48,11 @@ class CollegeHospitalController extends Controller
      */
     public function show($id)
     {
-        //
+        $col = College::findOrFail($id);
+
+        $hosp = $col->collegehospitals;
+
+        return view('collegeHospital.show',compact('col','hosp'));
     }
 
     /**

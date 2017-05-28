@@ -63,6 +63,12 @@ Route::get('colleges/{id}/collegeHostels/create','CollegeHostelController@create
 Route::post('colleges/{id}/collegeHostels/create','CollegeHostelController@store');
 Route::get('colleges/{id}/collegeHostels/show','CollegeHostelController@show');
 
+Route::get('colleges/{id}/collegeHospital/create','CollegeHospitalController@create');
+Route::post('colleges/{id}/collegeHospital/create','CollegeHospitalController@store');
+Route::get('colleges/{id}/collegeHospital/show','CollegeHospitalController@show');
+
+
+
 
 
 
