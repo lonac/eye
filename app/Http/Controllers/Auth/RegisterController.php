@@ -71,7 +71,6 @@ class RegisterController extends Controller
             $col = College::findOrFail($id);
             $colid = $col->first();
             
-            
            return User::create([
             'firstname' => $data['firstname'],
             'lastname' => $data['lastname'],

@@ -58,8 +58,9 @@ class CollegeStaffIDsController extends Controller
 
         $staffid->save();
 
-        return redirect('home');
-    }
+                return view('collegestaffIDs.create',compact('col'));   
+                   
+                   }
 
     /**
      * Display the specified resource.
