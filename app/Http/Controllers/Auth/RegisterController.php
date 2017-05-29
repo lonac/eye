@@ -67,7 +67,7 @@ class RegisterController extends Controller
      */
     protected function create( $data, $id)
     {
-            $college = College::findOrFail($id);
+            $col = College::findOrFail($id);
 
             //before saving these data to the computer
 
@@ -98,10 +98,10 @@ class RegisterController extends Controller
             return User::create([
             'firstname' => $data['firstname'],
             'lastname' => $data['lastname'],
+            'college_id' => $col->id,
             'email' => $data['email'],
             'staffid'=>$data['staffid'],
             'password' => bcrypt($data['password']),
-             'college_id' => $college->id,
         ]);
 
         
