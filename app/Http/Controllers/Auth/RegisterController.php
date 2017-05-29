@@ -65,21 +65,22 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return User
      */
-    protected function create( $data)
+    protected function create($id, $data)
     {
 
-
-        
-            return User::create([
+            $col = College::findOrFail($id);
+            $colid = $col->first();
+            
+            
+           return User::create([
             'firstname' => $data['firstname'],
             'lastname' => $data['lastname'],
             'email' => $data['email'],
-           // 'college_id'=> $data->$col->id,
+            'college_id'=> $colid->id,
             'staffid'=>$data['staffid'],
             'password' => bcrypt($data['password']),
             
         ]);
-
         
     }
 }
