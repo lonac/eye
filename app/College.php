@@ -62,4 +62,5 @@ class College extends Model
     {
          return $this->hasMany('App\Collegehospital');
     }
+
 }

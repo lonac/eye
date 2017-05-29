@@ -70,6 +70,33 @@ class RegisterController extends Controller
 
             $col = College::findOrFail($id);
             $colid = $col->first();
+
+            //make the validation of the staffids from the feeder to the table
+
+
+            //get the college id
+
+             $colid = $col->first();
+
+
+            //get the stuffids of the above college
+
+
+
+            //get the stuffid entered by the user
+
+
+            //get the college id entered by the user
+
+
+
+            //make comparision between the two staffids
+
+
+            //if matches allow me to save the data
+
+
+            //if does not match drop me down
             
            return User::create([
             'firstname' => $data['firstname'],
