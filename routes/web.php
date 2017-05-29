@@ -17,13 +17,10 @@ Route::get('/', function () {
 
 Auth::routes();
 // Registrations
-Route::get('/colleges/{id}/register','Auth\RegisterController@showRegistrationForm');
-Route::post('/colleges/{id}/register','Auth\RegisterController@register');
+Route::get('colleges/{id}/register','Auth\RegisterController@showRegistrationForm');
+Route::post('colleges/{id}/register','Auth\RegisterController@register');
 
 Route::get('/home', 'HomeController@index');
-
-Route::get('welcomeToColleges/collegeswelcome','WelcomeToCollegesController@welcomeToColleges');
-
 
 Route::get('/staffId/create','StaffIDController@create');
 Route::post('/staffId/create','StaffIDController@store');

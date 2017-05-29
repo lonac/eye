@@ -1,14 +1,14 @@
 <?php
 
 namespace App\Http\Controllers\Auth;
+use App\College;
 
 use App\User;
 use Illuminate\Http\Request;
-
-use App\College;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+
 
 class RegisterController extends Controller
 {
@@ -65,43 +65,19 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return User
      */
-    protected function create( $data, $id)
+    protected function create( $data)
     {
-            $col = College::findOrFail($id);
-
-            //before saving these data to the computer
-
-        //get the college name and the Staffids from the user input data at the registration form
-
-                //collegeName
-
-                //    $college = College::findOrFail('id')
-
-        //get the staff id frm  the college staffids in the collegeIDS
 
 
-
-        //now compare the staffid entered by the user to the staffid present in the collegeIDs table
-
-
-
-        //if they match, allow me to save the data 
-
-
-
-        //after saving my data, chech the StaffID ROLE and allocate me to my page:
-
-
-
-        //if the dont match then cancell saving.
-
+        
             return User::create([
             'firstname' => $data['firstname'],
             'lastname' => $data['lastname'],
-            'college_id' => $col->id,
             'email' => $data['email'],
+           // 'college_id'=> $data->$col->id,
             'staffid'=>$data['staffid'],
             'password' => bcrypt($data['password']),
+            
         ]);
 
         

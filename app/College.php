@@ -8,15 +8,17 @@ class College extends Model
 {
     protected $fillable = [
 
-    'collage',
+    'college',
+    
     ];
+
 
     public function staffids()
     {
     	return $this->hasMany('App\Staffids');
     }
 
-    public function user()
+    public function users()
     {
     	return $this->hasMany('App\User');
     }
