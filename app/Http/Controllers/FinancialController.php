@@ -8,6 +8,10 @@ use App\Departments;
 
 use App\College;
 
+use App\Financial;
+
+use Auth;
+
 class FinancialController extends Controller
 {
     /**
@@ -39,9 +43,23 @@ class FinancialController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, $id)
     {
-        //
+    
+     $col = College::findOrFail($id);
+     $dep = $col->departments;
+
+     $fin = new Financial;
+     $fin->user_id = Auth::user()->id;
+     $fin->college_id = $col->id;
+     $fin->officeNo = $request->input('officeNo');
+     $fin->title = $request->input('title');
+     $fin->department = $request->input('department');
+
+     $fin->save();
+
+     return view('financial.create',compact('col','dep'));
+
     }
 
     /**
@@ -52,7 +70,10 @@ class FinancialController extends Controller
      */
     public function show($id)
     {
-        //
+        $col = College::findOrFail($id);
+        $fin = $col->financials;
+
+         return view('financial.show',compact('col','fin'));
     }
 
     /**

@@ -12,8 +12,13 @@
 					<h3 class="panel-title">{{$col->college}} Financials'</h3> 
 				</div>
 				<div class="panel-body">
-welcome
-
+					@if($fin->count()>0)
+						@foreach($fin as $finee)
+							{{ $finee->title}}
+						@endforeach
+					@else
+						<font color="red">No any Financial related information!</font>
+					@endif
 				</div>
 			</div>
 		</div>		

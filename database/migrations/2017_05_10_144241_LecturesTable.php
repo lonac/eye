@@ -15,7 +15,7 @@ class LecturesTable extends Migration
     {
         Schema::create('lecturers', function(Blueprint $table){
             $table->increments('id');
-            $table->integer('user_id')->unsigned()->index();
+            $table->integer('user_id')->unsigned()->index()->unique();
             $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade');
             $table->integer('college_id')->unsigned()->index();
             $table->foreign('college_id')->references('id')->on('colleges')->onUpdate('cascade');
