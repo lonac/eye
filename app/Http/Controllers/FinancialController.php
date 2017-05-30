@@ -21,9 +21,11 @@ class FinancialController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($id)
     {
-        //
+        $col = College::findOrFail($id);
+
+         return view('financial.create',compact('col'));
     }
 
     /**

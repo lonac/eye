@@ -21,6 +21,7 @@ class FinancialTable extends Migration
             $table->foreign('college_id')->references('id')->on('colleges')->onUpdate('cascade');
             $table->string('officeNo');
             $table->string('department')->nullable();
+            $table->string('title')->nullable();
             $table->timestamps();
         });
     }
