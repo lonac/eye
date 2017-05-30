@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Departments;
+
+use App\College;
+
 class FinancialController extends Controller
 {
     /**
@@ -24,8 +28,9 @@ class FinancialController extends Controller
     public function create($id)
     {
         $col = College::findOrFail($id);
+        $dep = $col->departments;
 
-         return view('financial.create',compact('col'));
+         return view('financial.create',compact('col','dep'));
     }
 
     /**
