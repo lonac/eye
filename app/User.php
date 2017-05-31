@@ -27,9 +27,15 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    public function users()
+   /* public function users()
     {
         $this->belongsTo('App\College');
+    } */
+
+    public function users()
+    {
+        $this->hasManyThrough('App\Lecturer','App\College');
     }
+
 }
 

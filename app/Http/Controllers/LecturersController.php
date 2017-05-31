@@ -8,7 +8,7 @@ use App\College;
 
 use App\Lecturer;
 
-//use App\User;
+use App\User;
 
 use Auth;
 
@@ -19,9 +19,12 @@ class LecturersController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($id)
     {
-        //
+        $col = College::findOrFail($id);
+        $lect = $col->lecturers;
+
+         return view('lecturers.index',compact('col','lect'));
     }
 
     /**
@@ -68,7 +71,7 @@ class LecturersController extends Controller
     {
         $col = College::findOrFail($id);
         $lect = $col->lecturers;
-
+        
          return view('lecturers.show',compact('col','lect'));
     }
 
