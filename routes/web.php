@@ -77,6 +77,10 @@ Route::get('colleges/{id}/financial/show','FinancialController@show');
 Route::post('colleges/{id}/financial/create','FinancialController@store');
 
 
+Route::get('status/create','StatusController@create');
+Route::post('status/create','StatusController@store');
+Route::get('status/show','StatusController@show');
+
 
 
 

@@ -13,7 +13,14 @@ class StatusTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('status', function (Blueprint $table){
+            $table->increments('id');
+            $table->integer('user_id')->unsigned()->index();
+            $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade');
+            $table->string('status');
+            $table->string('comment')->nullable();
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +30,6 @@ class StatusTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('status');
     }
 }

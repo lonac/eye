@@ -23,7 +23,7 @@ class StatusController extends Controller
      */
     public function create()
     {
-        //
+        return view('status.create');
     }
 
     /**
