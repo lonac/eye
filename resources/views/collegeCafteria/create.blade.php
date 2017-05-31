@@ -27,7 +27,7 @@
                            @endif
 						</div>
 						<button type="submit" class="btn btn-success">ADD</button>
-						<a href="{{url('colleges/'.$col->id.'/collegeHostels/create')}}" role="button" class="btn btn-success" >Done</a>
+						<a href="{{url('colleges/'.$col->id.'/collegeHostels/create')}}" role="button" class="btn btn-success" >SKIP</a>
 					</form>
 
 				</div>
