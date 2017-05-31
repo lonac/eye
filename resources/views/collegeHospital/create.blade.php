@@ -27,7 +27,7 @@
                            @endif
 						</div>
 						<button type="submit" class="btn btn-success">Save</button>
-						<a href="{{url('colleges/'.$col->id.'/')}}" role="button" class="btn btn-success" >SKIP</a>
+						<a href="{{url('colleges/'.$col->id.'/collegeCafteria/create')}}" role="button" class="btn btn-success" >SKIP</a>
 					</form>
 
 				</div>

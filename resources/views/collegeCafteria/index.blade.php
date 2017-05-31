@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', 'Cafteria Menu')
+@section('title', 'Cafteria')
 
 @section('content')
 
@@ -12,7 +12,13 @@
 					<h3 class="panel-title">  {{ $college->college}} Cafteria:</h3>
 				</div>
 				<div class="panel-body">
-					Show me the Menu!
+					@if($caf->count()>0)
+						@foreach($caf as $cafee)
+							<a href="{{url('colleges/'.$college->id.'/collegeCafteria/show')}}" role="button" class="btn btn-info">{{$cafee->cafe_name}}</a>
+						@endforeach
+					@else
+						<font color="red">No Cafteria for this college!</font>
+					@endif
 				</div>
 			</div>
 		</div>		

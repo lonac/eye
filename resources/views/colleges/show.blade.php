@@ -14,7 +14,7 @@
 				<div class="panel-body">
 					<a href="{{url('colleges/'.$college->id.'/collegeAdministrations/show')}}"
 						role="button" class="btn btn-info">Administrations</a>
-					<a href="{{url('colleges/'.$college->id.'/collegeCafteria/show')}}"
+					<a href="{{url('colleges/'.$college->id.'/collegeCafteria/index')}}"
 						role="button" class="btn btn-info">Cafteria Services</a>
 					<a href="{{url('colleges/'.$college->id.'/collegeHostels/show')}}"
 						role="button" class="btn btn-info">Hostel Service</a>

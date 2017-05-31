@@ -60,10 +60,10 @@ class StatusController extends Controller
     {
         $user = Auth::user();
 
-        $mystatus = Status::all();
+        $mystatus = $user->statuses->get();
 
 
-            return view('status.show',compact('mystatus'));
+        ///    return view('status.show',compact('mystatus'));
     }
 
     /**

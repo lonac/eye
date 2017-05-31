@@ -71,7 +71,10 @@ class LecturersController extends Controller
     {
         $col = College::findOrFail($id);
         $lect = $col->lecturers;
-        
+
+        $user = Auth::user();
+        //$status = $user->statuses;
+
          return view('lecturers.show',compact('col','lect'));
     }
 

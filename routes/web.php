@@ -60,7 +60,9 @@ Route::get('colleges/{id}/collegeAdministrations/show','CollegeAdministrationCon
 
 Route::get('colleges/{id}/collegeCafteria/create','CollegeCafteriaController@create');
 Route::post('colleges/{id}/collegeCafteria/create','CollegeCafteriaController@store');
+Route::get('colleges/{id}/collegeCafteria/index','CollegeCafteriaController@index');
 Route::get('colleges/{id}/collegeCafteria/show','CollegeCafteriaController@show');
+
 
 
 Route::get('colleges/{id}/collegeHostels/create','CollegeHostelController@create');
