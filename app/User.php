@@ -34,12 +34,12 @@ class User extends Authenticatable
 
     public function users()
     {
-        $this->hasManyThrough('App\Lecturer','App\College');
+       return  $this->hasManyThrough('App\Lecturer','App\College');
     }
 
     public function statuses()
     {
-        $this->hasOne('App\Status');
+       return $this->hasOne('App\Status');
     }
 
 }

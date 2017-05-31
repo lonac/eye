@@ -72,7 +72,7 @@
 								<h3 class="panel-title">Status:</h3>
 							</div>
 							<div class="panel-body">
-								<strong> </strong>
+								<strong><a href="{{url('status/show')}}">{{$status->status}}</a> </strong>
 							</div>
 						</div>	
 					</div>

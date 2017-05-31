@@ -73,9 +73,9 @@ class LecturersController extends Controller
         $lect = $col->lecturers;
 
         $user = Auth::user();
-        //$status = $user->statuses;
+        $status = $user->statuses;
 
-         return view('lecturers.show',compact('col','lect'));
+         return view('lecturers.show',compact('col','lect','status'));
     }
 
     /**

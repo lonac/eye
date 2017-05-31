@@ -33,9 +33,8 @@ class HomeController extends Controller
         $col = College::all();
         $user = Auth::user();
         $status = $user->statuses;
-        dd($status);
         
-        //return view('home',compact('col'));
+        return view('home',compact('col','status'));
     }
 
     public function welcome()
