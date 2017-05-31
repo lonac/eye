@@ -37,5 +37,10 @@ class User extends Authenticatable
         $this->hasManyThrough('App\Lecturer','App\College');
     }
 
+    public function status()
+    {
+        $this->hasOne('App\Status');
+    }
+
 }
 

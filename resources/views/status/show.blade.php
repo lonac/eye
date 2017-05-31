@@ -12,7 +12,13 @@
 					<h3 class="panel-title">My Status:</h3> 
 				</div>
 				<div class="panel-body">
-					Show me ur status
+					@if($mystatus->count()>0)
+						@foreach($mystatus as $stateee)
+							<strong>{{ $statee->status}}</strong>
+						@endforeach
+					@else
+						<font color="red">No any Status Updated!</font>
+					@endif
 				</div>
 			</div>
 		</div>		

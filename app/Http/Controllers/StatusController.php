@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Auth;
+
+use App\Status;
+
 class StatusController extends Controller
 {
     /**
@@ -34,7 +38,16 @@ class StatusController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $state = new Status;
+        $state->user_id = Auth::user()->id;
+        $state->status = $request->input('status');
+        $state->comment= $request->input('comment');
+        $state->save();
+
+        $user = Auth::user();
+        $mystatus = $user->statuses;
+
+        return view('status.show',compact('mystatus'));
     }
 
     /**
@@ -43,9 +56,15 @@ class StatusController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
-        //
+        $user = Auth::user();
+
+        $mystatus = $user->statuses;
+
+        dd($mystatus);
+
+       // return view('status.show',compact('mystatus'));
     }
 
     /**

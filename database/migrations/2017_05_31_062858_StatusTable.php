@@ -13,9 +13,9 @@ class StatusTable extends Migration
      */
     public function up()
     {
-        Schema::create('status', function (Blueprint $table){
+        Schema::create('statuses', function (Blueprint $table){
             $table->increments('id');
-            $table->integer('user_id')->unsigned()->index();
+            $table->integer('user_id')->unsigned()->index()->unique();
             $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade');
             $table->string('status');
             $table->string('comment')->nullable();

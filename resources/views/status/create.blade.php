@@ -31,12 +31,8 @@
 
 						<div class="form-group{{ $errors->has('comment') ? ' has-error' : '' }}">
 							<label for="comment">Comment:</label>
-							<input type="text" name="comment" id="comment" class="form-control" placeholder="Live Comment here" />
-							@if ($errors->has('comment'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('comment') }}</strong>
-                                    </span>
-                           @endif
+							<textarea type="text" name="comment" id="comment" class="form-control" placeholder="Comment on your status" />
+							</textarea>
 						</div>
 						<button type="submit" class="btn btn-success">Save</button>
 					</form>
