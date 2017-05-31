@@ -24,8 +24,8 @@ class LecturersController extends Controller
         $col = College::findOrFail($id);
         $lect = $col->lecturers;
 
-dd($lect);
-        // return view('lecturers.index',compact('col','lect'));
+
+         return view('lecturers.index',compact('col','lect'));
     }
 
     /**

@@ -12,7 +12,6 @@
 					<h3 class="panel-title"> Instr's Name at {{$col->college}}</h3> 
 				</div>
 				<div class="panel-body">
-					@if($lect->count()>0)
 					{{--full name of the instructor--}}
 
 
@@ -36,7 +35,7 @@
 								<h3 class="panel-title">Office No:</h3>
 							</div>
 							<div class="panel-body">
-								<strong> </strong>
+							<strong> </strong>
 							</div>
 						</div>	
 					</div>
@@ -70,18 +69,14 @@
 						<div class="panel panel-info">
 							<div class="panel-heading">
 								<h3 class="panel-title">Status:   
-									<font color="blue">{{$status->status}}</font>
+									<font color="blue">  </font>
 								</h3>
 							</div>
 							<div class="panel-body">
-								<strong>Updated at: {{ $status->updated_at}}</strong>
+								<strong>Updated at: </strong>
 							</div>
 						</div>	
 					</div>
-
-					@else
-						<font color="red">No Lecturers registered on this college!</font>
-					@endif
 
 				</div>
 			</div>
