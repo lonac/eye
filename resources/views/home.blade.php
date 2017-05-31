@@ -10,6 +10,9 @@
                 <div class="panel-heading">Welcome {{ Auth::user()->firstname}} 
                     {{ Auth::user()->lastname}} </div>
             </div>
+            <div class="panel-body">
+
+            </div>
         </div>
     </div>
 
@@ -21,9 +24,13 @@
 {{-- if the user has registered already let them see their colleges and other details--}}
     
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            
+        <div class="col-md-6 col-md-offset-1">
+            <div class="panel panel-info">
+                <div class="panel-heading"></div>
+                    <div class="panel-body">
 
+                    </div>
+            </div>
         </div>
     </div>
 </div>

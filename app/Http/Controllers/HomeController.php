@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\College;
 
+use App\Status;
+
 use Auth;
 
 class HomeController extends Controller
@@ -29,8 +31,11 @@ class HomeController extends Controller
     {
 
         $col = College::all();
+        $user = Auth::user();
+        $status = $user->statuses;
+        dd($status);
         
-        return view('home',compact('col'));
+        //return view('home',compact('col'));
     }
 
     public function welcome()

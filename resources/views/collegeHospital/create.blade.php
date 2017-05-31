@@ -14,7 +14,6 @@
 				<div class="panel-body">
 					
 					<form method="POST" action="{{ url('colleges/'.$col->id.'/collegeHospital/create') }}">
-
 						{{ csrf_field() }}
 
 						<div class="form-group{{ $errors->has('hospital') ? ' has-error' : '' }}">
