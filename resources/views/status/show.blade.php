@@ -13,9 +13,11 @@
 				</div>
 				<div class="panel-body">
 					@if($mystatus->count()>0)
-						@foreach($mystatus as $stateee)
-							<strong>{{ $statee->status}}</strong>
-						@endforeach
+							@foreach( $mystatus as $state)
+								<h2>Status:{{  $state->status }}</h2>
+								<h3>Updated:{{  $state->updated_at}}</h3>
+								Comments:{{  $state->comment}}
+							@endforeach
 					@else
 						<font color="red">No any Status Updated!</font>
 					@endif

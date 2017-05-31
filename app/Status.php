@@ -8,7 +8,7 @@ class Status extends Model
 {
     protected $fillable = ['user_id','status','comment',];
 
-    public function users()
+    public function user()
     {
     	return $this->belongsTo('App\User');
     }
