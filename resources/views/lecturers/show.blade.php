@@ -69,10 +69,12 @@
 					<div class="col-sm-6 col-sm-offset-1">
 						<div class="panel panel-info">
 							<div class="panel-heading">
-								<h3 class="panel-title">Status:</h3>
+								<h3 class="panel-title">Status:   
+									<font color="blue">{{$status->status}}</font>
+								</h3>
 							</div>
 							<div class="panel-body">
-								<strong><a href="{{url('status/show')}}">{{$status->status}}</a> </strong>
+								<strong>Updated at: {{ $status->updated_at}}</strong>
 							</div>
 						</div>	
 					</div>

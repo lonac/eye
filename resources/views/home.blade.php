@@ -11,7 +11,7 @@
                     {{ Auth::user()->lastname}} </div>
             </div>
             <div class="panel-body">
-                <strong>My Status: <a href="">{{$status->status}}</a></strong>
+                    <strong>My Status: <a href="{{url('status/show')}}">{{$status->status}}</a></strong>
             </div>
         </div>
     </div>

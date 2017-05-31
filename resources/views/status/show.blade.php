@@ -12,8 +12,8 @@
 					<h3 class="panel-title">My Status:</h3> 
 				</div>
 				<div class="panel-body">
-				<h2>Status:{{  $mystatus->status }}</h2>
-				<font color="red"> Update at:{{ $mystatus->updated_at}}</font>
+				<h2>Status:      {{  $mystatus->status }}</h2>
+				<h3>Update at:<font color="red">   {{ $mystatus->updated_at}}</font></h3>
 				<strong>Comment:</strong>{{ $mystatus->comment}}		
 			</div>
 		</div>		
