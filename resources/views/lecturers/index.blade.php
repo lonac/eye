@@ -6,7 +6,7 @@
 
 <div class="container">
 	<div class="row">
-		<div class="col-sm-6 col-sm-offset-1">
+		<div class="col-sm-3 col-sm-offset-3">
 			<div class="panel panel-primary">
 				<div class="panel-heading">
 					<h3 class="panel-title">{{$col->college}} Instructors'</h3> 
@@ -15,8 +15,8 @@
 					
 					@if($lect->count()>0)
 						@foreach( $lect as $instr)
-							<a href="{{url('colleges/'.$col->id.'/lecturers/show')}}">
-								{{$instr->instructor->firstname}} {{$instr->instructor->lastname}}</a>
+						<strong>	<a href="{{url('colleges/'.$col->id.'/lecturers/show')}}">
+								.{{$instr->instructor->firstname}} {{$instr->instructor->lastname}}</a></strong></br>
 						@endforeach
 					@else
 						<font color="red">

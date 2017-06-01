@@ -20,6 +20,7 @@ class LecturesTable extends Migration
             $table->integer('college_id')->unsigned()->index();
             $table->foreign('college_id')->references('id')->on('colleges')->onUpdate('cascade');
             $table->string('officeNo');
+            $table->string('phoneno')->nullable();
             $table->string('department')->nullable();
             $table->timestamps();
         });

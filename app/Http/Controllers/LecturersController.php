@@ -57,6 +57,7 @@ class LecturersController extends Controller
         $lecturer->officeNo = $request->input('officeNo');
         $lecturer->department = $request->input('department');
         $lecturer->college_id = $coll->id;
+        $lecturer->phoneno =$request->input('phoneno');
         $lecturer->user_id  = Auth::user()->id;
 
         $lecturer->save();
@@ -75,10 +76,6 @@ class LecturersController extends Controller
         $col = College::findOrFail($id);
         $lect = $col->lecturers;
 
-        $user = Auth::user();
-        $status = $user->statuses;
-
-      
 
          return view('lecturers.show',compact('col','lect','status'));
     }

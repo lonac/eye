@@ -11,6 +11,7 @@ class Lecturer extends Model
     'college_id',
     'officeNo',
     'department',
+    'phoneno',
     ];
 
     public function college()

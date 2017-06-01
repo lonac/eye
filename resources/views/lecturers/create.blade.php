@@ -21,6 +21,10 @@
 							<label for="officeNo">Office No:</label>
 							<input type="text" name="officeNo" id="officeNo" class="form-control" placeholder="Office Number">
 						</div>
+						<div class="form-group">
+							<label for="phoneno">Phone NUmber:</label>
+							<input type="number" name="phoneno" id="phoneno" class="form-control" placeholder="Phone Number">
+						</div>
 
 						@if($dep->count()> 0)
 							<div class="form-group">

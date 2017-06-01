@@ -7,15 +7,13 @@
 <div class="container">
 	<div class="row">
 		<div class="col-sm-6 col-sm-offset-1">
+			@if($lect->count()>0)
+				@foreach($lect as $lectee)
 			<div class="panel panel-primary">
 				<div class="panel-heading">
 					<h3 class="panel-title"> Instr's Name at {{$col->college}}</h3> 
 				</div>
 				<div class="panel-body">
-					{{--full name of the instructor--}}
-
-
-
 					{{--departments belonging--}}
 					<div class="col-sm-6 col-sm-offset-1">
 						<div class="panel panel-info">
@@ -23,7 +21,7 @@
 								<h3 class="panel-title">Department:</h3>
 							</div>
 							<div class="panel-body">
-								<strong> </strong>
+								<strong>{{$lectee->department}} </strong>
 							</div>
 						</div>	
 					</div>
@@ -35,7 +33,7 @@
 								<h3 class="panel-title">Office No:</h3>
 							</div>
 							<div class="panel-body">
-							<strong> </strong>
+							<strong>{{$lectee->officeNo}} </strong>
 							</div>
 						</div>	
 					</div>
@@ -80,6 +78,12 @@
 
 				</div>
 			</div>
+			@endforeach
+
+			@else
+
+			Nothing here
+			@endif
 		</div>		
 
 	</div>

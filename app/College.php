@@ -18,7 +18,7 @@ class College extends Model
     	return $this->hasMany('App\Staffids');
     }
 
-    public function users()
+    public function user()
     {
     	return $this->hasMany('App\User');
     }
