@@ -11,7 +11,8 @@
 				@foreach($lect as $lectee)
 			<div class="panel panel-primary">
 				<div class="panel-heading">
-					<h3 class="panel-title"> Instr's Name at {{$col->college}}</h3> 
+					<h3 class="panel-title">Instructor's Name:  {{ $lectee->instructor->firstname}}
+						{{$lectee->instructor->lastname}} at {{$col->college}}</h3> 		 		
 				</div>
 				<div class="panel-body">
 					{{--departments belonging--}}
@@ -71,7 +72,8 @@
 								</h3>
 							</div>
 							<div class="panel-body">
-								<strong>Updated at: </strong>
+								<strong>Updated at: 
+								</strong>
 							</div>
 						</div>	
 					</div>

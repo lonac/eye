@@ -8,8 +8,8 @@ class Status extends Model
 {
     protected $fillable = ['user_id','status','comment',];
 
-    public function user()
+    public function state()
     {
-    	return $this->belongsTo('App\User');
+    	return $this->belongsTo('App\User','statuses_id');
     }
 }
