@@ -16,7 +16,7 @@
 					@if($lect->count()>0)
 						@foreach( $lect as $instr)
 							<a href="{{url('colleges/'.$col->id.'/lecturers/show')}}">
-								{{$instr->user_id}}</a>
+								{{$instr->instructor->firstname}} {{$instr->instructor->lastname}}</a>
 						@endforeach
 					@else
 						<font color="red">

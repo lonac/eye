@@ -11,18 +11,18 @@
 				<div class="panel-heading">
 					<h3 class="panel-title">My Status:</h3> 
 					@if( ! Auth::guest())
-					@if($mystatus->id === Auth::user()->id)
-						<a href="{{ url('status/edit') }}">Edit</a>
+						@if($mystatus->id === Auth::user()->id)
+							<a href="{{ url('status/edit') }}">Edit</a>
 
-						{{-- TODO Add confirmation dialog --}}
-						<form method="POST" action=""  onclick="return confirm('You are about to delete Company?');">
-							{{ method_field('delete') }}
+							{{-- TODO Add confirmation dialog --}}
+							<form method="POST" action=""  onclick="return confirm('You are about to delete Status');">
+								{{ method_field('delete') }}
 
-							{{ csrf_field() }}
-							<button type="submit" class="btn btn-danger">Delete</button>
-						</form>
+								{{ csrf_field() }}
+								<button type="submit" class="btn btn-danger">Delete</button>
+							</form>
 
-						@endif		
+							@endif		
 					@endif
 				</div>
 				<div class="panel-body">

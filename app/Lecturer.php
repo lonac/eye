@@ -22,4 +22,9 @@ class Lecturer extends Model
     {
         return $this->belongsTo('App\Departments');
     }
+
+    public function instructor()
+    {
+        return $this->belongsTo('App\User','user_id');
+    }
 }

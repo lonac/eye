@@ -8,6 +8,8 @@ use App\College;
 
 use App\Lecturer;
 
+use App\Status;
+
 use App\User;
 
 use Auth;
@@ -75,6 +77,8 @@ class LecturersController extends Controller
 
         $user = Auth::user();
         $status = $user->statuses;
+
+      
 
          return view('lecturers.show',compact('col','lect','status'));
     }
