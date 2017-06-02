@@ -64,19 +64,7 @@
 					</div>
 
 					{{-- status--}}
-					<div class="col-sm-6 col-sm-offset-1">
-						<div class="panel panel-info">
-							<div class="panel-heading">
-								<h3 class="panel-title">Status:   
-									<font color="blue"> </font>
-								</h3>
-							</div>
-							<div class="panel-body">
-								<strong>Updated at: 
-								</strong>
-							</div>
-						</div>	
-					</div>
+					
 
 				</div>
 			</div>
@@ -87,6 +75,19 @@
 			Nothing here
 			@endif
 		</div>	
+		<div class="col-sm-6 col-sm-offset-1">
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<h3 class="panel-title">Status:   
+						<font color="blue"> </font>
+					</h3>
+				</div>
+				<div class="panel-body">
+					<strong>Updated at: 
+					</strong>
+				</div>
+			</div>	
+		</div>
 	</div>
 </div>
 

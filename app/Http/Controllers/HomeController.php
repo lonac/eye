@@ -33,6 +33,7 @@ class HomeController extends Controller
         $col = College::all();
         $user = Auth::user();
         $status = $user->statuses;
+     
         
         return view('home',compact('col','status'));
     }

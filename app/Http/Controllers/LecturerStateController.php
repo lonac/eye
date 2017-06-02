@@ -4,7 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class LecturerStateTable extends Controller
+use App\Lecturerstate;
+
+use App\Lecturer;
+
+class LecturerStateController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -32,11 +36,19 @@ class LecturerStateTable extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request,$id)
     {
         $state = new Lecturerstate;
 
-        $state->
+        $lect = Lecturer::findOrFail($id);
+        $state->lecture_id = $lect->id;
+        $state->state = $request->input('state');
+        $state->comment = $request->input('comment');
+
+        $state->save();
+
+        return view('/home');
+
     }
 
     /**
