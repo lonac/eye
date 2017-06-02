@@ -36,11 +36,5 @@ class User extends Authenticatable
     {
        return  $this->hasMany('App\Lecturer');
     }
-
-    public function statuses()
-    {
-       return $this->hasOne('App\Status');
-    }
-
 }
 

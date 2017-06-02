@@ -10,6 +10,6 @@ class Status extends Model
 
     public function state()
     {
-    	return $this->belongsTo('App\User','statuses_id');
+    	return $this->belongsTo('App\Lecturer');
     }
 }
