@@ -9,7 +9,7 @@
 		<div class="col-sm-6 col-sm-offset-1">
 			@if($lect->count()>0)
 				@foreach($lect as $lectee)
-			<div class="panel panel-primary">
+				<div class="panel panel-primary">
 				<div class="panel-heading">
 					<h3 class="panel-title">Instructor's Name:  {{ $lectee->instructor->firstname}}
 						{{$lectee->instructor->lastname}} at {{$col->college}}</h3> 		 		
@@ -46,7 +46,7 @@
 								<h3 class="panel-title">Phone Number:</h3>
 							</div>
 							<div class="panel-body">
-								<strong> </strong>
+								<strong>{{$lectee->phoneno}} </strong>
 							</div>
 						</div>	
 					</div>
@@ -58,7 +58,7 @@
 								<h3 class="panel-title">Email Address:</h3>
 							</div>
 							<div class="panel-body">
-								<strong> </strong>
+								<strong>{{$lectee->instructor->email}} </strong>
 							</div>
 						</div>	
 					</div>
@@ -86,8 +86,7 @@
 
 			Nothing here
 			@endif
-		</div>		
-
+		</div>	
 	</div>
 </div>
 
