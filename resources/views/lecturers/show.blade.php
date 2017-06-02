@@ -68,7 +68,7 @@
 						<div class="panel panel-info">
 							<div class="panel-heading">
 								<h3 class="panel-title">Status:   
-									<font color="blue">  </font>
+									<font color="blue"> </font>
 								</h3>
 							</div>
 							<div class="panel-body">

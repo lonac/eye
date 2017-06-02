@@ -35,6 +35,7 @@ class User extends Authenticatable
     public function users()
     {
        return  $this->hasMany('App\Lecturer');
+
     }
 }
 
