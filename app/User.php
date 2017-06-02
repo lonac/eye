@@ -32,10 +32,14 @@ class User extends Authenticatable
         $this->belongsTo('App\College');
     } */
 
-    public function users()
+    public function lecturers()
     {
        return  $this->hasMany('App\Lecturer');
 
+    }
+    public function statuses()
+    {
+        return $this->hasOne('App\Status');
     }
 }
 

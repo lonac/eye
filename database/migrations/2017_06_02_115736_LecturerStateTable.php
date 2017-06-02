@@ -13,7 +13,15 @@ class LecturerStateTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('lecturerstates', function(Blueprint $table){
+            
+            $table->increments('id');
+            $table->integer('lecturer_id')->unsigned()->index();
+            $table->foreign('lecturer_id')->references('id')->on('lecturers')->onUpdate('cascade');
+            $table->string('state');
+            $table->string('comment')->nullable();
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +31,6 @@ class LecturerStateTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('lecturerstates');
     }
 }

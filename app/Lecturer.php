@@ -9,7 +9,6 @@ class Lecturer extends Model
     protected $fillable = [
     'user_id',
     'college_id',
-    'statuses_id',
     'officeNo',
     'department',
     'phoneno',
@@ -32,6 +31,6 @@ class Lecturer extends Model
 
     public function state()
     {
-        return $this->hasOne('App\State','statuses_id');
+        return $this->hasOne('App\Lecturerstate');
     }
 }

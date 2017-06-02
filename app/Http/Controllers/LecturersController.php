@@ -8,11 +8,8 @@ use App\College;
 
 use App\Lecturer;
 
-use App\Status;
-
 use App\User;
 
-use App\Status;
 
 use Auth;
 
@@ -57,13 +54,10 @@ class LecturersController extends Controller
 
         //get the status id
 
-        $state = Status::findOrFail($id);
-
         $lecturer = new Lecturer();
         $lecturer->officeNo = $request->input('officeNo');
         $lecturer->department = $request->input('department');
         $lecturer->college_id = $coll->id;
-        $lecture->statuses_Id = $state->id,
         $lecturer->phoneno =$request->input('phoneno');
         $lecturer->user_id  = Auth::user()->id;
 

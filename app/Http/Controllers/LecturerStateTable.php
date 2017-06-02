@@ -23,7 +23,7 @@ class LecturerStateTable extends Controller
      */
     public function create()
     {
-        //
+        return view('status.create');
     }
 
     /**
@@ -34,7 +34,9 @@ class LecturerStateTable extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $state = new Lecturerstate;
+
+        $state->
     }
 
     /**
