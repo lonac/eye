@@ -28,9 +28,4 @@ class Lecturer extends Model
     {
         return $this->belongsTo('App\User','user_id');
     }
-
-    public function statuses()
-    {
-        return $this->hasOne('App\Status','statuses_id');
-    }
 }
