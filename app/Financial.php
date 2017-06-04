@@ -25,4 +25,9 @@ class Financial extends Model
     {
     	return $this->belongsTo('App\Departments');
     }
+
+    public function money()
+    {
+        return $this->belongsTo('App\User','user_id');
+    }
 }

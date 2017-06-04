@@ -16,7 +16,7 @@
 							role="button" class="btn btn-info">Instructors</a>
 						<a href="{{url('colleges/'.$col->id.'/collegedepartments/show')}}" 
 						role="button" class="btn btn-info">Departments</a>
-						<a href="{{url('colleges/'.$col->id.'/financial/show')}}"
+						<a href="{{url('colleges/'.$col->id.'/financial/index')}}"
 						 role="button" class="btn btn-info">Financial</a>
 						<a href="{{url('colleges/'.$col->id.'/otherstaffs/index')}}"
 						 role="button" class="btn btn-info">Dean of Students</a>		

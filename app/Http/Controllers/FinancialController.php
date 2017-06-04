@@ -19,9 +19,12 @@ class FinancialController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($id)
     {
-        //
+        $col = College::findOrFail($id);
+        $fin = $col->financials;
+            
+        return view('financial.index',compact('col','fin'));
     }
 
     /**
@@ -58,7 +61,7 @@ class FinancialController extends Controller
 
      $fin->save();
 
-     return view('financial.create',compact('col','dep'));
+     return view('financial.show',compact('col','dep'));
 
     }
 

@@ -80,6 +80,7 @@ Route::get('colleges/{id}/collegeHospital/show','CollegeHospitalController@show'
 
 
 Route::get('colleges/{id}/financial/create','FinancialController@create');
+Route::get('colleges/{id}/financial/index','FinancialController@index');
 Route::get('colleges/{id}/financial/show','FinancialController@show');
 Route::post('colleges/{id}/financial/create','FinancialController@store');
 
