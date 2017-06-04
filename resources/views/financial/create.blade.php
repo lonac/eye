@@ -7,7 +7,7 @@
 <div class="container">
 	<div class="row">
 		<div class="col-sm-6 col-sm-offset-1">
-			<div class="panel panel-default">
+			<div class="panel panel-primary">
 				<div class="panel-heading">
 					<h3 class="panel-title">{{$col->college}}: Financial Details:</h3> 
 				</div>
@@ -38,7 +38,6 @@
 							</div>
 						@endif
 						<button type="submit" class="btn btn-success">Save</button>
-						<a href="{{url('colleges/'.$col->id.'/')}}" role="button" class="btn btn-success" >SKIP</a>
 					</form>
 
 				</div>

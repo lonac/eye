@@ -81,7 +81,7 @@ ul li a i:hover {
          <div class="row">
             <div class="col-md-10">
                 <p class="text-center">
-                    &copy 2017 JICHO-UDOM | All Rights Reserved
+                    &copy 2017 JICHO | All Rights Reserved
                 </p>
             </div>    
         </div>
