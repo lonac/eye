@@ -32,10 +32,10 @@ Route::get('/colleges/{id}/show','CollegeController@show'); */
 
 Route::resource('colleges','CollegeController');
 
+Route::get('colleges/{id}/staffs/index','StaffController@index');
 
 
 Route::get('colleg/choose','collegController@colleg');
-Route::get('colleg/staffs','CollegeController@index');
 
 Route::get('/colleges/{id}/categories/create','CategoryController@create');
 Route::post('/colleges/{id}/categories/create','CategoryController@store');

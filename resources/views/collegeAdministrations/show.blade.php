@@ -12,7 +12,7 @@
 					<h3 class="panel-title"> {{$col->college}} Administrations:</h3>
 				</div>
 				<div class="panel-body">
-						<a href="{{url('colleges/'.$col->id.'/colleges/staffs')}}" 
+						<a href="{{url('colleges/'.$col->id.'/staffs/index')}}" 
 							role="button" class="btn btn-info">Staffs</a>
 						<a href="{{url('colleges/'.$col->id.'/collegedepartments/show')}}" 
 						role="button" class="btn btn-info">Departments</a>	

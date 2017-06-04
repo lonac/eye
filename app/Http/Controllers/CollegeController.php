@@ -73,14 +73,6 @@ class CollegeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-
     public function show($id)
     {
         $college = College::findOrFail($id);

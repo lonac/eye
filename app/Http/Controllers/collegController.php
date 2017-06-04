@@ -14,4 +14,5 @@ class collegController extends Controller
 
     	return view('colleg.choose',compact('col'));
     }
+
 }
