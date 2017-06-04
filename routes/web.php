@@ -35,6 +35,7 @@ Route::resource('colleges','CollegeController');
 
 
 Route::get('colleg/choose','collegController@colleg');
+Route::get('colleg/staffs','CollegeController@index');
 
 Route::get('/colleges/{id}/categories/create','CategoryController@create');
 Route::post('/colleges/{id}/categories/create','CategoryController@store');

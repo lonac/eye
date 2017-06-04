@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-primary">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -12,7 +12,7 @@
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" background-color="blue">
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" background-color="red">
             <ul class="nav navbar-nav navbar-left">
                 <li><a href="/home">Home</a></li>
                 <li><a href="/colleges">Colleges</a></li>

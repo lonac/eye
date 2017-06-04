@@ -29,9 +29,9 @@ class LecturersController extends Controller
 
         $usrid = $lect->get('user_id');
 
-        dd($usrid);
+        
 
-       //  return view('lecturers.index',compact('col','lect'));
+        return view('lecturers.index',compact('col','lect'));
     }
 
     /**

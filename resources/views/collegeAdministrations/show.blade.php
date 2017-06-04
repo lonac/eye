@@ -12,14 +12,10 @@
 					<h3 class="panel-title"> {{$col->college}} Administrations:</h3>
 				</div>
 				<div class="panel-body">
-						<a href="{{url('colleges/'.$col->id.'/lecturers/index')}}" 
-							role="button" class="btn btn-info">Instructors</a>
+						<a href="{{url('colleges/'.$col->id.'/colleges/staffs')}}" 
+							role="button" class="btn btn-info">Staffs</a>
 						<a href="{{url('colleges/'.$col->id.'/collegedepartments/show')}}" 
-						role="button" class="btn btn-info">Departments</a>
-						<a href="{{url('colleges/'.$col->id.'/financial/index')}}"
-						 role="button" class="btn btn-info">Financial</a>
-						<a href="{{url('colleges/'.$col->id.'/otherstaffs/index')}}"
-						 role="button" class="btn btn-info">Dean of Students</a>		
+						role="button" class="btn btn-info">Departments</a>	
 				</div>
 			</div>
 		</div>		
