@@ -7,12 +7,12 @@
 <div class="container">
 	<div class="row">
 		<div class="col-sm-6 col-sm-offset-1">
-			@if($lect->count()>0)
-				@foreach($lect as $lectee)
+			@if($staf->count()>0)
+				@foreach($staf as $stafee)
 				<div class="panel panel-primary">
 				<div class="panel-heading">
-					<h3 class="panel-title">Staff Name:  {{ $lectee->instructor->firstname}}
-						{{$lectee->instructor->lastname}} at {{$col->college}}</h3> 		 		
+					<h3 class="panel-title">Staff Name:  {{ $stafee->staff->firstname}}
+						{{$stafee->staff->lastname}} at {{$col->college}}</h3> 		 		
 				</div>
 				<div class="panel-body">
 					{{--departments belonging--}}
@@ -22,7 +22,7 @@
 								<h3 class="panel-title">Department:</h3>
 							</div>
 							<div class="panel-body">
-								<strong>{{$lectee->department}} </strong>
+								<strong>{{$stafee->department}} </strong>
 							</div>
 						</div>	
 					</div>
@@ -34,7 +34,7 @@
 								<h3 class="panel-title">Office No:</h3>
 							</div>
 							<div class="panel-body">
-							<strong>{{$lectee->officeNo}} </strong>
+							<strong>{{$stafee->officeNo}} </strong>
 							</div>
 						</div>	
 					</div>
@@ -46,7 +46,7 @@
 								<h3 class="panel-title">Phone Number:</h3>
 							</div>
 							<div class="panel-body">
-								<strong>{{$lectee->phoneno}} </strong>
+								<strong></strong>
 							</div>
 						</div>	
 					</div>
@@ -58,7 +58,7 @@
 								<h3 class="panel-title">Email Address:</h3>
 							</div>
 							<div class="panel-body">
-								<strong>{{$lectee->instructor->email}} </strong>
+								<strong>{{$stafee->staff->email}} </strong>
 							</div>
 						</div>	
 					</div>

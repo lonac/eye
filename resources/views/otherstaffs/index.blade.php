@@ -14,7 +14,8 @@
 				<div class="panel-body">
 					@if($staf->count()>0)
 						@foreach($staf as $stafee)
-							<strong><a href="">{{$stafee->staff->firstname}}</a></strong>
+							<strong><a href="{{url('colleges/'.$col->id.'/otherstaffs/show')}}">
+								{{$stafee->staff->firstname}}</a></strong>
 						@endforeach
 					@else
 						<font color="red">No any Stuff on this college!</font>

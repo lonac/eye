@@ -71,7 +71,10 @@ class OtherStuffsController extends Controller
      */
     public function show($id)
     {
-        //
+        $col =College::findOrFail($id);
+        $staf = $col->otherstaffs;
+
+        return view('otherstaffs.show',compact('col','staf'));
     }
 
     /**
