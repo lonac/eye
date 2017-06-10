@@ -21,6 +21,7 @@ Route::get('colleges/{id}/register','Auth\RegisterController@showRegistrationFor
 Route::post('colleges/{id}/register','Auth\RegisterController@register');
 
 Route::get('/home', 'HomeController@index');
+Route::get('/about','HomeController@about');
 
 Route::get('/staffId/create','StaffIDController@create');
 Route::post('/staffId/create','StaffIDController@store');

@@ -44,4 +44,9 @@ class HomeController extends Controller
         return view('/',compact('col'));
     }
 
+    public function about()
+    {
+        return view('/about');
+    }
+
 }
