@@ -4,19 +4,22 @@
 
 @section('content')
 <div class="container">
- <div class="row">
+    <div class="row">
         <div class="col-md-3 col-md-offset-1">
             <div class="panel panel-primary">
                 <div class="panel-heading">Welcome {{ Auth::user()->firstname}} 
-                    {{ Auth::user()->lastname}} </div>
+                    {{ Auth::user()->lastname}}
+                </div>
+                <div class="panel-body">
+                        @if(Auth::user()->statuses != null)
+                            <strong>My Status: <a href="{{url('status/show')}}">{{ Auth::user()->statuses->status }}</a></strong>
+                        @else
+                            <strong>My Status: </strong> None
+                            <br><br>
+                            <strong><a href="{{url('status/create')}}">Create Status?</a></strong>
+                        @endif
+                </div>                
             </div>
-            @if($status->count()>0)
-            <div class="panel-body">
-                    <strong>My Status: <a href="{{url('status/show')}}">{{$status->status}} </a></strong>
-            </div>
-            @else
-                <strong><a href="{{url('status/create')}}">Create Status?</a></strong>
-            @endif
         </div>
     </div>
 

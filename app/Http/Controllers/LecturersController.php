@@ -77,12 +77,14 @@ class LecturersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($collegeId, $lecturerId)
     {
-        $col = College::findOrFail($id);
-        $lect = $col->lecturers;
 
-        return view('lecturers.show',compact('col','lect'));
+        $col = College::findOrFail($collegeId);
+
+        $lecturer = $col->lecturers()->where('id', $lecturerId)->firstOrFail();
+
+        return view('lecturers.show',compact('col','lecturer'));
     }
 
     /**
