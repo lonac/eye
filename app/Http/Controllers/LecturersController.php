@@ -81,11 +81,8 @@ class LecturersController extends Controller
     {
         $col = College::findOrFail($id);
         $lect = $col->lecturers;
-        $stat = Status::all();
 
-        //$lectid = $lect->get('user_id');
-
-        return view('lecturers.show',compact('col','lect','status'));
+        return view('lecturers.show',compact('col','lect'));
     }
 
     /**
