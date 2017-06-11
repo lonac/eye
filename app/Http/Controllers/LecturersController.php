@@ -79,6 +79,7 @@ class LecturersController extends Controller
      */
     public function show($collegeId, $lecturerId)
     {
+
         $col = College::findOrFail($collegeId);
 
         $lecturer = $col->lecturers()->where('id', $lecturerId)->firstOrFail();

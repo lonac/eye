@@ -20,13 +20,6 @@
                         @endif
                 </div>                
             </div>
-            {{--  @if($status->count()>0)
-            <div class="panel-body">
-                    <strong>My Status: <a href="{{url('status/show')}}">{{$status->status}} </a></strong>
-            </div>
-            @else
-                <strong><a href="{{url('status/create')}}">Create Status?</a></strong>
-            @endif --}}
         </div>
     </div>
 

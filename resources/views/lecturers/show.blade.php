@@ -15,6 +15,28 @@
 						{{$lectee->instructor->lastname}} at {{$col->college}}</h3> 		 		
 				</div>
 				<div class="panel-body">
+					<div class="col-sm-6 col-sm-offset-1">
+			<div class="panel panel-info">
+				<div class="panel-heading">
+					<h3 class="panel-title">Status:   
+						<font color="blue">
+	                        @if($lecturer->statuses != null)
+	                            {{ $lecturer->statuses->status }}
+	                        @else
+	                            No status
+	                        @endif
+						</font>
+					</h3>
+				</div>
+				<div class="panel-body">
+                    @if($lecturer->statuses != null)
+						<strong>Updated at: 
+						</strong>                    
+                        {{ $lecturer->statuses->updated_at->diffForHumans() }}
+                    @endif					
+				</div>
+			</div>	
+		</div>
 					{{--departments belonging--}}
 					<div class="col-sm-6 col-sm-offset-1">
 						<div class="panel panel-info">
@@ -75,19 +97,6 @@
 			Nothing here
 			@endif
 		</div>	
-		<div class="col-sm-6 col-sm-offset-1">
-			<div class="panel panel-primary">
-				<div class="panel-heading">
-					<h3 class="panel-title">Status:   
-						<font color="blue"> </font>
-					</h3>
-				</div>
-				<div class="panel-body">
-					<strong>Updated at: 
-					</strong>
-				</div>
-			</div>	
-		</div>
 	</div>
 </div>
 
