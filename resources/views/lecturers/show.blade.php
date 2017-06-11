@@ -7,10 +7,12 @@
 <div class="container">
 	<div class="row">
 		<div class="col-sm-6 col-sm-offset-1">
+			@if($lect->count()>0)
+				@foreach($lect as $lectee)
 				<div class="panel panel-primary">
 				<div class="panel-heading">
-					<h3 class="panel-title">Instructor's Name:  {{ $lecturer->instructor->firstname}}
-						{{$lecturer->instructor->lastname}} at {{$col->college}}</h3> 		 		
+					<h3 class="panel-title">Instructor's Name:  {{ $lectee->instructor->firstname}}
+						{{$lectee->instructor->lastname}} at {{$col->college}}</h3> 		 		
 				</div>
 				<div class="panel-body">
 					{{--departments belonging--}}
@@ -20,7 +22,7 @@
 								<h3 class="panel-title">Department:</h3>
 							</div>
 							<div class="panel-body">
-								<strong>{{$lecturer->department}} </strong>
+								<strong>{{$lectee->department}} </strong>
 							</div>
 						</div>	
 					</div>
@@ -32,7 +34,7 @@
 								<h3 class="panel-title">Office No:</h3>
 							</div>
 							<div class="panel-body">
-							<strong>{{$lecturer->officeNo}} </strong>
+							<strong>{{$lectee->officeNo}} </strong>
 							</div>
 						</div>	
 					</div>
@@ -44,7 +46,7 @@
 								<h3 class="panel-title">Phone Number:</h3>
 							</div>
 							<div class="panel-body">
-								<strong>{{$lecturer->phoneno}} </strong>
+								<strong>{{$lectee->phoneno}} </strong>
 							</div>
 						</div>	
 					</div>
@@ -56,34 +58,33 @@
 								<h3 class="panel-title">Email Address:</h3>
 							</div>
 							<div class="panel-body">
-								<strong>{{$lecturer->instructor->email}} </strong>
+								<strong>{{$lectee->instructor->email}} </strong>
 							</div>
 						</div>	
 					</div>
 
 					{{-- status--}}
+					
+
 				</div>
 			</div>
+			@endforeach
+
+			@else
+
+			Nothing here
+			@endif
 		</div>	
 		<div class="col-sm-6 col-sm-offset-1">
 			<div class="panel panel-primary">
 				<div class="panel-heading">
 					<h3 class="panel-title">Status:   
-						<font color="blue">
-	                        @if($lecturer->statuses != null)
-	                            {{ $lecturer->statuses->status }}
-	                        @else
-	                            No status
-	                        @endif
-						</font>
+						<font color="blue"> </font>
 					</h3>
 				</div>
 				<div class="panel-body">
-                    @if($lecturer->statuses != null)
-						<strong>Updated at: 
-						</strong>                    
-                        {{ $lecturer->statuses->updated_at->diffForHumans() }}
-                    @endif					
+					<strong>Updated at: 
+					</strong>
 				</div>
 			</div>	
 		</div>
