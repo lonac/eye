@@ -13,6 +13,20 @@
     <link rel="stylesheet" type="text/css" href="/css/bootstrap-material-design.css">
     <link rel="stylesheet" type="text/css" href="/css/ripples.min.css">
 
+    <link rel="stylesheet" type="text/css" href="/css/jumbotron.css">
+
+    <style type="text/css">
+        .jumbotron{
+            display: block;
+        margin-top: 300px;
+         z-index: 999;  
+        padding: 17px;
+        width: 115%;
+        color: #00F3FF;
+        background-color: #00F3FF;
+        }
+        </style>
+
 </head>
 <body>
 
@@ -39,6 +53,7 @@
             $.material.init();
         });
     </script>
+
 </body>
 
 </html>
