@@ -8,17 +8,10 @@
     <div class="content">
         <div class="row">
             <div class="col-md-12">  
-                <div class="container-full-bg"  style="background-image:url('/images/jicho.PNG');background-repeat: no-repeat;background-size: 100% 100%; height: 500px;">
-                 <div class="container special">
-                    <div class="col-md-4 col-md-offset-3">
-                         <div class="jumbotron">
-                        <p>
-                            @include('search.searchform')
-                        </p>
+                    <div class="search-background">
+                        <img src="{{ asset('images/jicho.PNG')}}">
                     </div>
-                    </div>
-                   
-                </div>
+                        @include('search.searchform')
               </div>    
             </div>
         </div>
@@ -27,8 +20,9 @@
                 <div class="panel panel-primary">
                     <div class="panel-heading">
                          <h2>
-                             <a href="" class="btn btn-default">UNIVERSITY</a>
+                             <a href="" class="btn btn-default">UNIVERSIT</a>
                             <a href="" class="btn btn-default">TRANSPORT</a>
+                            <a href="" class="btn btn-default">BANK</a>
                         </h2>
                     </div>
                 </div>
