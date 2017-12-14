@@ -20,7 +20,7 @@
                 <div class="panel panel-primary">
                     <div class="panel-heading">
                          <h2>
-                             <a href="" class="btn btn-default">UNIVERSIT</a>
+                             <a href="" class="btn btn-default">UNIVERSITY</a>
                             <a href="" class="btn btn-default">TRANSPORT</a>
                             <a href="" class="btn btn-default">BANK</a>
                         </h2>
