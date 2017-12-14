@@ -21,7 +21,6 @@ class UniversityTable extends Migration
             $table->string('city');
             $table->string('institution_type');
             $table->string('ownership_status');
-            $table->string('category');
             $table->timestamps();
         });
     }
@@ -33,6 +32,6 @@ class UniversityTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('universities');
     }
 }

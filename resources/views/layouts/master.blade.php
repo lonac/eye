@@ -47,7 +47,7 @@
     @include('layouts.navbar')
 
     <div class="container">
-       {{-- @include('errors.list') --}}
+       @include('errors.list')
     </div>
 
     @yield('content')
