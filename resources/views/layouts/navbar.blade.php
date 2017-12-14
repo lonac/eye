@@ -1,4 +1,4 @@
-<nav class="navbar navbar-immersed">
+<nav class="navbar navbar-default">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -14,15 +14,12 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" background-color="red">
             <ul class="nav navbar-nav navbar-left">
-                <li><a href="/home">Home</a></li>
-                <li><a href="/colleges">Colleges</a></li>
-                <li><a href="/about">About Us</a></li>
-                <li><a href="/contacts">Contacts</a></li>
+                
 
             </ul>
 
                     <ul class="nav navbar-nav navbar-right">
-                        <!-- Authentication Links -->
+                        <!-- Authentication Links
                         @if (Auth::guest())
                             <li><a href="{{ url('/login') }}">Login</a></li>
                           <li><a href="{{ url('/colleg/choose') }}">Register</a></li>
@@ -48,7 +45,7 @@
                                     </li>
                                 </ul>
                             </li>
-                        @endif
+                        @endif  -->  
                     </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
