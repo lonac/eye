@@ -41,4 +41,7 @@ Route::get('/universities', 'UniversityController@index');
 Route::get('/universities/{id}','UniversityController@show');
 
 
+//Search
+Route::get('search',array('as'=>'search','uses'=>'SearchController@search'));
+Route::get('autocomplete',array('as'=>'autocomplete','uses'=>'SearchController@autocomplete'));
 

@@ -1,8 +1,12 @@
 <div class="well-searchbox">
-    <form class="navbar-form navbar-left" role="search">
-		<div class="form-group">
-			<input type="text" class="form-control" placeholder="UNIVERSITY, TRANSPORTS, BANKS">
-		</div>
-		<button type="submit" class="btn btn-success">Search</button>
-		</form>
+    <form action="{{ url('search') }}" method="GET" role="form">
+    <div class="input-group input-group-lg">
+        <input autofocus class="typeahead form-control" autocomplete="off" name="q"
+               placeholder="University, Transports,"
+               type="text" value="{{ isset($_GET['q']) ? $_GET['q'] : '' }}">
+        <span class="input-group-btn">
+			<button class="btn btn-info btn-lg" type="submit">Search</button>
+		</span>
+    </div>
+</form>
  </div>
