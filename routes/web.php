@@ -37,5 +37,8 @@ Route::get('/colleges/{id}/show','CollegeController@show'); */
 //UNIVERSITY
 Route::get('/universities/register', 'UniversityController@register');
 Route::post('/universities/register', 'UniversityController@store');
+Route::get('/universities', 'UniversityController@index');
+Route::get('/universities/{id}','UniversityController@show');
+
 
 

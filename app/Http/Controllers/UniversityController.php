@@ -15,8 +15,11 @@ class UniversityController extends Controller
      */
     public function index()
     {
-        //
-    }
+        $universities = University::all();
+
+        return view('universities.index',compact('universities'));
+
+   }
 
     /**
      * Show the form for creating a new resource.
@@ -67,7 +70,9 @@ class UniversityController extends Controller
      */
     public function show($id)
     {
-        //
+        $university = University::findOrFail($id);
+
+        return view('universities.show',compact('university'));
     }
 
     /**
