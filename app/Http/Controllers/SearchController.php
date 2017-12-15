@@ -18,6 +18,7 @@ class SearchController extends Controller
 
     {
         $universities = University::where('name', 'like', '%' . $request->input('q') . '%')->paginate(12);
+        
         return view('universities.index', compact('universities'));
     }
 

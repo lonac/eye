@@ -41,6 +41,21 @@
 }
         </style>
 
+        <style type="text/css">
+          #loading {
+                -webkit-animation: rotation 4s infinite linear;
+            }
+
+            @-webkit-keyframes rotation {
+                from {
+                    -webkit-transform: rotate(0deg);
+                }
+                to {
+                    -webkit-transform: rotate(359deg);
+                }
+            }
+        </style>
+
 </head>
 <body>
 
