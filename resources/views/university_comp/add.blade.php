@@ -7,7 +7,8 @@
 <div class="container">
 	<div class="row">
 		<div class="col-sm-8 col-sm-offset-2">
-			<form>
+			<form method="POST" action="{{url('/universities/'.$university->id.'/university_comp/add')}}">
+				{{csrf_field()}}
 				<div class="panel panel-default">
 					<div class="panel-heading"><center><h2>Add Component at {{$university->name}}</h2></center>
 					</div>
@@ -18,7 +19,7 @@
 								<label for="name">NAME</label>
 							</div>
 							<div class="col-md-6">
-								<input type="text" class="form-control" name="name" placeholder="e.g SPORTS and GAMES,">
+								<input type="text" class="form-control" name="comp_name" placeholder="e.g SPORTS and GAMES,">
 							</div>
 						</div>
 						<div class="form-group">

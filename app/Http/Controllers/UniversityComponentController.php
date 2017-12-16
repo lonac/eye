@@ -99,4 +99,17 @@ class UniversityComponentController extends Controller
     {
         //
     }
+
+    public function newcomp(Request $request, $id)
+    {
+        $university = University::findOrFail($id);
+
+        $component = new UniversityComponents;
+
+        $component->university_id = $university->id;
+        $component->comp_name = $request->input('comp_name');
+        $component->save();
+
+        dd('Components saved');
+    }
 }
