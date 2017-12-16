@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.masterhomepage')
 
 @section('title','Jicho')
 
