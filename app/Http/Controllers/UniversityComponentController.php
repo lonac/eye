@@ -49,7 +49,9 @@ class UniversityComponentController extends Controller
      */
     public function show($id)
     {
-        //
+        $university = University::findOrFail($id);
+
+        return view('university_comp.show',compact('university'));
     }
 
     /**
