@@ -45,3 +45,14 @@ Route::get('/universities/{id}','UniversityController@show');
 Route::get('search',array('as'=>'search','uses'=>'SearchController@search'));
 Route::get('autocomplete',array('as'=>'autocomplete','uses'=>'SearchController@autocomplete'));
 
+
+//Admins
+Route::get('universities/{id}/admin','AdminPageController@index');
+
+
+
+//university_component
+Route::get('universities/{id}/university_comp/add','UniversityComponentController@add');
+Route::get('universities/{id}/university_comp/update','UniversityComponentController@update');
+Route::post('universities/{id}/university_comp/update','UniversityComponentController@store');
+
