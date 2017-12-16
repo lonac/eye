@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\University;
 
+use App\UniversityComponents;
+
 class UniversityComponentController extends Controller
 {
     /**
@@ -36,9 +38,17 @@ class UniversityComponentController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, $id)
     {
-        //
+        $university = University::findOrFail($id);
+
+        $component = new UniversityComponents;
+
+        $component->university_id = $university->id;
+        $component->comp_name = $request->input('comp_name');
+        $component->save();
+
+        dd('Components saved');
     }
 
     /**

@@ -7,7 +7,8 @@
 <div class="container">
 	<div class="row">
 		<div class="col-sm-6 col-sm-offset-2">
-			<form>
+			<form method="POST" action="{{url('universities/'.$university->id.'/university_comp/update')}}">
+				{{csrf_field()}}
 				<div class="panel panel-default">
 					<div class="panel-heading"><h2>Here are some University Components</h2>
 					</div>
@@ -15,29 +16,29 @@
 						<form>
 							<div class="form-group">
 								<div class="checkbox">
-									<label> <strong>Administration</strong>  <input type="checkbox" value="administation"></label>
+									<label> <strong>Administration</strong>  <input name="comp_name" type="checkbox" value="administation"></label>
 								</div>							
 							</div>
 							<div class="form-group">
 								<div class="checkbox">
-									<label> <strong>College</strong>  <input type="checkbox" value="college"> </label>
+									<label> <strong>College</strong>  <input name="comp_name" type="checkbox" value="college"> </label>
 								</div>		
 							</div>
 							<div class="form-group">
 								<div class="checkbox">
-									<label><strong>Library</strong> <input type="checkbox" value="library"> </label>
+									<label><strong>Library</strong> <input name="comp_name" type="checkbox" value="library"> </label>
 								</div>	
 							</div>
 
 							<div class="form-group">
 								<div class="checkbox">
-									<label> <strong>Cafteria</strong> <input type="checkbox" value="cafteria"> </label>
+									<label> <strong>Cafteria</strong> <input name="comp_name"  type="checkbox" value="cafteria"> </label>
 								</div>	
 							</div>
 
 							<div class="form-group">
 								<div class="checkbox">
-									<label><strong>Hospital</strong> <input type="checkbox" value="hospital"> </label>
+									<label><strong>Hospital</strong> <input name="comp_name" type="checkbox" value="hospital"> </label>
 								</div>	
 							</div>
 

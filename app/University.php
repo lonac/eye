@@ -12,4 +12,9 @@ class University extends Model
     {
     	$this->hasMany('App\College');
     }
+
+    public function university_components()
+    {
+    	return $this->hasMany('App\UniversityComponents');
+    }
 }
