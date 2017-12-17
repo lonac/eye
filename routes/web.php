@@ -54,6 +54,7 @@ Route::get('universities/{id}/admin','AdminPageController@index');
 //university_component
 Route::get('universities/{id}/university_comp/add','UniversityComponentController@add');
 Route::post('universities/{id}/university_comp/add','UniversityComponentController@newcomp');
+Route::get('universities/{id}/university_comp/edit/{comp_id}','UniversityComponentController@edit');
 
 Route::get('universities/{id}/university_comp/update','UniversityComponentController@update');
 Route::post('universities/{id}/university_comp/update','UniversityComponentController@store');

@@ -61,7 +61,9 @@ class UniversityComponentController extends Controller
     {
         $university = University::findOrFail($id);
 
-        return view('university_comp.show',compact('university'));
+         $uni_comp = $university->university_components;
+
+        return view('university_comp.show',compact('university','uni_comp'));
     }
 
     /**
@@ -70,9 +72,14 @@ class UniversityComponentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($id , $comp_id)
     {
-        //
+          $university = University::findOrFail($id);
+
+          $comp = UniversityComponents::findOrFail($comp_id);
+
+           return view('university_comp.edit',compact('university','comp'));
+
     }
 
     /**
@@ -86,7 +93,9 @@ class UniversityComponentController extends Controller
     {
          $university = University::findOrFail($id);
 
-        return view('university_comp.update',compact('university'));
+         $uni_comp = $university->university_components;
+
+          return view('university_comp.update',compact('university','uni_comp'));
     }
 
     /**

@@ -7,13 +7,17 @@
 <div class="container">
 	<div class="row">
 		<div class="col-sm-6 col-sm-offset-2">
-			<form method="POST" action="{{url('universities/'.$university->id.'/university_comp/update')}}">
+			@if($uni_comp->count()>0)
+				<div class="form-group">
+					<a href="{{url('universities/'.$university->id.'/university_comp/add')}}" class="btn btn-warning">ADD COMPONENT?</a>	
+				</div>
+			@else
+				<form method="POST" action="{{url('universities/'.$university->id.'/university_comp/update')}}">
 				{{csrf_field()}}
 				<div class="panel panel-default">
 					<div class="panel-heading"><h2>Here are some University Components</h2>
 					</div>
 					<div class="panel-body">
-						<form>
 							<div class="form-group">
 								<div class="checkbox">
 									<label> <strong>Administration</strong>  <input name="comp_name" type="checkbox" value="administation"></label>
@@ -44,16 +48,14 @@
 
 							<div class="form-group">
 								<button type="submit" class="btn btn-primary">UPDATE</button>
+								<a href="{{url('universities/'.$university->id.'/university_comp/add')}}" class="btn btn-info">SKIP</a>
 							</div>
-
-						</form>
-
-						<div class="form-group">
-								<a href="{{url('universities/'.$university->id.'/university_comp/add')}}" class="btn btn-warning">ADD COMPONENT?</a>	
-							</div>
+						
 					</div>
 			</div>
 			</form>
+			@endif
+			
 			
 		</div>		
 
