@@ -13,7 +13,6 @@
 						@if($search_word!==null)
 							<h3>Your Search for <b>{{$search_word}} </b> {{count($universities)}}</h3>
 						@endif
-
 						@if($universities!==null)
 							@foreach($universities as $university)
 								<a href="{{url('/universities/'.$university->id)}}"><h2>{{$university->name}}</h2></a>		
