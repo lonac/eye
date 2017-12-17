@@ -21,8 +21,7 @@ class SearchController extends Controller
         
         $search_word = $request->input('q');
 
-
-         return view('universities.index', compact('universities','search_word'));
+         return view('universities.search', compact('universities','search_word'));
 
 
 

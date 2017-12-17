@@ -10,6 +10,9 @@
 					<div class="panel panel-heading"><center><strong><h3>UNIVERSITIES</h3></strong></center> 
 					</div>
 					<div class="panel panel-body">
+						@if($search_word!==null)
+							<h3>Your Search for <b>{{$search_word}} </b> ({{count($universities)}} results)</h3>
+						@endif
 						@if($universities->count()>0)
 							@foreach($universities as $university)
 								<a href="{{url('/universities/'.$university->id)}}"><h2>{{$university->name}}</h2></a>		
