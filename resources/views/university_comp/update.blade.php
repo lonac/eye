@@ -20,29 +20,29 @@
 					<div class="panel-body">
 							<div class="form-group">
 								<div class="checkbox">
-									<label> <strong>Administration</strong>  <input name="comp_name" type="checkbox" value="Administation"></label>
+									<label> <strong>Administration</strong>  <input name="comp_name[]" type="checkbox" value="Administation"></label>
 								</div>							
 							</div>
 							<div class="form-group">
 								<div class="checkbox">
-									<label> <strong>College</strong>  <input name="comp_name" type="checkbox" value="College"> </label>
+									<label> <strong>College</strong>  <input name="comp_name[]" type="checkbox" value="College"> </label>
 								</div>		
 							</div>
 							<div class="form-group">
 								<div class="checkbox">
-									<label><strong>Library</strong> <input name="comp_name" type="checkbox" value="Library"> </label>
+									<label><strong>Library</strong> <input name="comp_name[]" type="checkbox" value="Library"> </label>
 								</div>	
 							</div>
 
 							<div class="form-group">
 								<div class="checkbox">
-									<label> <strong>Cafteria</strong> <input name="comp_name"  type="checkbox" value="Cafteria"> </label>
+									<label> <strong>Cafteria</strong> <input name="comp_name[]"  type="checkbox" value="Cafteria"> </label>
 								</div>	
 							</div>
 
 							<div class="form-group">
 								<div class="checkbox">
-									<label><strong>Hospital</strong> <input name="comp_name" type="checkbox" value="Hospital"> </label>
+									<label><strong>Hospital</strong> <input name="comp_name[]" type="checkbox" value="Hospital"> </label>
 								</div>	
 							</div>
 

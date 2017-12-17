@@ -44,11 +44,22 @@ class UniversityComponentController extends Controller
 
         $component = new UniversityComponents;
 
+        $all_comp = implode(",", $request->get('comp_name'));
+
+        $arr = serialize($all_comp);
+
+        dd($arr);
+
+       
+
         $component->university_id = $university->id;
-        $component->comp_name = $request->input('comp_name');
-        $component->save();
+        $component->comp_name = $all_comp;
+
+       // $component->save();
 
         dd('Components saved');
+
+
     }
 
     /**
@@ -111,6 +122,7 @@ class UniversityComponentController extends Controller
 
     public function newcomp(Request $request, $id)
     {
+
         $university = University::findOrFail($id);
 
         $component = new UniversityComponents;
