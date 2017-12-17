@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\University;
 
+use App\UniversityComponents;
+
 class UniversityController extends Controller
 {
     /**
@@ -72,7 +74,9 @@ class UniversityController extends Controller
     {
         $university = University::findOrFail($id);
 
-        return view('universities.show',compact('university'));
+        $uni_comp = $university->university_components;
+
+        return view('universities.show',compact('university','uni_comp'));
     }
 
     /**
@@ -107,5 +111,12 @@ class UniversityController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function LoginForm($id)
+    {
+         $university = University::findOrFail($id);
+
+        return view('universities.login',compact('university'));
     }
 }

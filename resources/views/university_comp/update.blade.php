@@ -20,29 +20,29 @@
 					<div class="panel-body">
 							<div class="form-group">
 								<div class="checkbox">
-									<label> <strong>Administration</strong>  <input name="comp_name" type="checkbox" value="administation"></label>
+									<label> <strong>Administration</strong>  <input name="comp_name" type="checkbox" value="Administation"></label>
 								</div>							
 							</div>
 							<div class="form-group">
 								<div class="checkbox">
-									<label> <strong>College</strong>  <input name="comp_name" type="checkbox" value="college"> </label>
+									<label> <strong>College</strong>  <input name="comp_name" type="checkbox" value="College"> </label>
 								</div>		
 							</div>
 							<div class="form-group">
 								<div class="checkbox">
-									<label><strong>Library</strong> <input name="comp_name" type="checkbox" value="library"> </label>
+									<label><strong>Library</strong> <input name="comp_name" type="checkbox" value="Library"> </label>
 								</div>	
 							</div>
 
 							<div class="form-group">
 								<div class="checkbox">
-									<label> <strong>Cafteria</strong> <input name="comp_name"  type="checkbox" value="cafteria"> </label>
+									<label> <strong>Cafteria</strong> <input name="comp_name"  type="checkbox" value="Cafteria"> </label>
 								</div>	
 							</div>
 
 							<div class="form-group">
 								<div class="checkbox">
-									<label><strong>Hospital</strong> <input name="comp_name" type="checkbox" value="hospital"> </label>
+									<label><strong>Hospital</strong> <input name="comp_name" type="checkbox" value="Hospital"> </label>
 								</div>	
 							</div>
 
@@ -55,8 +55,6 @@
 			</div>
 			</form>
 			@endif
-			
-			
 		</div>		
 
 	</div>

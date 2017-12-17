@@ -39,6 +39,8 @@ Route::get('/universities/register', 'UniversityController@register');
 Route::post('/universities/register', 'UniversityController@store');
 Route::get('/universities', 'UniversityController@index');
 Route::get('/universities/{id}','UniversityController@show');
+Route::get('/universities/{id}/login','UniversityController@LoginForm');
+
 
 
 //Search

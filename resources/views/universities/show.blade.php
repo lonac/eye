@@ -16,9 +16,12 @@
 		<div class="row">
 			<div class="panel panel-default">
 					<div class="panel panel-body">
-
 						<div class="col-md-4">
-							categories available for university
+							@if($uni_comp->count()>0)
+								@foreach($uni_comp as $comp)
+									<a href="{{url('universities/'.$comp->university->id.'/')}}" class="btn btn-info">{{$comp->comp_name}}</a><br>
+								@endforeach		
+							@endif
 						</div>
 
 						<div class="col-md-4">
