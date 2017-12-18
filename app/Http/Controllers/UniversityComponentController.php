@@ -46,18 +46,18 @@ class UniversityComponentController extends Controller
 
         $component = new UniversityComponents;
 
-        $all_comp = implode(",", $request->get('comp_name'));
+       // $all_comp = implode(",", $request->get('comp_name'));
 
-        $arr = serialize($all_comp);
+       // $arr = serialize($all_comp);
 
-        dd($arr);
+       // dd($arr);
 
        
 
         $component->university_id = $university->id;
         $component->comp_name = $all_comp;
 
-       // $component->save();
+        $component->save();
 
         dd('Components saved');
 

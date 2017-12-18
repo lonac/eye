@@ -29,11 +29,17 @@ class UniversityAdministrationController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create($id)
+    public function create($id,$comp_id)
     {
-        $university = University::findOrFail($id);
+         $university = University::findOrFail($id);
 
-        return view('university_administr.update',compact('university'));
+        $comp = UniversityComponents::findOrFail($comp_id);
+
+        $uni_comp = $university->university_components()->where('id', $comp->id)->get();
+
+        $administr = $university->university_administrations()->where('id', $comp->id)->get();
+
+        return view('university_comp.update',compact('university','uni_comp','administr'));
     }
 
     /**
