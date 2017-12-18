@@ -25,9 +25,7 @@
 						</div>
 
 						<div class="col-md-4">
-							<center>
-								<img id="loading" src="{{asset('/images/jicho.jpg')}}" width="100" length="100">
-							</center>	
+							Animation video	
 						</div>
 
 						<div class="col-md-4">
