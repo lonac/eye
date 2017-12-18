@@ -46,9 +46,9 @@ Route::get('/universities/{id}/login','UniversityController@LoginForm');
 Route::get('universities/{id}/university_administr','UniversityAdministrationController@index');
 Route::get('universities/{id}/university_administr/update','UniversityAdministrationController@create');
 Route::post('universities/{id}/university_administr/update','UniversityAdministrationController@update');
-Route::get('universities/{id}/university_administr/add','UniversityAdministrationController@add');
-Route::post('universities/{id}/university_administr/add','UniversityAdministrationController@store');
-
+Route::get('universities/{id}/university_comp/{comp_id}/university_administr/add','UniversityAdministrationController@add');
+Route::post('universities/{id}/university_comp/{comp_id}/university_administr/add','UniversityAdministrationController@store');
+Route::get('universities/{id}/university_comp/{comp_id}/university_administr/show','UniversityAdministrationController@show');
 
 
 //Search

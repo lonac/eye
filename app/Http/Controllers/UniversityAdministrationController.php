@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 
 use App\University;
 
+use App\UniversityComponents;
+
+use App\UniversityAdministration;
+
 class UniversityAdministrationController extends Controller
 {
     /**
@@ -40,17 +44,38 @@ class UniversityAdministrationController extends Controller
      */
 
     
-    public function add($id)
+    public function add($id, $comp_id)
     {
 
         $university = University::findOrFail($id);
 
-        return view('university_administr.add',compact('university'));
+        $comp = UniversityComponents::findOrFail($comp_id);
+
+        $uni_comp = $university->university_components()->where('id', $comp->id)->get();
+
+        return view('university_administr.add',compact('university','uni_comp'));
     }
 
-    public function store(Request $request)
+    public function store(Request $request, $id, $comp_id)
     {
-        //
+        $this->validate($request,[
+            'name'=>'required|max:100',
+            ]);
+
+        $university = University::findOrFail($id);
+        $comp = UniversityComponents::findOrFail($comp_id);
+        $uni_comp = $university->university_components()->where('id', $comp->id)->get();
+
+        $universt_admin = new UniversityAdministration;
+        $universt_admin->university_id = $university->id;
+        $universt_admin->university_comp_id = $comp->id;
+        $universt_admin->name = $request->input('name');
+
+        //$universt_admin->save();
+
+        return redirect('/universities/'.$university->id.'/university_comp/'.$comp->id.'/university_administr/show')->with('message','New Component Successfully Added');
+
+
     }
 
     /**
@@ -59,9 +84,15 @@ class UniversityAdministrationController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($id, $comp_id)
     {
-        //
+         $university = University::findOrFail($id);
+
+        $comp = UniversityComponents::findOrFail($comp_id);
+
+        $uni_comp = $university->university_components()->where('id', $comp->id)->get();
+
+        return view('university_administr.show',compact('university','uni_comp'));
     }
 
     /**

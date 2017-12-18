@@ -18,6 +18,8 @@ class UniversityAdministrationTable extends Migration
             $table->increments('id');
             $table->integer('university_id')->unsigned();
             $table->foreign('university_id')->references('id')->on('universities')->onUpdate('cascade');
+             $table->integer('university_comp_id')->unsigned();
+            $table->foreign('university_comp_id')->references('id')->on('university_components')->onUpdate('cascade');
             $table->string('name');
             $table->timestamps();
         });

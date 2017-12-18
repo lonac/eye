@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title','KKOO')
+@section('title','JICHO')
 
 @section('content')
     <div class='col-lg-4 col-lg-offset-4'>

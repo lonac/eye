@@ -10,17 +10,19 @@
 			<div class="panel panel-default">
 				<div class="panel-heading">
 					<center><strong><h3>{{$university->name}} 
+						@if($uni_comp->count()>0)		
+							@foreach($uni_comp as $comp)
+								>{{$comp->comp_name}}
+							@endforeach
+						@endif
 					</h3></strong></center>
 				</div>
+
 				<div class="panel panel-body">
-					@if($uni_comp->count()>0)		
-							@foreach($uni_comp as $comp)
-								<strong><h3>{{$comp->comp_name}} </h3></strong>
-							@endforeach
-						@else
-					<font color="red">
-						<h3>Sorry, no any component Updated for this University!</h3>
-					</font>	
+					@if(!$uni_comp->count()>0)		
+						<font color="red">
+							<h3>Sorry, no any component Updated for this University!</h3>
+						</font>	
 					@endif
 				</div>
 			</div>
