@@ -8,12 +8,12 @@
     <div class="content">
         <div class="row">
             <div class="col-md-12">  
-                    <div class="search-background">
-                        <img src="{{ asset('images/jicho.PNG')}}">
-                    </div>
-                        @include('search.searchform')
-              </div>    
-            </div>
+                <div class="search-background">
+                    <img src="{{ asset('images/jicho.PNG')}}">
+               
+                     @include('search.searchform')
+              </div> 
+            </div>   
         </div>
         <div class="row">
             <div class="col-md-12">
