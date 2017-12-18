@@ -8,6 +8,8 @@ use App\University;
 
 use App\UniversityComponents;
 
+use App\UniversityAdministration;
+
 class UniversityComponentController extends Controller
 {
     /**
@@ -76,7 +78,9 @@ class UniversityComponentController extends Controller
 
         $uni_comp = $university->university_components()->where('id', $comp->id)->get();
 
-        return view('university_comp.show',compact('university','uni_comp'));
+        $administr = $university->university_administrations()->where('id', $comp->id)->get();
+
+        return view('university_comp.show',compact('university','uni_comp','administr'));
     }
 
     /**

@@ -71,7 +71,7 @@ class UniversityAdministrationController extends Controller
         $universt_admin->university_comp_id = $comp->id;
         $universt_admin->name = $request->input('name');
 
-        //$universt_admin->save();
+        $universt_admin->save();
 
         return redirect('/universities/'.$university->id.'/university_comp/'.$comp->id.'/university_administr/show')->with('message','New Component Successfully Added');
 

@@ -19,6 +19,14 @@
 				</div>
 
 				<div class="panel panel-body">
+					<!-- DISPLAY ADMINISTR CONTENTS -->
+					@if($administr->count()>0)
+						@foreach($administr as $admin)
+							<strong><h2><a href="" class="btn btn-info">{{$admin->name}}</a></h2></strong>
+						@endforeach
+					@endif
+
+					<!-- UNIVERSITY COMPONENTS -->
 					@if(!$uni_comp->count()>0)		
 						<font color="red">
 							<h3>Sorry, no any component Updated for this University!</h3>
