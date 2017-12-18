@@ -19,7 +19,7 @@
 						<div class="col-md-4">
 							@if($uni_comp->count()>0)
 								@foreach($uni_comp as $comp)
-									<a href="{{url('universities/'.$comp->university->id.'/')}}" class="btn btn-info">{{$comp->comp_name}}</a><br>
+									<a href="{{url('universities/'.$comp->university->id.'/'.$comp->comp_name.'/')}}" class="btn btn-info">{{$comp->comp_name}}</a><br>
 								@endforeach		
 							@endif
 						</div>

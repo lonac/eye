@@ -68,11 +68,13 @@ class UniversityComponentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($id, $comp_id)
     {
         $university = University::findOrFail($id);
 
-         $uni_comp = $university->university_components;
+        $comp = UniversityComponents::findOrFail($comp_id);
+
+        $uni_comp = $university->university_components()->where('id', $comp->id)->get();
 
         return view('university_comp.show',compact('university','uni_comp'));
     }

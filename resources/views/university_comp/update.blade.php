@@ -20,7 +20,7 @@
 					<div class="panel-body">
 							<div class="form-group">
 								<div class="checkbox">
-									<label> <strong>Administration</strong>  <input name="comp_name[]" type="checkbox" value="Administation"></label>
+									<label> <strong>Administration</strong>  <input name="comp_name[]" type="checkbox" value="Administration"></label>
 								</div>							
 							</div>
 							<div class="form-group">

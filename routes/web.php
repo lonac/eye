@@ -68,7 +68,7 @@ Route::get('universities/{id}/university_comp/edit/{comp_id}','UniversityCompone
 
 Route::get('universities/{id}/university_comp/update','UniversityComponentController@update');
 Route::post('universities/{id}/university_comp/update','UniversityComponentController@store');
-Route::get('universities/{id}/university_comp/show','UniversityComponentController@show');
+Route::get('universities/{id}/university_comp/{comp_id}','UniversityComponentController@show');
 
 
 
