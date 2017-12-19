@@ -7,7 +7,7 @@
 		<div class="row">
 			<div class="col-md-8 col-md-offset-2">
 				<div class="panel panel-default">
-					<div class="panel panel-heading"><center><strong><h3>UNIVERSITIES</h3></strong></center> 
+					<div class="panel panel-heading"><center><strong><h2>UNIVERSITIES</h2></strong></center> 
 					</div>
 					<div class="panel panel-body">
 						@if($universities->count()>0)

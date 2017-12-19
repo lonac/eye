@@ -60,7 +60,7 @@ class UniversityController extends Controller
 
        $university->save();
 
-       echo "University successfully saved";
+       return redirect('universities')->with('message','University was Successfully Registered');
 
     }
 

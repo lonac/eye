@@ -6,16 +6,16 @@
 
 <div class="container">
 	<div class="row">
-		<div class="col-sm-8 col-sm-offset-1">
+		<div class="col-sm-8 col-sm-offset-2">
 			<div class="panel panel-default">
 				<div class="panel-heading">
-					<center><strong><h3>{{$university->name}} 
+					<center><strong><h2>{{$university->name}} 
 						@if($uni_comp->count()>0)		
 							@foreach($uni_comp as $comp)
 								>{{$comp->comp_name}}
 							@endforeach
 						@endif
-					</h3></strong></center>
+					</h2></strong></center>
 				</div>
 
 				<div class="panel panel-body">

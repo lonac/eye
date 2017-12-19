@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\University;
 
+use App\UniversityComponents;
+
 class AdminPageController extends Controller
 {
     /**
@@ -17,7 +19,9 @@ class AdminPageController extends Controller
     {
         $university= University::findOrFail($id);
 
-        return view('admin.index', compact('university'));
+        $uni_comp = $university->university_components;
+
+        return view('admin.index', compact('university','uni_comp'));
     }
 
     /**

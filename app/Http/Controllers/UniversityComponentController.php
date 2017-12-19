@@ -62,7 +62,9 @@ class UniversityComponentController extends Controller
         }
             if(!empty($arr)){
                 \DB::table('university_components')->insert($arr);
-                    dd('Insert Record successfully.');
+                    
+                    return redirect('universities/'.$university->id.'/university_comp/add')
+                    ->with('message','The Component was Successfully Added!');
             }
 
         }
@@ -151,5 +153,14 @@ class UniversityComponentController extends Controller
         $component->save();
 
         dd('Components saved');
+    }
+
+    public function showAdminComp($id)
+    {
+         $university = University::findOrFail($id);
+
+         $uni_comp = $university->university_components;
+
+        return view('university_comp.admin_comp',compact('university','uni_comp'));
     }
 }

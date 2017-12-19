@@ -6,16 +6,27 @@
 
 <div class="container">
 	<div class="row">
-		<div class="col-sm-6 col-sm-offset-2">
+		<div class="col-sm-8 col-sm-offset-2">
+			<div class="panel panel-default">
+				<div class="panel panel-heading"><center><h3><strong>{{$university->name}}</strong></h3></center></div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-11 col-sm-offset-1">
 			@if($uni_comp->count()>0)
-				<div class="form-group">
-					<a href="{{url('universities/'.$university->id.'/university_comp/add')}}" class="btn btn-warning">ADD COMPONENT?</a>	
+				<div class="panel panel-default">
+					<div class="panel panel-heading">
+						<div class="form-group">
+							<a href="{{url('universities/'.$university->id.'/university_comp/add')}}" class="btn btn-warning">ADD COMPONENT?</a>	
+						</div>
+					</div>
 				</div>
 			@else
 				<form method="POST" action="{{url('universities/'.$university->id.'/university_comp/update')}}">
 				{{csrf_field()}}
 				<div class="panel panel-default">
-					<div class="panel-heading"><h2>Here are some University Components</h2>
+					<div class="panel-heading"><h3>Here are some Common University Components Update or Skip</h3>
 					</div>
 					<div class="panel-body">
 							<div class="form-group">
