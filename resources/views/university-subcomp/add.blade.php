@@ -9,7 +9,7 @@
 		<div class="col-sm-8 col-sm-offset-2">
 			@if($uni_comp->count()>0)
 				@foreach($uni_comp as $comp)
-					<form method="POST" action="{{url('/universities/'.$comp->university_id.'/university_comp/'.$comp->id.'/university_administr/add')}}">
+					<form method="POST" action="{{url('/universities/'.$comp->university_id.'/university_comp/'.$comp->id.'/university-subcomp/add')}}">
 						{{csrf_field()}}
 						<div class="panel panel-default">
 							<div class="panel-heading"><center><h2>Add Component at {{$comp->university->name}} <b>{{$comp->comp_name}}</b></h2></center>

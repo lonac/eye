@@ -11,12 +11,12 @@
 			@if($administr->count()>0)
 				@foreach($administr as $admin)
 					<div class="form-group">
-						<a href="{{url('universities/'.$admin->university_id.'/university_comp/'.$admin->university_comp_id.'/university_administr/add')}}" class="btn btn-warning">ADD COMPONENT?</a>
+						<a href="{{url('universities/'.$admin->university_id.'/university_comp/'.$admin->university_comp_id.'/university-subcomp/add')}}" class="btn btn-warning">ADD COMPONENT?</a>
 					</div>	
 				@endforeach
 			@else
 				@foreach($administr as $admin)
-					<form method="POST" action="{{url('universities/'.$admin->university_id.'/university_comp/'.$admin->university_comp_id.'/university_administr/update')}}">
+					<form method="POST" action="{{url('universities/'.$admin->university_id.'/university_comp/'.$admin->university_comp_id.'/university-subcomp/update')}}">
 					{{csrf_field()}}
 					<div class="panel panel-default">
 						<div class="panel-heading"><h2>Here are some Administration Components</h2>
@@ -52,7 +52,7 @@
 
 								<div class="form-group">
 									<button type="submit" class="btn btn-primary">UPDATE</button>
-									<a href="{{url('universities/'.$university->id.'/university_administr/add')}}" class="btn btn-info">SKIP</a>
+									<a href="{{url('universities/'.$university->id.'/university-subcomp/add')}}" class="btn btn-info">SKIP</a>
 								</div>
 							
 						</div>

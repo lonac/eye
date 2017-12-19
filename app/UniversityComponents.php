@@ -8,8 +8,8 @@ class UniversityComponents extends Model
 {
     protected $fillable = ['comp_name','university_id'];
 
-    public function university()
+    public function university_components()
     {
-    	return $this->belongsTo('App\University');
+    	return $this->belongsTo('App\UniversityAdministration');
     }
 }

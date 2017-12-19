@@ -10,7 +10,7 @@ use App\UniversityComponents;
 
 use App\UniversityAdministration;
 
-class UniversityAdministrationController extends Controller
+class UniversitySubCompController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -21,7 +21,7 @@ class UniversityAdministrationController extends Controller
     {
         $university = University::findOrFail($id);
 
-        return view('university_administr.show',compact('university'));
+        return view('university-subcomp.show',compact('university'));
     }
 
     /**
@@ -59,7 +59,7 @@ class UniversityAdministrationController extends Controller
 
         $uni_comp = $university->university_components()->where('id', $comp->id)->get();
 
-        return view('university_administr.add',compact('university','uni_comp'));
+        return view('university-subcomp.add',compact('university','uni_comp'));
     }
 
     public function store(Request $request, $id, $comp_id)
@@ -98,7 +98,7 @@ class UniversityAdministrationController extends Controller
 
         $uni_comp = $university->university_components()->where('id', $comp->id)->get();
 
-        return view('university_administr.show',compact('university','uni_comp'));
+        return view('university-subcomp.show',compact('university','uni_comp'));
     }
 
     /**
