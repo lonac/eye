@@ -10,6 +10,8 @@ use App\UniversityComponents;
 
 use App\UniversityAdministration;
 
+use Illuminate\Support\Facades\Validator;
+
 class UniversityComponentController extends Controller
 {
     /**
@@ -42,25 +44,31 @@ class UniversityComponentController extends Controller
      */
     public function store(Request $request, $id)
     {
+ 
         $university = University::findOrFail($id);
 
         $component = new UniversityComponents;
 
-       // $all_comp = implode(",", $request->get('comp_name'));
+        $comp_names = implode(",", $request->get('comp_name'));
 
-       // $arr = serialize($all_comp);
+        $comp_name = explode(',', $comp_names);
 
-       // dd($arr);
+        if (!empty($comp_name)) {
+            foreach ($comp_name as $name) {
+            $arr[] = [
+                    'university_id'=>University::findOrFail($id)->id,
+                    'comp_name'=> $name,
+                     ];
+        }
+            if(!empty($arr)){
+                \DB::table('university_components')->insert($arr);
+                    dd('Insert Record successfully.');
+            }
 
-       
+        }
+        
 
-        $component->university_id = $university->id;
-        $component->comp_name = $all_comp;
-
-        $component->save();
-
-        dd('Components saved');
-
+        
 
     }
 
@@ -72,9 +80,11 @@ class UniversityComponentController extends Controller
      */
     public function show($id, $comp_id)
     {
-        $university = University::findOrFail($id);
+         $comp = UniversityComponents::where('id', $comp_id)
+            ->orWhere('comp_name', $comp_id)
+            ->firstOrFail();
 
-        $comp = UniversityComponents::findOrFail($comp_id);
+        $university = University::findOrFail($id);
 
         $uni_comp = $university->university_components()->where('id', $comp->id)->get();
 
@@ -128,6 +138,9 @@ class UniversityComponentController extends Controller
 
     public function newcomp(Request $request, $id)
     {
+        $this->validate($request,[
+            'comp_name'=>'required|max:100'
+            ]);
 
         $university = University::findOrFail($id);
 
