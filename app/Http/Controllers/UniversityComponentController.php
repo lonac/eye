@@ -90,7 +90,7 @@ class UniversityComponentController extends Controller
 
         $uni_comp = $university->university_components()->where('id', $comp->id)->get();
 
-        $uni_subcomp = $comp->university_subcomponents;
+        $uni_subcomp = $comp->university_subcomponents()->where('university_components_id', $comp->id)->get();
 
         return view('university_comp.show',compact('university','uni_comp','uni_subcomp','comp'));
     }
