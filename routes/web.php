@@ -47,7 +47,7 @@ Route::get('universities/{id}/university_comp/add','UniversityComponentControlle
 Route::post('universities/{id}/university_comp/add','UniversityComponentController@newcomp');
 Route::get('universities/{id}/university_comp/edit/{comp_id}','UniversityComponentController@edit');
 Route::patch('universities/{id}/university_comp/edit/{comp_id}','UniversityComponentController@update');
-Route::post('universities/{id}/university_comp/{comp_id}','UniversityComponentController@destroy');
+//Route::post('universities/{id}/university_comp/{comp_id}','UniversityComponentController@destroy');
 
 
 Route::get('universities/{id}/university_comp/update','UniversityComponentController@updateDefaults');

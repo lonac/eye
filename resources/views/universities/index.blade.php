@@ -18,7 +18,8 @@
 					<div class="panel panel-body">
 						@if($universities->count()>0)
 							@foreach($universities as $university)
-								<a href="{{url('/universities/'.$university->id)}}"><h2>{{$university->name}}</h2></a>		
+								<a href="{{url('/universities/'.$university->id)}}"><h2>{{$university->name}}</h2></a>	
+								<a href="{{url('/universities/'.$university->id.'/admin')}}">Admin Panel</a>	
 							@endforeach
 						@else
 							<center>

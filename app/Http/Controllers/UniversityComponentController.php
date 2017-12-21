@@ -167,9 +167,10 @@ class UniversityComponentController extends Controller
 
         $component->university_id = $university->id;
         $component->comp_name = $request->input('comp_name');
-       // $component->save();
+        $component->save();
 
-        dd('Components saved');
+        return redirect('universities/'.$university->id.'/university_comp')
+                    ->with('message','Data was Successfully Added');
     }
 
     public function showAdminComp($id)
