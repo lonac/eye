@@ -145,7 +145,7 @@ class UniversityComponentController extends Controller
 
         $component->university_id = $university->id;
         $component->comp_name = $request->input('comp_name');
-        $component->save();
+       // $component->save();
 
         dd('Components saved');
     }
