@@ -38,8 +38,9 @@
 						@else
 					</table>
 							<font color="red">
-								<h3>Sorry, no any component Updated for this University!
-								<a href="{{url('universities/'.$university->id.'/university_comp/update')}}" class="btn btn-info">UPDATE NOW?</a></h3>
+								<center>
+									<h3>Sorry, no any component Updated for this University!
+								</center>
 							</font>	
 					@endif
 				</div>

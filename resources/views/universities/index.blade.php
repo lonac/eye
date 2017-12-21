@@ -9,6 +9,12 @@
 				<div class="panel panel-default">
 					<div class="panel panel-heading"><center><h2>UNIVERSITIES</h2></center> 
 					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-10 col-md-offset-1">
+				<div class="panel panel-default">
 					<div class="panel panel-body">
 						@if($universities->count()>0)
 							@foreach($universities as $university)

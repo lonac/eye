@@ -17,7 +17,7 @@
         </div>
         <div class="row">
             <div class="col-md-12">
-                <div class="panel panel-primary">
+                <div class="panel panel-info">
                     <div class="panel-heading">
                          <h2>
                              <a href="{{url('/universities')}}" class="btn btn-default">UNIVERSITY</a>

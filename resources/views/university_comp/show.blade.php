@@ -20,12 +20,14 @@
 	<div class="row">
 		<div class="col-sm-10 col-sm-offset-1">
 			<div class="panel panel-default">
+				<div class="panel panel-heading"><center>{{$comp->comp_name}}</center>
+				</div>
 				<div class="panel panel-body">
 					<!-- DISPLAY UNI-SUBCOMP CONTENTS -->
 					@if($uni_subcomp->count()>0)
 						@foreach($uni_subcomp as $comp)
-							<strong><h2><a href="{{url('universities/'.$comp->university_component->university_id.'/university_comp/'.$comp->university_components_id.'/university-subcomp/show')}}" 
-								class="btn btn-info">{{$comp->name}}</a></h2></strong>
+							<h4><a href="{{url('universities/'.$comp->university_component->university_id.'/university_comp/'.$comp->university_components_id.'/university-subcomp/show')}}" 
+								class="btn btn-info">{{$comp->name}}</a></h4>
 						@endforeach
 					@endif
 
