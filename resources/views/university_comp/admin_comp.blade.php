@@ -20,17 +20,26 @@
 					<!-- UNIVERSITY COMPONENTS -->
 					<table class="table">
 						@if($uni_comp->count()>0)	
-						<th>COMPONENT</th> <th>ACTIONS </th>
+						<th>COMPONENT</th> <th>SUB-COMPONENTS </th> <th>ADD SUB-COMP</th><th>EDIT</th><th>DELETE</th>
 							@foreach($uni_comp as $comp)
 								<tr>
 									<td>{{$comp->comp_name}}</td>
+									<td></td>
 									<td>
-										<a href="{{url('')}}" class="btn btn-primary">VIEW</a>
-										<a href="{{url('universities')}}" class="btn btn-primary">EDIT</a>
-										<a href="{{url('universities')}}" class="btn btn-danger">DELETE</a>
+										<a href="{{url('universities/'.$comp->university_id.'/university_comp/'.$comp->id.'/university-subcomp/add')}}" 
+											class="btn btn-primary">ADD</a>
 									</td>
+									<td>
+										<a href="{{url('universities')}}" class="btn btn-primary">EDIT</a>
+									</td>
+									<td>
+										<a href="{{url('universities')}}" class="btn btn-danger">DELETE</a>
+									</td>			
 								</tr>
 							@endforeach	
+							<th>
+								<a href="{{url('universities/'.$university->id.'/university_comp/add')}}">ADD COMPONENT</a>
+							</th>
 						@else
 					</table>
 							<font color="red">

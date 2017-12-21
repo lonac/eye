@@ -42,14 +42,31 @@ Route::get('/universities/{id}','UniversityController@show');
 Route::get('/universities/{id}/login','UniversityController@LoginForm');
 
 
-//UNIVERSITY ADMINISTRATIONS
-Route::get('universities/{id}/university-subcomp','UniversitySubCompController@index');
+//UNIVERSITY-COMPONENTS
+Route::get('universities/{id}/university_comp/add','UniversityComponentController@add');
+Route::post('universities/{id}/university_comp/add','UniversityComponentController@newcomp');
+Route::get('universities/{id}/university_comp/edit/{comp_id}','UniversityComponentController@edit');
+
+Route::get('universities/{id}/university_comp/update','UniversityComponentController@update');
+Route::post('universities/{id}/university_comp/update','UniversityComponentController@store');
+Route::get('universities/{id}/university_comp/{param}','UniversityComponentController@show');
+Route::get('universities/{id}/university_comp','UniversityComponentController@showAdminComp');
+
+
+//UNIVERSITY SUB-COMPONENTS
+Route::get('universities/{id}/university_comp/{comp_id}/university-subcomp/create','UniverSubCompController@create');
+Route::post('universities/{id}/university_comp/{comp_id}/university-subcomp/create','UniverSubCompController@store');
+
+Route::get('universities/{id}/university_comp/{comp_id}/university-subcomp/add','UniverSubCompController@add');
+
+
+ /*Route::get('universities/{id}/university-subcomp','UniversitySubCompController@index');
 Route::get('universities/{id}/university_comp/{comp_id}/university-subcomp/update','UniversitySubCompController@create');
 Route::post('universities/{id}/university_comp/{comp_id}/university-subcomp/update','UniversitySubCompController@update');
 Route::get('universities/{id}/university_comp/{comp_id}/university-subcomp/add','UniversitySubCompController@add');
 Route::post('universities/{id}/university_comp/{comp_id}/university-subcomp/add','UniversitySubCompController@store');
 Route::get('universities/{id}/university_comp/{comp_id}/university-subcomp/show','UniversitySubCompController@show');
-
+*/
 
 //Search
 Route::get('search',array('as'=>'search','uses'=>'SearchController@search'));
@@ -60,16 +77,6 @@ Route::get('autocomplete',array('as'=>'autocomplete','uses'=>'SearchController@a
 Route::get('universities/{id}/admin','AdminPageController@index');
 
 
-
-//university_component
-Route::get('universities/{id}/university_comp/add','UniversityComponentController@add');
-Route::post('universities/{id}/university_comp/add','UniversityComponentController@newcomp');
-Route::get('universities/{id}/university_comp/edit/{comp_id}','UniversityComponentController@edit');
-
-Route::get('universities/{id}/university_comp/update','UniversityComponentController@update');
-Route::post('universities/{id}/university_comp/update','UniversityComponentController@store');
-Route::get('universities/{id}/university_comp/{param}','UniversityComponentController@show');
-Route::get('universities/{id}/university_comp','UniversityComponentController@showAdminComp');
 
 
 

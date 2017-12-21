@@ -26,7 +26,7 @@
 				<form method="POST" action="{{url('universities/'.$university->id.'/university_comp/update')}}">
 				{{csrf_field()}}
 				<div class="panel panel-default">
-					<div class="panel-heading"><h3>Here are some Common University Components Update or Skip</h3>
+					<div class="panel-heading"><h3>Here are some Common University Components just Update or Skip</h3>
 					</div>
 					<div class="panel-body">
 							<div class="form-group">

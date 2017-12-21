@@ -1,0 +1,154 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+use App\University;
+
+use App\UniversityComponents;
+
+use App\UniversitySubcomponent;
+
+class UniverSubCompController extends Controller
+{
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        //
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create($id, $comp_id)
+    {
+        $university = University::findOrFail($id);
+
+        $comp = UniversityComponents::findOrFail($comp_id);
+
+        $uni_comp = $university->university_components()->where('id',$comp->id)->get();
+
+        $uni_subcomp = $comp->university_subcomponents;
+
+        return view('university-subcomp.create',compact('university','comp','uni_comp','uni_subcomp'));
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request, $id, $comp_id)
+    {
+        $university = University::findOrFail($id);
+
+        $comp = UniversityComponents::findOrFail($comp_id);
+
+        $uni_subcomp = new UniversitySubcomponent;
+
+        $comp_names = implode(",", $request->get('subname'));
+
+        $name = explode(',', $comp_names);
+
+        if (!empty($name)) {
+            foreach ($name as $subname) {
+            $arr[] = [
+                    'university_components_id'=>UniversityComponents::findOrFail($id)->id,
+                    'name'=> $subname,
+                     ];
+        }
+            if(!empty($arr)){
+                \DB::table('university_subcomponents')->insert($arr);
+                    
+                    return redirect('universities/'.$university->id.'/university_comp/add')
+                    ->with('message','The Component was Successfully Added!');
+            }
+
+        }
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function add($id, $comp_id)
+    {
+        $university = University::findOrFail($id);
+
+        $comp = UniversityComponents::findOrFail($comp_id);
+
+        $uni_comp = $university->university_components()->where('id', $comp->id)->get();
+
+        return view('university-subcomp.add',compact('university','uni_comp'));
+    }
+
+    public function addNew(Request $request, $id, $comp_id)
+    {
+         $this->validate($request,[
+            'name'=>'required|max:100',
+            ]);
+
+        $university = University::findOrFail($id);
+        $comp = UniversityComponents::findOrFail($comp_id);
+        $uni_comp = $university->university_components()->where('id', $comp->id)->get();
+
+        $uni_subcomp = new UniversitySubComponent;
+        $uni_subcomp->university_id = $university->id;
+        $uni_subcomp->university_comp_id = $comp->id;
+        $uni_subcomp->name = $request->input('name');
+
+      //  $uni_subcomp->save();
+
+        return redirect('/universities/'.$university->id.'/university_comp/'.$comp->id.'/university-subcomp/show')->with('message','New Component Successfully Added');
+    }
+
+
+    public function show($id)
+    {
+        //
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($id)
+    {
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+        //
+    }
+}

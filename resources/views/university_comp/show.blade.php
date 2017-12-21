@@ -19,10 +19,11 @@
 				</div>
 
 				<div class="panel panel-body">
-					<!-- DISPLAY ADMINISTR CONTENTS -->
-					@if($administr->count()>0)
-						@foreach($administr as $admin)
-							<strong><h2><a href="" class="btn btn-info">{{$admin->name}}</a></h2></strong>
+					<!-- DISPLAY UNI-SUBCOMP CONTENTS -->
+					@if($uni_subcomp->count()>0)
+						@foreach($uni_subcomp as $comp)
+							<strong><h2><a href="{{url('universities/'.$comp->university_component->university_id.'/university_comp/'.$comp->university_components_id.'/university-subcomp/show')}}" 
+								class="btn btn-info">{{$comp->name}}</a></h2></strong>
 						@endforeach
 					@endif
 

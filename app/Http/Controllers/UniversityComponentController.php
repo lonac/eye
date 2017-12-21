@@ -10,7 +10,7 @@ use App\UniversityComponents;
 
 use App\UniversityAdministration;
 
-use Illuminate\Support\Facades\Validator;
+//use Illuminate\Support\Facades\Validator;
 
 class UniversityComponentController extends Controller
 {
@@ -90,9 +90,9 @@ class UniversityComponentController extends Controller
 
         $uni_comp = $university->university_components()->where('id', $comp->id)->get();
 
-        $administr = $university->university_administrations()->where('id', $comp->id)->get();
+        $uni_subcomp = $comp->university_subcomponents;
 
-        return view('university_comp.show',compact('university','uni_comp','administr'));
+        return view('university_comp.show',compact('university','uni_comp','uni_subcomp'));
     }
 
     /**
@@ -133,11 +133,6 @@ class UniversityComponentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
-    {
-        //
-    }
-
     public function newcomp(Request $request, $id)
     {
         $this->validate($request,[

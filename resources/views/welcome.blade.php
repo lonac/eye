@@ -9,7 +9,7 @@
         <div class="row">
             <div class="col-md-12">  
                 <div class="search-background">
-                    <img src="{{ asset('images/jicho.PNG')}}">
+                    <img src="{{ asset('images/jichoImage.JPG')}}">
                
                      @include('search.searchform')
               </div> 

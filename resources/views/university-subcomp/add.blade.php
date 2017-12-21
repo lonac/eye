@@ -7,12 +7,19 @@
 <div class="container">
 	<div class="row">
 		<div class="col-sm-8 col-sm-offset-2">
+			<div class="panel panel-default">
+				<div class="panel panel-heading"><center><h2><strong>{{$university->name}}</strong></h2></center></div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-10 col-sm-offset-1">
 			@if($uni_comp->count()>0)
 				@foreach($uni_comp as $comp)
 					<form method="POST" action="{{url('/universities/'.$comp->university_id.'/university_comp/'.$comp->id.'/university-subcomp/add')}}">
 						{{csrf_field()}}
 						<div class="panel panel-default">
-							<div class="panel-heading"><center><h2>Add Component at {{$comp->university->name}} <b>{{$comp->comp_name}}</b></h2></center>
+							<div class="panel-heading"><center><h3>Add Component or Service at <b>{{$comp->comp_name}}</b></h3></center>
 							</div>
 							
 							<div class="panel-body">
@@ -21,7 +28,7 @@
 										<label for="name">NAME</label>
 									</div>
 									<div class="col-md-6">
-										<input type="text" class="form-control" name="name" placeholder="School Mentor,">
+										<input type="text" class="form-control" name="name" placeholder="e.g. College Name, Cafteria, Clubs">
 									</div>
 								</div>
 								<div class="form-group">

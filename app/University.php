@@ -13,8 +13,4 @@ class University extends Model
     	return $this->hasMany('App\UniversityComponents');
     }
 
-    public function university_administrations()
-    {
-    	return $this->hasMany('App\UniversityAdministration');
-    }
 }

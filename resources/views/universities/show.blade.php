@@ -9,7 +9,7 @@
 				<div class="panel panel-default">
 					<div class="panel panel-heading">
 						<center><strong><h2>{{$university->name}}</h2></strong></center>
-						</div>	
+					</div>	
 				</div>		
 			</div>
 		</div>
@@ -17,7 +17,7 @@
 			<div class="panel panel-default">
 					<div class="panel panel-body">
 						<div class="col-md-4">
-							@if($uni_comp->count()>0)
+							@if($uni_comp!==null)
 								@foreach($uni_comp as $comp)
 									<a href="{{url('universities/'.$comp->university->id.'/university_comp/'.$comp->comp_name.'/')}}" class="btn btn-info">{{$comp->comp_name}}</a><br>
 								@endforeach		
