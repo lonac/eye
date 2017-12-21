@@ -100,14 +100,14 @@ class UniverSubCompController extends Controller
 
         $university = University::findOrFail($id);
         $comp = UniversityComponents::findOrFail($comp_id);
+
         $uni_comp = $university->university_components()->where('id', $comp->id)->get();
 
         $uni_subcomp = new UniversitySubcomponent;
-        $uni_subcomp->university_id = $university->id;
-        $uni_subcomp->university_comp_id = $comp->id;
+        $uni_subcomp->university_components_id = $comp->id;
         $uni_subcomp->name = $request->input('name');
 
-      //  $uni_subcomp->save();
+        $uni_subcomp->save();
 
         return redirect('/universities/'.$university->id.'/university_comp/'.$comp->id.'/university-subcomp')->with('message','New Component Successfully Added');
     }

@@ -29,13 +29,11 @@
 							<h4><a href="{{url('universities/'.$comp->university_component->university_id.'/university_comp/'.$comp->university_components_id.'/university-subcomp/show')}}" 
 								class="btn btn-info">{{$comp->name}}</a></h4>
 						@endforeach
-					@endif
-
-					<!-- UNIVERSITY COMPONENTS -->
-					@if(!$uni_comp->count()>0)		
-						<font color="red">
+					@else
+					<font color="red">
 							<h3>Sorry, no any component Updated for this University!</h3>
-						</font>	
+						</font>
+
 					@endif
 				</div>
 			</div>

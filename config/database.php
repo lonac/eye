@@ -55,7 +55,7 @@ return [
             'strict' => true,
             'engine' => null,
         ],
-           'pgsql' => [
+            'pgsql' => [
                 'driver'   => 'pgsql',
                 'host'     => parse_url(getenv("DATABASE_URL"))["host"],
                 'database' => substr(parse_url(getenv("DATABASE_URL"))["path"], 1),
