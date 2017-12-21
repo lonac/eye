@@ -9,8 +9,8 @@
 		<div class="col-sm-8 col-sm-offset-2">
 			<div class="panel panel-default">
 				<div class="panel-heading">
-					<center><strong><h2>{{$university->name}} 
-					</h2></strong></center>
+					<center><h2>{{$university->name}} 
+					</h2></center>
 				</div>
 			</div>
 		</div>

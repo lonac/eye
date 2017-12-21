@@ -8,7 +8,7 @@
 			<div class="col-md-8 col-md-offset-2">
 				<div class="panel panel-default">
 					<div class="panel panel-heading">
-						<center><strong><h2>{{$university->name}}</h2></strong></center>
+						<center><h2>{{$university->name}}</h2></center>
 					</div>	
 				</div>		
 			</div>

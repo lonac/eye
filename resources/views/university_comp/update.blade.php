@@ -8,7 +8,7 @@
 	<div class="row">
 		<div class="col-sm-8 col-sm-offset-2">
 			<div class="panel panel-default">
-				<div class="panel panel-heading"><center><h3><strong>{{$university->name}}</strong></h3></center></div>
+				<div class="panel panel-heading"><center><h3>{{$university->name}}</h3></center></div>
 			</div>
 		</div>
 	</div>

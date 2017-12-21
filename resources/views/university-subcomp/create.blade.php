@@ -9,7 +9,7 @@
 		<div class="col-sm-6 col-sm-offset-2">
 			<div class="panel panel-default">
 				<div class="panel panel-heading">
-					<center><h2><strong>{{$university->name}}</strong></h2></center>
+					<center><h2>{{$university->name}}</h2></center>
 				</div>
 			</div>
 		</div>

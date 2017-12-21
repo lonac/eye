@@ -7,7 +7,7 @@
 		<div class="row">
 			<div class="col-md-8 col-md-offset-2">
 				<div class="panel panel-default">
-					<div class="panel panel-heading"><center><strong><h3>UNIVERSITIES</h3></strong></center> 
+					<div class="panel panel-heading"><center><h2>UNIVERSITIES</h2></center> 
 					</div>
 					<div class="panel panel-body">
 						@if($search_word!==null)
