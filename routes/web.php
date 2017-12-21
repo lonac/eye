@@ -56,8 +56,11 @@ Route::get('universities/{id}/university_comp','UniversityComponentController@sh
 //UNIVERSITY SUB-COMPONENTS
 Route::get('universities/{id}/university_comp/{comp_id}/university-subcomp/create','UniverSubCompController@create');
 Route::post('universities/{id}/university_comp/{comp_id}/university-subcomp/create','UniverSubCompController@store');
+Route::get('universities/{id}/university_comp/{comp_id}/university-subcomp/show','UniverSubCompController@show');
+
 
 Route::get('universities/{id}/university_comp/{comp_id}/university-subcomp/add','UniverSubCompController@add');
+Route::get('universities/{id}/university_comp/{comp_id}/university-subcomp','UniverSubCompController@showAdminComp');
 
 
  /*Route::get('universities/{id}/university-subcomp','UniversitySubCompController@index');

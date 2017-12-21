@@ -10,14 +10,16 @@
 			<div class="panel panel-default">
 				<div class="panel-heading">
 					<center><strong><h2>{{$university->name}} 
-						@if($uni_comp->count()>0)		
-							@foreach($uni_comp as $comp)
-								>{{$comp->comp_name}}
-							@endforeach
-						@endif
 					</h2></strong></center>
 				</div>
+			</div>
+		</div>
+	</div>
 
+	</div>
+	<div class="row">
+		<div class="col-sm-10 col-sm-offset-1">
+			<div class="panel panel-default">
 				<div class="panel panel-body">
 					<!-- DISPLAY UNI-SUBCOMP CONTENTS -->
 					@if($uni_subcomp->count()>0)
