@@ -26,7 +26,7 @@
 									<td>{{$comp->comp_name}}</td>
 									<td>
 										<a href="{{url('universities/'.$university->id.'/university_comp/'.$comp->id.'/university-subcomp')}}" class="btn btn-primary">VIEW</a>
-										<a href="{{url('universities')}}" class="btn btn-primary">EDIT</a>
+										<a href="{{url('universities/'.$university->id.'/university_comp/edit/'.$comp->id)}}" class="btn btn-primary">EDIT</a>
 										<a href="{{url('universities')}}" class="btn btn-danger">DELETE</a>
 									</td>			
 								</tr>

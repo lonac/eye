@@ -9,6 +9,13 @@
 				<div class="panel panel-default">
 					<div class="panel panel-heading"><center><h2>UNIVERSITIES</h2></center> 
 					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-10 col-md-offset-1">
+				<div class="panel panel-default">
 					<div class="panel panel-body">
 						@if($search_word!==null)
 							<h3>Your Search for <b>{{$search_word}} </b> ({{count($universities)}} results)</h3>

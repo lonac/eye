@@ -46,8 +46,10 @@ Route::get('/universities/{id}/login','UniversityController@LoginForm');
 Route::get('universities/{id}/university_comp/add','UniversityComponentController@add');
 Route::post('universities/{id}/university_comp/add','UniversityComponentController@newcomp');
 Route::get('universities/{id}/university_comp/edit/{comp_id}','UniversityComponentController@edit');
+Route::patch('universities/{id}/university_comp/edit/{comp_id}','UniversityComponentController@update');
 
-Route::get('universities/{id}/university_comp/update','UniversityComponentController@update');
+
+Route::get('universities/{id}/university_comp/update','UniversityComponentController@updateDefaults');
 Route::post('universities/{id}/university_comp/update','UniversityComponentController@store');
 Route::get('universities/{id}/university_comp/{param}','UniversityComponentController@show');
 Route::get('universities/{id}/university_comp','UniversityComponentController@showAdminComp');

@@ -105,9 +105,31 @@ class UniversityComponentController extends Controller
     {
           $university = University::findOrFail($id);
 
-          $comp = UniversityComponents::findOrFail($comp_id);
+          $unicomp = UniversityComponents::findOrFail($comp_id);
 
-           return view('university_comp.edit',compact('university','comp'));
+          $comp = $university->university_components()->where('id',$unicomp->id)->get();
+
+           return view('university_comp.edit',compact('university','comp','unicomp'));
+
+    }
+
+    public function update(Request $request,$id,$comp_id)
+    {
+        $this->validate($request,[
+            'comp_name'=>'required|max:100'
+            ]);
+
+        $university = University::findOrFail($id);
+
+        $comp = UniversityComponents::findOrFail($comp_id);
+        $comp->university_id = $university->id;
+        $comp->comp_name = $request->input('comp_name');
+
+        $comp->save();
+
+        return redirect('universities/'.$university->id.'/university_comp')
+                    ->with('message','Data was Successfully Updated');
+
 
     }
 
@@ -118,7 +140,7 @@ class UniversityComponentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update($id)
+    public function updateDefaults($id)
     {
          $university = University::findOrFail($id);
 
