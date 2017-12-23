@@ -65,6 +65,9 @@ Route::get('universities/{id}/university_comp/{comp_id}/university-subcomp/show'
 Route::get('universities/{id}/university_comp/{comp_id}/university-subcomp/add','UniverSubCompController@add');
 Route::post('universities/{id}/university_comp/{comp_id}/university-subcomp/add','UniverSubCompController@addNew');
 
+Route::get('universities/{id}/university_comp/{comp_id}/university-subcomp/edit/{sub_id}','UniverSubCompController@edit');
+Route::patch('universities/{id}/university_comp/{comp_id}/university-subcomp/edit/{sub_id}','UniverSubCompController@update');
+
 Route::get('universities/{id}/university_comp/{comp_id}/university-subcomp','UniverSubCompController@showAdminComp');
 
 

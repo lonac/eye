@@ -122,7 +122,7 @@ class UniverSubCompController extends Controller
 
         $uni_comp = $university->university_components()->where('id', $comp->id)->get();
 
-        $uni_subcomp = $comp->university_subcomponents()->where('university_components_id','$comp->id')->get();
+        $uni_subcomp = $comp->university_subcomponents()->where('university_components_id',$comp->id)->get();
 
 
         return view('university-subcomp.show',compact('university','uni_comp','uni_subcomp'));
@@ -134,9 +134,19 @@ class UniverSubCompController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($id, $comp_id, $sub)
     {
-        //
+
+        $university = University::findOrFail($id);
+
+        $unicomp = UniversityComponents::findOrFail($comp_id);
+
+        $unisubcomp =UniversitySubcomponent::findOrFail($sub);
+
+        $subcomp = $unicomp->university_subcomponents()->where('id', $unisubcomp->id)->get();
+
+        return view('university-subcomp.edit',compact('university','unicomp','unisubcomp','subcomp'));
+
     }
 
     /**
@@ -146,9 +156,24 @@ class UniverSubCompController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $id, $comp_id, $sub)
     {
-        //
+         $this->validate($request,[
+            'name'=>'required|max:100',
+            ]);  
+        $university = University::findOrFail($id);
+
+        $unicomp = UniversityComponents::findOrFail($comp_id);
+
+        $uni_subcomp =UniversitySubcomponent::findOrFail($sub);
+        $uni_subcomp->university_components_id = $unicomp->id;
+        $uni_subcomp->name = $request->input('name');
+
+         $uni_subcomp->save();
+
+        return redirect('/universities/'.$university->id.'/university_comp/'.$unicomp->id.'/university-subcomp')->with('message','Component Successfully Updated');
+
+
     }
 
     /**

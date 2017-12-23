@@ -28,9 +28,11 @@
 								<tr>
 									<td>{{$comp->name}}</td>
 									<td>
-										<a href="{{url('universities')}}" class="btn btn-primary">EDIT</a>
+										<a href="{{url('universities/'.$comp->university_component->university_id.'/university_comp/'.$comp->university_components_id.'/university-subcomp/edit/'.$comp->id)}}" class="btn btn-primary">EDIT</a>
 									</td>
 									<td>
+										<form method="POST" action="{{'universities/'.$comp->university_id.'/university_comp/'.$comp->id.'/university-subcomp'}}">
+										</form>
 										<a href="{{url('universities')}}" class="btn btn-danger">DELETE</a>
 									</td>			
 								</tr>
