@@ -29,11 +29,13 @@
 										<a href="{{url('universities/'.$university->id.'/university_comp/edit/'.$comp->id)}}" class="btn btn-primary">EDIT</a>
 									</td>
 									<td>
-										<form action="" method="post">
-								            {{csrf_field()}}
-								            <input name="_method" type="hidden" value="DELETE">
-								            <button class="btn btn-danger" type="submit">Delete</button>
-								         </form>
+										{{-- TODO Add confirmation dialog --}}
+										<form method="POST" action="{{ url('universities/'.$university->id.'/university_comp/'.$comp->id)}}"  onclick="return confirm('Delete this Component?')">
+											{{ method_field('delete') }}
+
+											{{ csrf_field() }}
+											<button type="submit" class="btn btn-danger">Delete</button>
+										</form>
 									</td>			
 								</tr>
 							@endforeach	

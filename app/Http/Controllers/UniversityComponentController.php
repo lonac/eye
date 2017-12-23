@@ -10,7 +10,6 @@ use App\UniversityComponents;
 
 use App\UniversityAdministration;
 
-//use Illuminate\Support\Facades\Validator;
 
 class UniversityComponentController extends Controller
 {
@@ -180,5 +179,19 @@ class UniversityComponentController extends Controller
          $uni_comp = $university->university_components;
 
         return view('university_comp.admin_comp',compact('university','uni_comp'));
+    }
+
+    public function destroy($id, $comp_id)
+    {
+        $university = University::findOrFail($id);
+
+        $comp = UniversityComponents::find($comp_id);
+
+        $comp->delete();
+
+        return redirect('universities/'.$university->id.'/university_comp')
+                    ->with('message','Component was Successfully Deleted');
+
+        
     }
 }
