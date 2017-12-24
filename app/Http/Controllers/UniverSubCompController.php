@@ -113,19 +113,20 @@ class UniverSubCompController extends Controller
     }
 
 
-    public function show($id, $comp_id)
+    public function show($id, $comp_id, $sub)
     {
         
         $university = University::findOrFail($id);
 
         $comp = UniversityComponents::findOrFail($comp_id);
 
+        $subcomp = UniversitySubcomponent::findOrFail($sub);
+
         $uni_comp = $university->university_components()->where('id', $comp->id)->get();
 
-        $uni_subcomp = $comp->university_subcomponents()->where('university_components_id',$comp->id)->get();
+        $uni_subcomp = $comp->university_subcomponents()->where('id',$subcomp->id)->get();
 
-
-        return view('university-subcomp.show',compact('university','uni_comp','uni_subcomp'));
+        //return view('university-subcomp.show',compact('university','uni_comp','uni_subcomp','subcomp'));
     }
 
     /**

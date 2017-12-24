@@ -26,7 +26,7 @@
 					@if($uni_subcomp->count()>0)
 						@foreach($uni_subcomp as $comp)
 							<h4><a href="{{url('universities/'.$comp->university_component->university_id.'/
-								university_comp/'.$comp->university_components_id.'/university-subcomp/show')}}" 
+								university_comp/'.$comp->university_components_id.'/university-subcomp/'.$comp->id)}}" 
 								class="btn btn-info">{{$comp->name}}</a></h4>
 						@endforeach
 					@else

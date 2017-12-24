@@ -4,6 +4,7 @@
 
 @section('content')
 	<div class="container">
+		@if($uni_subcomp->count()>0)
 		<div class="row">
 			<div class="col-md-8 col-md-offset-2">
 				<div class="panel panel-default">
@@ -15,18 +16,22 @@
 		</div>
 		<div class="row">
 			<div class="col-md-10 col-md-offset-1">
+				@if($uni_subcomp->count()>0)
 				<div class="panel panel-default">
+					<div class="panel panel-heading"><center><strong>{{$subcomp->name}}</strong></center>
+					</div>
 						<div class="panel panel-body">
-							@if($uni_subcomp->count()>0)
-								@foreach($uni_subcomp as $comp)
-									<a href="" class="btn btn-info">{{$comp->name}}</a>
-								@endforeach	
-							@else
-								<p>Nothing Update so far!</p>
-							@endif
+							
+								
 						</div>
 				</div>
+				@else
+					<p>Nothing Update so far!</p>
+				@endif
 			</div>
 		</div>
+		@else
+			@include('errors.503')
+	@endif
 	</div>
 @endsection
