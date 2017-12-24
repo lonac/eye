@@ -41,7 +41,7 @@
 					</table>
 							<font color="red">
 								<center>
-									<h3>Sorry, no any component Updated for this University!
+									<h3>Sorry, no any component Updated for this Category!
 								</center>
 							</font>	
 					@endif

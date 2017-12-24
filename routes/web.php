@@ -39,6 +39,9 @@ Route::get('/universities/register', 'UniversityController@register');
 Route::post('/universities/register', 'UniversityController@store');
 Route::get('/universities', 'UniversityController@index');
 Route::get('/universities/{id}','UniversityController@show');
+Route::get('universities/edit/{id}','UniversityController@edit');
+Route::patch('universities/edit/{id}','UniversityController@update');
+
 Route::get('/universities/{id}/login','UniversityController@LoginForm');
 
 
@@ -59,7 +62,7 @@ Route::get('universities/{id}/university_comp','UniversityComponentController@sh
 //UNIVERSITY SUB-COMPONENTS
 Route::get('universities/{id}/university_comp/{comp_id}/university-subcomp/create','UniverSubCompController@create');
 Route::post('universities/{id}/university_comp/{comp_id}/university-subcomp/create','UniverSubCompController@store');
-Route::get('universities/{id}/university_comp/{comp_id}/university-subcomp/show','UniverSubCompController@show');
+Route::get('universities/{id}/university_comp/{comp_id}/university-subcomp/{sub}','UniverSubCompController@show');
 
 
 Route::get('universities/{id}/university_comp/{comp_id}/university-subcomp/add','UniverSubCompController@add');

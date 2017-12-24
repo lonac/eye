@@ -21,8 +21,6 @@
                     <div class="panel-heading">
                          <h2>
                              <a href="{{url('/universities')}}" class="btn btn-default">UNIVERSITY</a>
-                            <a href="" class="btn btn-default">TRANSPORT</a>
-                            <a href="" class="btn btn-default">BANK</a>
                         </h2>
                     </div>
                 </div>

@@ -16,9 +16,8 @@
 		</div>
 	</div>
 
-	</div>
 	<div class="row">
-		<div class="col-sm-10 col-sm-offset-1">
+		<div class="col-sm-6 col-sm-offset-1">
 			<div class="panel panel-default">
 				<div class="panel panel-heading"><center>{{$comp->comp_name}}</center>
 				</div>
@@ -26,7 +25,8 @@
 					<!-- DISPLAY UNI-SUBCOMP CONTENTS -->
 					@if($uni_subcomp->count()>0)
 						@foreach($uni_subcomp as $comp)
-							<h4><a href="{{url('universities/'.$comp->university_component->university_id.'/university_comp/'.$comp->university_components_id.'/university-subcomp/show')}}" 
+							<h4><a href="{{url('universities/'.$comp->university_component->university_id.'/
+								university_comp/'.$comp->university_components_id.'/university-subcomp/show')}}" 
 								class="btn btn-info">{{$comp->name}}</a></h4>
 						@endforeach
 					@else
@@ -40,6 +40,6 @@
 				</div>
 			</div>
 		</div>
-		</div>		
-	</div>
+	</div>		
+</div>
 @endsection

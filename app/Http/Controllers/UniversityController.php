@@ -87,7 +87,9 @@ class UniversityController extends Controller
      */
     public function edit($id)
     {
-        //
+         $university = University::findOrFail($id);
+
+        return view('universities.edit',compact('university','uni_comp'));
     }
 
     /**
@@ -99,7 +101,25 @@ class UniversityController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+         //veriry data
+       $this->validate($request,[
+            'university_name'=>'required|max:100',
+            'city'=>'required|max:50',
+            'institution_type'=>'required',
+            'ownership_status'=>'required',
+            ]);
+
+       $university = University::findOrFail($id);
+       $university->name = $request->input('university_name');
+       $university->code = $request->input('code');
+       $university->city = $request->input('city');
+       $university->institution_type = $request->input('institution_type');
+       $university->ownership_status = $request->input('ownership_status');
+
+       $university->save();
+
+       return redirect('universities/'.$university->id.'/admin')->with('message','University Informations were Successfully Update');
+
     }
 
     /**

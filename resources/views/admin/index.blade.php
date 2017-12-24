@@ -16,7 +16,7 @@
 	</div>
 
 	<div class="row">
-		<div class="col-md-12">
+		<div class="col-md-8">
 			<div class="panel panel-default">
 				<div class="panel panel-heading">
 					<strong>
@@ -31,6 +31,21 @@
 				</div>
 			</div>
 		</div>
+
+		<div class="col-md-4">
+			<div class="panel panel-default">
+				<div class="panel panel-heading">
+					<strong>
+						<center>University Informations:
+						</center>	
+					</strong>
+				</div>
+				<div class="panel-body">
+					<a href="{{url('universities/edit/'.$university->id)}}" class="btn btn-warning btn-block">EDIT INFORMATION</a>
+				</div>
+			</div>
+		</div>
+
 	</div>
 </div>
 
