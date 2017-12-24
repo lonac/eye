@@ -126,7 +126,7 @@ class UniverSubCompController extends Controller
 
         $uni_subcomp = $comp->university_subcomponents()->where('id',$subcomp->id)->get();
 
-        //return view('university-subcomp.show',compact('university','uni_comp','uni_subcomp','subcomp'));
+        return view('university-subcomp.show',compact('university','uni_comp','uni_subcomp','subcomp'));
     }
 
     /**

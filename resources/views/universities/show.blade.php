@@ -14,7 +14,7 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-8">
+			<div class="col-md-8 col-md-offset-1">
 				<div class="panel panel-default">
 					<div class="panel panel-body">
 						@if($uni_comp!==null)
